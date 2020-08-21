@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useLayoutEffect } from "react"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
+import Footer from "./Footer"
 import GlobalStyles from "./GlobalStyles"
 
 import { AppContainer, MainContent, Backdrop } from "./LayoutStyles"
@@ -32,6 +33,7 @@ export default function Layout({ children }) {
       <GlobalStyles />
       <Navbar openSidebar={openSidebar} />
       <MainContent>{children}</MainContent>
+      <Footer />
       <Sidebar closeSidebar={closeSidebar} isOpen={isOpen} />
       <Backdrop tabIndex="-1" onClick={closeSidebar} isOpen={isOpen} />
     </AppContainer>
