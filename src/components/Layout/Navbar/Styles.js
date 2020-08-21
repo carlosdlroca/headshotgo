@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const NavbarContainer = styled.nav`
-  /* max-width: 1050px */
   background-color: white;
   padding: 3rem;
 
@@ -11,6 +10,7 @@ export const NavbarContainer = styled.nav`
 
   #Logo {
     font-size: 3rem;
+    color: var(--color-primary);
   }
 
   #openSidebarButton {

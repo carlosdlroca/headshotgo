@@ -6,7 +6,9 @@ import MenuSvg from "./menu.svg"
 export default function Navbar({ openSidebar }) {
   return (
     <NavbarContainer>
-      <div id="Logo">Logo</div>
+      <Link to="/">
+        <div id="Logo">Logo</div>
+      </Link>
       <button
         id="openSidebarButton"
         onClick={openSidebar}
