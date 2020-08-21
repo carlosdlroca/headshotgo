@@ -27,6 +27,9 @@ export default function Navbar({ openSidebar }) {
         <NavbarLink>
           <Link to="/book">Book Today</Link>
         </NavbarLink>
+        <NavbarLink>
+          <Link to="/pricing">Pricing</Link>
+        </NavbarLink>
       </NavbarLinks>
     </NavbarContainer>
   )
