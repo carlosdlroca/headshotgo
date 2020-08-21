@@ -30,6 +30,7 @@
   ],
   "license": "0BSD",
   "scripts": {
+    "deploy": "gatsby build && surge public headshotgo.surge.sh",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
