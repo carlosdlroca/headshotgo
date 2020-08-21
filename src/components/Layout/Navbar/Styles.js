@@ -1,12 +1,17 @@
 import styled from "styled-components"
 
 export const NavbarContainer = styled.nav`
+  position: sticky;
+  top: 0;
+  z-index: 98;
   background-color: white;
   padding: 3rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  box-shadow: 0 0.3rem 3rem rgba(0, 0, 0, 0.3);
 
   #Logo {
     font-size: 3rem;
