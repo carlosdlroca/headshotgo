@@ -5,7 +5,7 @@ export const NavbarContainer = styled.nav`
   top: 0;
   z-index: 98;
   background-color: white;
-  padding: 3rem;
+  padding: 1.5rem 3rem;
 
   display: flex;
   align-items: center;
@@ -27,6 +27,10 @@ export const NavbarContainer = styled.nav`
       display: none;
     }
   }
+
+  @media only screen and (min-width: 75em) {
+    padding: 1.6rem 12vw;
+  }
 `
 
 export const NavbarLinks = styled.ul`
@@ -38,10 +42,11 @@ export const NavbarLinks = styled.ul`
 `
 
 export const NavbarLink = styled.li`
-  font-size: 1.6rem;
-  border-radius: 0.5rem;
-  padding: 1rem 1.5rem;
   a {
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    display: block;
     text-decoration: none;
     color: var(--color-secondary);
     transition: color 0.2s ease;
@@ -49,6 +54,7 @@ export const NavbarLink = styled.li`
 
   &:hover {
     background: var(--color-quaternary);
+    cursor: pointer;
     a {
       color: var(--color-primary);
     }
