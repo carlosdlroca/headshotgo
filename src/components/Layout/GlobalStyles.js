@@ -6,7 +6,11 @@ export default createGlobalStyle`
         --color-secondary: #1f5f8b;
         --color-tertiary: #1891ac;
         --color-quaternary: #d2ecf9;
+
+        --color-text-dark: #1a2a3a;
+        --color-text-light: #4a5a6a;
     }
+    
     *, *::before, *::after {
         box-sizing: border-box;
         margin: 0;
@@ -15,7 +19,7 @@ export default createGlobalStyle`
 
     html {
         font-size: 62.5%;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: sans-serif;
     }
 
     a {

@@ -1,9 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { NavbarContainer, NavbarLinks, NavbarLink } from "./Styles"
 import MenuSvg from "./menu.svg"
 
 export default function Navbar({ openSidebar }) {
+  const data = useStaticQuery(graphql`
+    query GetBookingLink {
+      site {
+        siteMetadata {
+          bookingLink
+        }
+      }
+    }
+  `)
+
   return (
     <NavbarContainer>
       <Link to="/">
@@ -24,13 +34,10 @@ export default function Navbar({ openSidebar }) {
           <Link to="/team">Our Team</Link>
         </NavbarLink>
         <NavbarLink>
-          <Link to="/about">About Us</Link>
-        </NavbarLink>
-        <NavbarLink>
-          <Link to="/book">Book Today</Link>
-        </NavbarLink>
-        <NavbarLink>
           <Link to="/pricing">Pricing</Link>
+        </NavbarLink>
+        <NavbarLink>
+          <a href={data.site.siteMetadata.bookingLink}>Book Today</a>
         </NavbarLink>
       </NavbarLinks>
     </NavbarContainer>

@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Headshot on the Go`,
+    description: `A mobile photography service that specializes in headshot photography services for undergraduate, graduate students, and young professionals.`,
+    author: `@mayafilmz`,
+    email: "mayafilmsphotovideo@gmail.com",
+    bookingLink: "https://square.site/book/PXQFBMDDJM5AJ/headshot-on-the-go",
   },
   plugins: [
     `gatsby-plugin-react-svg`,
@@ -20,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Headshot Go`,
+        short_name: `HeadshotGo`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

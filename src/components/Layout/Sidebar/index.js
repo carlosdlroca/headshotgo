@@ -1,9 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { SidebarContainer, SidebarContent } from "./Styles"
 import CloseSvg from "./close.svg"
+
 function Sidebar({ isOpen, closeSidebar }) {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          bookingLink
+        }
+      }
+    }
+  `)
+
   return (
     <SidebarContainer isOpen={isOpen}>
       <button
@@ -16,8 +27,8 @@ function Sidebar({ isOpen, closeSidebar }) {
       <SidebarContent>
         <Link to="/portfolio">Our Work</Link>
         <Link to="/team">Our Team</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/book">Book Today</Link>
+        <Link to="/pricing">Pricing</Link>
+        <a href={data.site.siteMetadata.bookingLink}>Book Today</a>
       </SidebarContent>
     </SidebarContainer>
   )
