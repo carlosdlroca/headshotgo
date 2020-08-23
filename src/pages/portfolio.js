@@ -1,5 +1,5 @@
 import React from "react"
-
+import Gallery from "../components/Gallery"
 export default function PortfolioPage() {
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -13,6 +13,7 @@ export default function PortfolioPage() {
       >
         Our Work
       </h1>
+      <Gallery />
     </div>
   )
 }
