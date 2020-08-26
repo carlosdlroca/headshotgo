@@ -27,6 +27,9 @@ export default styled.section`
       grid-template-columns: 1fr;
       grid-row-gap: 4rem;
     }
+    @media only screen and (max-width: 65em) {
+      grid-column-gap: 2rem;
+    }
 
     @media only screen and (min-width: 65em) {
       padding: 6rem 0;

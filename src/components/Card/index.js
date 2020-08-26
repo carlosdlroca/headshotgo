@@ -21,7 +21,15 @@ export default styled.div`
     text-decoration-color: ${({ color }) => color};
     color: var(--color-primary);
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.4rem;
+
+    @media only screen and (max-width: 49em) {
+      font-size: 3rem;
+    }
+
+    @media only screen and (min-width: 50em) and (max-width: 65em) {
+      font-size: 2rem;
+    }
   }
 
   button {
