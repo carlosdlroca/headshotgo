@@ -1,17 +1,40 @@
 [
   {
     "packageName": "Undergraduate",
-    "price": "35.75",
-    "color": "#55ee88"
+    "packageTagname": "Most Affordable package",
+    "price": "45.00",
+    "color": "#55ee88",
+    "packageDetails": [
+      "3 guaranteed images",
+      "30 minute photoshoot",
+      "2-3 business days deliver",
+      "*Location of Choice (price varies)"
+    ]
   },
   {
     "packageName": "Graduate",
-    "price": "55.75",
-    "color": "#5555EE"
+    "packageTagname": "Most Popular package",
+    "price": "60.00",
+    "color": "#5555EE",
+    "packageDetails": [
+      "3 guaranteed images",
+      "30 minute photoshoot",
+      "2-3 business days deliver",
+      "*Location of Choice (price varies)",
+      "Photshop skin retouch"
+    ]
   },
   {
     "packageName": "Young Professional",
-    "price": "85.75",
-    "color": "#8855EE"
+    "packageTagname": "Fastest delivery package",
+    "price": "75.00",
+    "color": "#8855EE",
+    "packageDetails": [
+      "3 guaranteed images",
+      "30 minute photoshoot",
+      "1 business day deliver",
+      "*Location of Choice (price varies)",
+      "Photshop skin retouch"
+    ]
   }
 ]
