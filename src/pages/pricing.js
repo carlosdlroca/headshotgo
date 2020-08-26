@@ -1,6 +1,7 @@
 import React, { useCallback } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import SEO from "../components/seo"
 
 const PricingCards = styled.div`
   display: grid;
@@ -130,6 +131,7 @@ export default function Pricing({ data }) {
   }, [data.site.siteMetadata.bookingLink])
   return (
     <div>
+      <SEO title="Our Prices" />
       <h1
         style={{
           fontSize: "3.4rem",

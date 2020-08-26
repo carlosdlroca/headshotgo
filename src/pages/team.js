@@ -13,6 +13,8 @@ import Peep1 from "../images/peeps/peep-54.svg"
 import Peep2 from "../images/peeps/peep-15.svg"
 import Peep3 from "../images/peeps/peep-46.svg"
 
+import SEO from "../components/seo"
+
 const TeamMembers = styled.div``
 
 const TeamMemberContainer = styled(FullWidth)`
@@ -103,6 +105,7 @@ const TeamMemberContainer = styled(FullWidth)`
 export default function OurTeam() {
   return (
     <>
+      <SEO title="Our Team" />
       <h2
         style={{
           textAlign: "center",
