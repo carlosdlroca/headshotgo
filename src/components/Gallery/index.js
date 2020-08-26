@@ -12,7 +12,7 @@ const imgStyles = {
     width: "100%",
     height: "100%",
     objectPosition: "center",
-    transition: "transform 0.5s, filter 0.25",
+    transition: "transform 0.5s, filter 0.25s",
     "&:hover": {
       transform: "scale(1.1)",
       filter: "saturate(1.4)",
