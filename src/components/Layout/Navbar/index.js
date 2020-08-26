@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { NavbarContainer, NavbarLinks, NavbarLink } from "./Styles"
 import MenuSvg from "./menu.svg"
+import Logo from "../../../images/HeadshotsOnTheGo.png"
 
 export default function Navbar({ openSidebar }) {
   const data = useStaticQuery(graphql`
@@ -17,7 +18,9 @@ export default function Navbar({ openSidebar }) {
   return (
     <NavbarContainer>
       <Link to="/">
-        <div id="Logo">Logo</div>
+        <div className="Logo">
+          <img src={Logo} alt="Headshots on the go" />
+        </div>
       </Link>
       <button
         id="openSidebarButton"

@@ -6,12 +6,12 @@ const PricingCards = styled.div`
   display: grid;
   grid-row-gap: 3rem;
   width: 65%;
-  margin: 0 auto;
+  margin: 10rem auto;
 
   @media only screen and (min-width: 65em) {
-    width: min(90%, 88.66rem);
+    width: min(90%, 110rem);
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1rem;
+    grid-column-gap: 4rem;
   }
 `
 
@@ -26,11 +26,19 @@ const PricingCard = styled.div`
     position: relative;
     line-height: 1.7;
     h1 {
-      font-size: 2.5rem;
+      text-align: center;
+      font-size: 2.1rem;
+      margin-bottom: 2rem;
     }
 
+    p {
+      line-height: 1.3;
+      font-size: 1.4rem;
+      text-align: center;
+    }
     .Price {
-      font-size: 2rem;
+      text-align: center;
+      font-size: 4.5rem;
     }
   }
   button {
@@ -47,6 +55,12 @@ const PricingCard = styled.div`
     &:hover {
       background-color: #eee;
       cursor: pointer;
+    }
+  }
+
+  @media only screen and (min-width: 65em) {
+    &:nth-of-type(2n) {
+      transform: translateY(-4rem);
     }
   }
 `
@@ -96,10 +110,11 @@ const pricingData = [
 export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {
     return pricingData.map(({ packageName, color, price }) => (
-      <PricingCard color={color}>
+      <PricingCard color={color} key={packageName}>
         <div className="Main">
-          <h1>{packageName}</h1>
-          <span className="Price">${price}</span>
+          <h1>{packageName} Photographs</h1>
+          <p>starting at</p>
+          <p className="Price">${price}*</p>
           <a href={data.site.siteMetadata.bookingLink}>
             <button aria-label="book now">Book Now</button>
           </a>
@@ -108,7 +123,7 @@ export default function Pricing({ data }) {
           <p>3 guaranteed images</p>
           <p>30 minute photoshoot</p>
           <p>2-3 business days delivery</p>
-          <p>Location of choice (price varies)</p>
+          <p>*Location of choice (price varies)</p>
         </PricingInfo>
       </PricingCard>
     ))

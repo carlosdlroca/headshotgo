@@ -6,19 +6,19 @@ import Jumbotron from "../components/Jumbotron"
 import Card from "../components/Card"
 import FullWidth from "../components/FullWidth"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
+import TextContainer from "../components/TextContainer"
+import Button from "../components/Button"
 
 const IndexPage = ({ data }) => (
   <div>
     <SEO title="Home" />
-    <span>Still a work in progress</span>
-    <p>a nice photograph will replace the color</p>
-    <Jumbotron>
-      <h1>{data.site.siteMetadata.title}</h1>
-      <h2>{data.site.siteMetadata.description}</h2>
+    <TextContainer>
+      <h1>We are Headshots-on-the-GO!</h1>
+      <p>{data.site.siteMetadata.description}</p>
       <Link to="/portfolio">
-        <button>Visit Portfolio</button>
+        <Button>Visit Portfolio</Button>
       </Link>
-    </Jumbotron>
+    </TextContainer>
     <FullWidth>
       <h1>Check out our Packages</h1>
       <div className="cards">
