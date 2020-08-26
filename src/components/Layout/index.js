@@ -3,6 +3,7 @@ import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 import GlobalStyles from "./GlobalStyles"
+import { Helmet } from "react-helmet"
 
 import { AppContainer, MainContent, Backdrop } from "./LayoutStyles"
 
@@ -31,6 +32,12 @@ export default function Layout({ children }) {
   return (
     <AppContainer>
       <GlobalStyles />
+      <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
       <Navbar openSidebar={openSidebar} />
       <MainContent>{children}</MainContent>
       <Footer />
