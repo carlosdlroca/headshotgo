@@ -7,8 +7,16 @@ import FullWidth from "../components/FullWidth"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
 import TextContainer from "../components/TextContainer"
 import Button from "../components/Button"
+import { FeaturesContainer, Feature } from "../components/Features"
 
 import { FadeInContainer } from "../components/Animations/FadeIn"
+
+import ChoicesSvg from "../images/illustrations/choices-colour.svg"
+import UnlockSvg from "../images/illustrations/unlock.svg"
+import LevelUpSvg from "../images/illustrations/lifting-colour.svg"
+
+import BlobBlue from "../images/illustrations/BlobBlue.svg"
+import BlobPurple from "../images/illustrations/BlobPurple.svg"
 
 const IndexPage = ({ data }) => {
   const renderPriceCards = useCallback(() => {
@@ -36,6 +44,58 @@ const IndexPage = ({ data }) => {
           <Button>Visit Portfolio</Button>
         </Link>
       </TextContainer>
+
+      <FeaturesContainer>
+        <TextContainer>
+          <h1>Why Headshot photography?</h1>
+        </TextContainer>
+        <Feature>
+          <div className="Illustration">
+            <ChoicesSvg />
+            <BlobBlue />
+          </div>
+          <Feature.Content>
+            <h1>This is some content</h1>
+            <p>
+              This is text about some content that i think you would like to
+              learn about
+            </p>
+          </Feature.Content>
+        </Feature>
+        <Feature>
+          <div className="Illustration">
+            <UnlockSvg />
+            <BlobPurple />
+          </div>
+          <Feature.Content>
+            <h1>Unlock New Possibilities</h1>
+            <p>
+              This is text about some content that i think you would like to
+              learn about
+            </p>
+          </Feature.Content>
+        </Feature>
+        <Feature>
+          <div className="Illustration">
+            <BlobBlue />
+            <LevelUpSvg />
+          </div>
+          <Feature.Content>
+            <h1>Level up your career</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur consequatur distinctio deleniti debitis consectetur
+              dolor explicabo, excepturi maxime! Illo optio non obcaecati
+              nostrum rem sint itaque, temporibus sunt deleniti nobis.Corrupti
+              veniam ut ipsam non doloribus neque. Adipisci dicta, rerum numquam
+              inventore laudantium commodi? Eligendi, quibusdam cumque debitis
+              vitae et quaerat consequatur expedita similique, fugit mollitia
+              quam cum recusandae impedit!
+            </p>
+          </Feature.Content>
+        </Feature>
+      </FeaturesContainer>
+
       <FullWidth>
         <h1>Check out our Packages</h1>
         <div className="cards">{renderPriceCards()}</div>
