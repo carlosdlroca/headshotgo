@@ -6,9 +6,10 @@ export default styled.section`
   align-items: center;
   background-color: ${({ bgColor }) =>
     bgColor ? bgColor : "var(--color-quaternary)"};
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   padding: 6rem 1rem;
   width: 100%;
+
   h1 {
     font-size: clamp(2.8rem, 3vw, 4rem);
     text-align: center;

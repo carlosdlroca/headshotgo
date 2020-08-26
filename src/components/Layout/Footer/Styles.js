@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const FooterContainer = styled.footer`
   background: var(--color-primary);
-  padding: 5rem 10rem;
+  padding: 5rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -50,5 +50,7 @@ export const FooterContainer = styled.footer`
   }
 `
 export const Copyright = styled.span`
+  margin-top: 4rem;
   font-size: 1.2rem;
+  line-height: 1.7;
 `

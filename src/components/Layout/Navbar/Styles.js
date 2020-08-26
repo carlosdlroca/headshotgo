@@ -4,18 +4,19 @@ export const NavbarContainer = styled.nav`
   position: sticky;
   top: 0;
   z-index: 98;
-  background-color: white;
-  padding: 1.5rem 3rem;
+  padding: 0.5rem 3rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  background: white;
   box-shadow: 0 0.3rem 3rem rgba(0, 0, 0, 0.3);
 
-  #Logo {
-    font-size: 3rem;
-    color: var(--color-primary);
+  .Logo {
+    img {
+      width: 7rem;
+      height: 7rem;
+    }
   }
 
   #openSidebarButton {
@@ -29,7 +30,7 @@ export const NavbarContainer = styled.nav`
   }
 
   @media only screen and (min-width: 75em) {
-    padding: 1.6rem 12vw;
+    padding: 0.5rem 12vw;
   }
 `
 

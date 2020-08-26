@@ -18,8 +18,11 @@ export default styled.div`
   }
 
   &&& h1 {
-    color: var(--color-tertiary);
-    font-size: clamp(1.8rem, 2vw, 2.4rem);
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-dark);
+    color: var(--color-primary);
+    /* font-weight: 700; */
+    font-size: 2rem;
   }
 
   button {
@@ -40,7 +43,7 @@ export default styled.div`
   }
 
   .pricing-link {
-    color: var(--color-tertiary);
+    color: var(--color-text-dark);
     font-size: 1.6rem;
     padding: 0.5rem 1.2rem;
     position: relative;

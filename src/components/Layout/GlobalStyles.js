@@ -2,10 +2,10 @@ import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
     :root {
-        --color-primary: #253B6E;
-        --color-secondary: #1f5f8b;
-        --color-tertiary: #1891ac;
-        --color-quaternary: #d2ecf9;
+        --color-primary: #494ca2;
+        --color-secondary: #8186d5;
+        --color-tertiary:#c6cbef;
+        --color-quaternary: #e3e7f1;
 
         --color-text-dark: #1a2a3a;
         --color-text-light: #4a5a6a;
@@ -19,7 +19,7 @@ export default createGlobalStyle`
 
     html {
         font-size: 62.5%;
-        font-family: sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 
     a {
@@ -33,5 +33,13 @@ export default createGlobalStyle`
     ul {
         list-style: none;
     }
+
+    .Logo {
+    img {
+      height: 15rem;
+      width: 15rem;
+      object-fit: contain;
+    }
+  }
 
 `
