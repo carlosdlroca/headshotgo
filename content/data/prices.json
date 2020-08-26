@@ -1,0 +1,17 @@
+[
+  {
+    "packageName": "Undergraduate",
+    "price": "35.75",
+    "color": "#55ee88"
+  },
+  {
+    "packageName": "Graduate",
+    "price": "55.75",
+    "color": "#5555EE"
+  },
+  {
+    "packageName": "Young Professional",
+    "price": "85.75",
+    "color": "#8855EE"
+  }
+]
