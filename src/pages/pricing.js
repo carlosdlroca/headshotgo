@@ -2,12 +2,18 @@ import React, { useCallback } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo"
+import PageTitle from "../components/Pages/PageTitle"
+import Button from "../components/Button"
 
 const PricingCards = styled.div`
   display: grid;
   grid-row-gap: 3rem;
   width: 65%;
   margin: 10rem auto;
+
+  @media only screen and (max-width: 31.25em) {
+    width: 97%;
+  }
 
   @media only screen and (min-width: 65em) {
     width: min(90%, 110rem);
@@ -43,19 +49,15 @@ const PricingCard = styled.div`
     }
   }
   button {
-    background: white;
-    color: var(--color-primary);
-    font-size: 1.8rem;
-    padding: 1rem 2rem;
-    border-radius: 4rem;
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    box-shadow: 0.1rem 0.4rem 1rem rgba(0, 0, 0, 0.5);
-    &:hover {
-      background-color: #eee;
-      cursor: pointer;
+    bottom: -2rem;
+    left: calc(50% - 7.1rem);
+    border: 0.2rem solid var(--color-primary);
+  }
+
+  @media only screen and (max-width: 31.25em) {
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
     }
   }
 
@@ -117,7 +119,13 @@ export default function Pricing({ data }) {
           <p>starting at</p>
           <p className="Price">${price}*</p>
           <a href={data.site.siteMetadata.bookingLink}>
-            <button aria-label="book now">Book Now</button>
+            <Button
+              bgColor={"#fff"}
+              color={"var(--color-primary)"}
+              aria-label="book now"
+            >
+              Book Now
+            </Button>
           </a>
         </div>
         <PricingInfo>
@@ -132,16 +140,7 @@ export default function Pricing({ data }) {
   return (
     <div>
       <SEO title="Our Prices" />
-      <h1
-        style={{
-          fontSize: "3.4rem",
-          textAlign: "center",
-          color: "var(--color-primary)",
-          margin: "3rem 0 5rem",
-        }}
-      >
-        Our Packages
-      </h1>
+      <PageTitle>Our Packages</PageTitle>
       <PricingCards>{renderPrices()}</PricingCards>
       <LocationInfo>
         <h1>Location Prices</h1>

@@ -8,11 +8,15 @@ import satisfactionPng from "../images/satisfaction_guarantee.png"
 import TextContainer from "../components/TextContainer"
 import Button from "../components/Button"
 
+import { FadeInContainer } from "../components/Animations/FadeIn"
+
 const IndexPage = ({ data }) => (
   <div>
     <SEO title="Home" />
     <TextContainer>
-      <h1>We are Headshots-on-the-GO!</h1>
+      <FadeInContainer>
+        <h1>We are Headshots-on-the-GO!</h1>
+      </FadeInContainer>
       <p>{data.site.siteMetadata.description}</p>
       <Link to="/portfolio">
         <Button>Visit Portfolio</Button>
@@ -28,7 +32,7 @@ const IndexPage = ({ data }) => (
             Learn more
           </Link>
           <a href={data.site.siteMetadata.bookingLink}>
-            <button>Book Now</button>
+            <Button>Book Now</Button>
           </a>
         </Card>
         <Card>
@@ -38,7 +42,7 @@ const IndexPage = ({ data }) => (
             Learn more
           </Link>
           <a href={data.site.siteMetadata.bookingLink}>
-            <button>Book Now</button>
+            <Button>Book Now</Button>
           </a>
         </Card>
         <Card>
@@ -48,7 +52,7 @@ const IndexPage = ({ data }) => (
             Learn more
           </Link>
           <a href={data.site.siteMetadata.bookingLink}>
-            <button>Book Now</button>
+            <Button>Book Now</Button>
           </a>
         </Card>
       </div>

@@ -1,5 +1,7 @@
 import React from "react"
 import FullWidth from "../components/FullWidth"
+import SEO from "../components/seo"
+import PageTitle from "../components/Pages/PageTitle"
 import styled from "styled-components"
 
 import TwitterSvg from "../images/socialmedia/twitter.svg"
@@ -12,8 +14,6 @@ import EmailSvg from "../images/socialmedia/email.svg"
 import Peep1 from "../images/peeps/peep-54.svg"
 import Peep2 from "../images/peeps/peep-15.svg"
 import Peep3 from "../images/peeps/peep-46.svg"
-
-import SEO from "../components/seo"
 
 const TeamMembers = styled.div``
 
@@ -106,16 +106,7 @@ export default function OurTeam() {
   return (
     <>
       <SEO title="Our Team" />
-      <h2
-        style={{
-          textAlign: "center",
-          fontSize: "3.4rem",
-          margin: "3rem 0 5rem",
-          color: "var(--color-primary",
-        }}
-      >
-        Meet Our Team
-      </h2>
+      <PageTitle>Meet Our Team</PageTitle>
       <TeamMembers>
         <TeamMemberContainer>
           <div className="TeamMemberImage">
