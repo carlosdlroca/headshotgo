@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Headshots on the Go`,
+    title: `Headshots-on-the-Go`,
     description: `Helping young professionals accelerate their career by making sure they give the best first impression. Update your headshot profile picture today!`,
     author: `@mayafilmz`,
     email: "mayafilmsphotovideo@gmail.com",
