@@ -16,6 +16,7 @@ function Sidebar({ isOpen, closeSidebar }) {
       </button>
       <SidebarContent>
         <Link to="/portfolio">Our Work</Link>
+        <Link to="/who-we-are">Who We Are</Link>
         <Link to="/team">Our Team</Link>
         <Link to="/pricing">Pricing</Link>
       </SidebarContent>
