@@ -9,6 +9,7 @@ export default styled.section`
   color: var(--color-text-dark);
   padding: 6rem 1rem;
   width: 100%;
+  min-height: 50vh;
 
   h1 {
     font-size: clamp(2.8rem, 3vw, 4rem);
