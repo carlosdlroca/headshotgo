@@ -45,10 +45,22 @@
                 fill-rule: evenodd;
             }
         </style>
+        <linearGradient id="largeGradient">
+            <stop offset="0%" stop-color="#7163D1"></stop>
+            <stop offset="100%" stop-color="#FA4D56"></stop>
+            <animateTransform 
+                attributeName="gradientTransform"
+                type="rotate"
+                dur="5s"
+                from="360 0 0" 
+                to="0 0 0 "
+                repeatCount="indefinite" />
+        </linearGradient>
     </defs>
     <g id="Layer_2" data-name="Layer 2">
         <g id="vector">
-            <path class="blobywuobb"
+            <path
+            fill="url(#largeGradient)"
                 d="M636.5,232.73c68.06,61.33,93.17,180.88,67.33,286.61C677.81,625.07,601,717,496,778.29c-105,61.14-238,91.9-326.82,43.86S36.17,647.63,13.78,523.53c-22.2-124.11-22.56-245.67,36.58-305C109.5,159.4,228,162.31,342.79,165.22,457.62,168.31,568.62,171.41,636.5,232.73Z" />
             <rect class="isisjsusjruieyreuryeurye" x="558.8" y="858.32" width="22.08" height="14.74" />
             <rect class="isisjsusjruieyreuryeurye" x="677.14" y="835.57" width="20.72" height="18.36"

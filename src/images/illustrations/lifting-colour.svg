@@ -33,18 +33,30 @@
             }
 
             .oasdkl3jj {
-                fill: #fd8369;
+                fill: #2C73D2;
             }
 
             .isksusj {
                 fill: #dedede;
             }
         </style>
+    <linearGradient id="liftingGradient">
+      <stop offset="0%" stop-color="#ff8806"></stop>
+      <stop offset="100%" stop-color="#d9574a"></stop>
+      <animateTransform 
+        attributeName="gradientTransform"
+        type="rotate"
+        dur="4s"
+        from="0 0 0" 
+        to="360 0 0 "
+        repeatCount="indefinite" />
+    </linearGradient>
     </defs>
     <title>lifting-colour</title>
     <g id="Layer_2" data-name="Layer 2">
         <g id="Vector">
-            <path class="qweqwe"
+            <path 
+                fill="url(#liftingGradient)"
                 d="M715.4,140.44c52.1,67.38,60.78,162.69,65.87,250.07s6.8,166.66-14.15,261.4c-21,94.56-64.55,204.41-146.84,254.8-82.29,50.58-203.46,41.71-304.62-3.4C214.5,858.39,133.53,777.23,81.44,681.92,29.54,586.42,6.51,477,50.3,405.23S204.49,299.54,285.84,237.45c81.53-62.1,134-152.31,208.18-177.79C568,34,663.31,73.25,715.4,140.44Z" />
             <line class="lalais" x1="114.48" y1="161.68" x2="788.29" y2="161.68" />
             <line class="lalais" y1="161.68" x2="28.21" y2="161.68" />

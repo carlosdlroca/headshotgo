@@ -33,10 +33,23 @@
                 fill: #FF9671;
             }
         </style>
+        
+        
+        <linearGradient id="choiceGradient">
+            <stop offset="0%" stop-color="#F9F871"></stop>
+            <stop offset="100%" stop-color="#0F62FB"></stop>
+            <animateTransform 
+                attributeName="gradientTransform"
+                type="rotate"
+                dur="8s"
+                from="0 0 0" 
+                to="360 0 0 "
+                repeatCount="indefinite" />
+        </linearGradient>
     </defs>
     <g id="Layer_2" data-name="Layer 2">
         <g id="Vector">
-            <path class="uiiuyiuyi"
+            <path fill="url(#choiceGradient)"
                 d="M630.56,118.29C710.86,152,770.2,244.35,772.88,335.38c2.52,91.19-51.63,180.87-109.13,258.15-57.33,77.11-118,141.65-192.61,170-74.76,28.33-163.6,20.46-227.3-19.11C180.31,705,142.09,633.76,99.67,563.35,57.26,493.12,11,423.55,1.78,340.57c-9.39-82.81,18.44-179.36,82.31-215.91s163.6-13.07,264.18-13.91S550.1,84.77,630.56,118.29Z" />
             <path class="oiudasoasd"
                 d="M206.74,357.24c.65,13.11,0,509.71,0,509.71h34.65l53-326.35c.67-10.58,10.33-127.55,10.33-127.55l-61-62.66Z" />
