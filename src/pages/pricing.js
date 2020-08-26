@@ -52,7 +52,7 @@ const PricingCard = styled.div`
     position: absolute;
     bottom: -2rem;
     left: calc(50% - 6.6rem);
-    border: 0.2rem solid var(--color-primary);
+    border: 0.2rem solid ${({ color }) => color};
   }
 
   @media only screen and (max-width: 31.25em) {
