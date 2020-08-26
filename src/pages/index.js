@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
@@ -10,65 +10,49 @@ import Button from "../components/Button"
 
 import { FadeInContainer } from "../components/Animations/FadeIn"
 
-const IndexPage = ({ data }) => (
-  <div>
-    <SEO title="Home" />
-    <TextContainer>
-      <FadeInContainer>
-        <h1>We are Headshots-on-the-GO!</h1>
-      </FadeInContainer>
-      <p>{data.site.siteMetadata.description}</p>
-      <Link to="/portfolio">
-        <Button>Visit Portfolio</Button>
-      </Link>
-    </TextContainer>
-    <FullWidth>
-      <h1>Check out our Packages</h1>
-      <div className="cards">
-        <Card>
-          <h1>Undergraduate</h1>
-          <p className="price">$35.75</p>
+const IndexPage = ({ data }) => {
+  const renderPriceCards = useCallback(() => {
+    return data.allPricesJson.edges.map(
+      ({ node: { price, packageName, color, id } }) => (
+        <Card key={id} color={color}>
+          <h1>{packageName} Package</h1>
+          <p className="price">${price}</p>
           <Link className="pricing-link" to="/pricing">
-            Learn more
+            <Button>Learn more</Button>
           </Link>
-          <a href={data.site.siteMetadata.bookingLink}>
-            <Button>Book Now</Button>
-          </a>
         </Card>
-        <Card>
-          <h1>Graduate</h1>
-          <p className="price">$55.75</p>
-          <Link className="pricing-link" to="/pricing">
-            Learn more
-          </Link>
-          <a href={data.site.siteMetadata.bookingLink}>
-            <Button>Book Now</Button>
-          </a>
-        </Card>
-        <Card>
-          <h1>Young Professional</h1>
-          <p className="price">$85.75</p>
-          <Link className="pricing-link" to="/pricing">
-            Learn more
-          </Link>
-          <a href={data.site.siteMetadata.bookingLink}>
-            <Button>Book Now</Button>
-          </a>
-        </Card>
-      </div>
-    </FullWidth>
+      )
+    )
+  }, [data.allPricesJson.edges])
+  return (
+    <div>
+      <SEO title="Home" />
+      <TextContainer>
+        <FadeInContainer duration=".96s">
+          <h1>We are Headshots-on-the-GO!</h1>
+        </FadeInContainer>
+        <p>{data.site.siteMetadata.description}</p>
+        <Link to="/portfolio">
+          <Button>Visit Portfolio</Button>
+        </Link>
+      </TextContainer>
+      <FullWidth>
+        <h1>Check out our Packages</h1>
+        <div className="cards">{renderPriceCards()}</div>
+      </FullWidth>
 
-    <img
-      src={satisfactionPng}
-      alt="Satisfaction Guaranteed"
-      style={{
-        width: "25rem",
-        margin: "2rem auto",
-        display: "block",
-      }}
-    />
-  </div>
-)
+      <img
+        src={satisfactionPng}
+        alt="Satisfaction Guaranteed"
+        style={{
+          width: "25rem",
+          margin: "2rem auto",
+          display: "block",
+        }}
+      />
+    </div>
+  )
+}
 
 export const pageQuery = graphql`
   query {
@@ -77,6 +61,16 @@ export const pageQuery = graphql`
         title
         description
         bookingLink
+      }
+    }
+    allPricesJson {
+      edges {
+        node {
+          id
+          color
+          price
+          packageName
+        }
       }
     }
   }

@@ -51,7 +51,7 @@ const PricingCard = styled.div`
   button {
     position: absolute;
     bottom: -2rem;
-    left: calc(50% - 7.1rem);
+    left: calc(50% - 6.6rem);
     border: 0.2rem solid var(--color-primary);
   }
 
@@ -92,51 +92,35 @@ const LocationInfo = styled.section`
   }
 `
 
-const pricingData = [
-  {
-    packageName: "Undergraduate",
-    price: "35.75",
-    color: "#5588EE",
-  },
-  {
-    packageName: "Graduate",
-    price: "55.75",
-    color: "#5555EE",
-  },
-  {
-    packageName: "Young Professional",
-    price: "85.75",
-    color: "#8855EE",
-  },
-]
-
 export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {
-    return pricingData.map(({ packageName, color, price }) => (
-      <PricingCard color={color} key={packageName}>
-        <div className="Main">
-          <h1>{packageName} Photographs</h1>
-          <p>starting at</p>
-          <p className="Price">${price}*</p>
-          <a href={data.site.siteMetadata.bookingLink}>
-            <Button
-              bgColor={"#fff"}
-              color={"var(--color-primary)"}
-              aria-label="book now"
-            >
-              Book Now
-            </Button>
-          </a>
-        </div>
-        <PricingInfo>
-          <p>3 guaranteed images</p>
-          <p>30 minute photoshoot</p>
-          <p>2-3 business days delivery</p>
-          <p>*Location of choice (price varies)</p>
-        </PricingInfo>
-      </PricingCard>
-    ))
-  }, [data.site.siteMetadata.bookingLink])
+    return data.allPricesJson.edges.map(
+      ({ node: { color, id, packageName, price } }) => (
+        <PricingCard color={color} key={id}>
+          <div className="Main">
+            <h1>{packageName} Photographs</h1>
+            <p>starting at</p>
+            <p className="Price">${price}*</p>
+            <a href={data.site.siteMetadata.bookingLink}>
+              <Button
+                bgColor={"#fff"}
+                color={"var(--color-primary)"}
+                aria-label="book now"
+              >
+                Book Now
+              </Button>
+            </a>
+          </div>
+          <PricingInfo>
+            <p>3 guaranteed images</p>
+            <p>30 minute photoshoot</p>
+            <p>2-3 business days delivery</p>
+            <p>*Location of choice (price varies)</p>
+          </PricingInfo>
+        </PricingCard>
+      )
+    )
+  }, [data.site.siteMetadata.bookingLink, data.allPricesJson.edges])
   return (
     <div>
       <SEO title="Our Prices" />
@@ -175,6 +159,16 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         bookingLink
+      }
+    }
+    allPricesJson {
+      edges {
+        node {
+          id
+          packageName
+          price
+          color
+        }
       }
     }
   }
