@@ -38,6 +38,10 @@ const PricingCard = styled.div`
       margin-bottom: 2rem;
     }
 
+    h2 {
+      font-size: 1.7rem;
+    }
+
     p {
       line-height: 1.3;
       font-size: 1.4rem;
@@ -70,11 +74,17 @@ const PricingCard = styled.div`
 
 const PricingInfo = styled.div`
   background: white;
-  color: var(--color-text-dark);
-  font-size: 1.8rem;
+  color: var(--color-text-light);
+  font-size: 1.6rem;
   line-height: 1.7;
   padding: 3.5rem 1rem 3rem;
   text-align: center;
+
+  h2 {
+    color: ${({ color }) => color};
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-dark);
+  }
 `
 
 const LocationInfo = styled.section`
@@ -95,10 +105,12 @@ const LocationInfo = styled.section`
 export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {
     return data.allPricesJson.edges.map(
-      ({ node: { color, id, packageName, price } }) => (
+      ({
+        node: { id, color, price, packageName, packageTagname, packageDetails },
+      }) => (
         <PricingCard color={color} key={id}>
           <div className="Main">
-            <h1>{packageName} Photographs</h1>
+            <h1>{packageName}</h1>
             <p>starting at</p>
             <p className="Price">${price}*</p>
             <a href={data.site.siteMetadata.bookingLink}>
@@ -111,11 +123,11 @@ export default function Pricing({ data }) {
               </Button>
             </a>
           </div>
-          <PricingInfo>
-            <p>3 guaranteed images</p>
-            <p>30 minute photoshoot</p>
-            <p>2-3 business days delivery</p>
-            <p>*Location of choice (price varies)</p>
+          <PricingInfo color={color}>
+            <h2>{packageTagname}</h2>
+            {packageDetails.map((detailString, index) => (
+              <p key={index}>{detailString}</p>
+            ))}
           </PricingInfo>
         </PricingCard>
       )
@@ -164,8 +176,10 @@ export const pageQuery = graphql`
     allPricesJson {
       edges {
         node {
-          id
           packageName
+          packageTagname
+          packageDetails
+          id
           price
           color
         }

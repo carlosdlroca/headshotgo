@@ -12,7 +12,6 @@ export const FeaturesContainer = styled.section`
 export const Feature = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
-
   &:nth-of-type(even) {
     grid-template-columns: 3fr 1fr;
     .Illustration {
@@ -29,6 +28,7 @@ export const Feature = styled.div`
 
   & .Illustration {
     position: relative;
+    width: 90%;
     transform: scale(1);
     .Blob {
       position: absolute;
@@ -37,7 +37,7 @@ export const Feature = styled.div`
       height: 100%;
       width: 100%;
       z-index: -1;
-      transform: scale(1.5);
+      transform: scale(2);
     }
   }
 

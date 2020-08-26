@@ -27,8 +27,8 @@ export default styled.div`
       font-size: 3rem;
     }
 
-    @media only screen and (min-width: 50em) and (max-width: 65em) {
-      font-size: 2rem;
+    @media only screen and (min-width: 50em) {
+      font-size: 2.5rem;
     }
   }
 
