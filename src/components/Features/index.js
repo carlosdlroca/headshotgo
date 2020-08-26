@@ -40,6 +40,40 @@ export const Feature = styled.div`
       transform: scale(1.5);
     }
   }
+
+  @media only screen and (max-width: 47em) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &:nth-of-type(even) {
+      grid-template-columns: 1fr;
+      & > *:last-child {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        text-align: unset;
+      }
+    }
+
+    /* height: 65vh; */
+    .Illustration,
+    &:nth-of-type(even) .Illustration {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin: 0 auto;
+    }
+
+    .Illustration {
+      svg {
+        height: 16rem;
+        width: 16rem;
+      }
+    }
+
+    div {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  }
 `
 
 Feature.Content = styled.div`

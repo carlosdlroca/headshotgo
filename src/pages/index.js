@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
             <BlobBlue />
           </div>
           <Feature.Content>
-            <h1>This is some content</h1>
+            <h1>Tell a Story</h1>
             <p>
               This is text about some content that i think you would like to
               learn about
