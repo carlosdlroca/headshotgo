@@ -1,18 +1,48 @@
 [
     {
-        "name": "",
+        "name": "Juan Maya Hernandez",
         "title": "CEO",
-        "description": "",
+        "description": "Juan Maya Hernandez is a 20 year old entrepreneur, content creator, and photographer. As a current undergraduate student at UCLA, he is pursuing a Bachelor's of Science in Atmospheric & Oceanic Sciences/Mathematics. Hindered by his citizenship status, he has created opportunities for himself through his networking capabilities and his desire to learn. His status, his family, and friends motivate Juan to continue to pursue his goals and aspirations. He hopes to one day make a larger impact on his family and the undocumented community by becoming the first millionaire in his family.",
         "links": [
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/mayafilmz"
+            },
+            {
+                "name": "instagram",
+                "url": "https://www.instagram.com/mayafilmz/"
+            },
             {
                 "name": "linkedin",
                 "url": "https://linkedin.com"
             },
             {
-                "name": "myspace",
-                "url": "https://myspace.com"
+                "name": "facebook",
+                "url": "https://www.facebook.com/MayaFilmz/"
+            },
+            {
+                "name": "youtube",
+                "url": "https://www.youtube.com/channel/UCOKvLVp6g2ID4pGJQgegc4A?view_as=subscriber/"
+            },
+            {
+                "name": "email",
+                "url": "mailto:mayafilmsphotovideo@gmail.com"
             }
         ],
+        "avatar": {}
+    },
+    {
+        "name": "Damaris Esquivel",
+        "title": "Writer",
+        "description": "lorem ipsum",
+        "links": [],
+        "avatar": {}
+    },
+    {
+        "name": "Carlos De La Roca",
+        "title": "Web Developer",
+        "description": "n/a",
+        "links": [],
         "avatar": {}
     }
 ]
