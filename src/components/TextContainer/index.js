@@ -4,6 +4,11 @@ export default styled.section`
   width: 100%;
   text-align: center;
   padding: 6rem 0;
+
+  & > *:not(:last-child) {
+    margin-bottom: 2.2rem;
+  }
+
   h1 {
     font-size: clamp(5rem, 3vw, 6rem);
     color: var(--color-primary);
