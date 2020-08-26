@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
-import Jumbotron from "../components/Jumbotron"
 import Card from "../components/Card"
 import FullWidth from "../components/FullWidth"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
