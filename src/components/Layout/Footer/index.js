@@ -1,5 +1,8 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { FooterContainer, Copyright } from "./Styles"
+
+import Logo from "../../../images/HeadshotsOnTheGo.png"
 
 import TwitterSvg from "../../../images/socialmedia/twitter.svg"
 import InstagramSvg from "../../../images/socialmedia/instagram.svg"
@@ -8,42 +11,56 @@ import FacebookSvg from "../../../images/socialmedia/facebook.svg"
 import YoutubeSvg from "../../../images/socialmedia/youtube.svg"
 import EmailSvg from "../../../images/socialmedia/email.svg"
 
+const renderSvg = name => {
+  switch (name) {
+    case "instagram":
+      return <InstagramSvg />
+    case "facebook":
+      return <FacebookSvg />
+    case "linkedin":
+      return <LinkedInSvg />
+    case "email":
+      return <EmailSvg />
+    case "twitter":
+      return <TwitterSvg />
+    case "youtube":
+      return <YoutubeSvg />
+    default:
+      return null
+  }
+}
+
 export default function Footer() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          socialMedia {
+            instagram
+            linkedin
+            email
+          }
+        }
+      }
+    }
+  `)
+
+  const renderLinks = data => {
+    const { socialMedia } = data.site.siteMetadata
+    return Object.keys(socialMedia).map(name => (
+      <li aria-label={name} key={name}>
+        <a href={socialMedia[name]}>{renderSvg(name)}</a>
+      </li>
+    ))
+  }
   return (
     <FooterContainer>
-      <div id="footer-logo">Logo</div>
+      <div className="Logo">
+        <img src={Logo} alt="Headshots on the go" />
+      </div>
       <ul id="socialmedia">
         <h2>Follow us at: </h2>
-        <li aria-label="Twitter">
-          <a href="https://twitter.com/mayafilmz">
-            <TwitterSvg />
-          </a>
-        </li>
-        <li aria-label="Instagram">
-          <a href="https://www.instagram.com/mayafilmz/">
-            <InstagramSvg />
-          </a>
-        </li>
-        <li aria-label="Linked In">
-          <a href="https://www.linkedin.com/in/juan-maya-hernandez-075aa316b/">
-            <LinkedInSvg />
-          </a>
-        </li>
-        <li aria-label="Facebook">
-          <a href="https://www.facebook.com/MayaFilmz/">
-            <FacebookSvg />
-          </a>
-        </li>
-        <li aria-label="Youtube">
-          <a href="https://www.youtube.com/channel/UCOKvLVp6g2ID4pGJQgegc4A?view_as=subscriber/">
-            <YoutubeSvg />
-          </a>
-        </li>
-        <li aria-label="Email">
-          <a href="mailto:mayafilmsphotovideo@gmail.com">
-            <EmailSvg />
-          </a>
-        </li>
+        {renderLinks(data)}
       </ul>
       <Copyright>
         &copy;&nbsp;{new Date().getFullYear()}&nbsp; Headshot Go. All Rights
