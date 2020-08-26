@@ -19,16 +19,17 @@ export default styled.section`
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
-    width: 100%;
-    margin: 3rem 0;
+    grid-gap: 4rem;
+    width: min(95%, 112rem);
+    margin: 3rem auto;
 
     @media only screen and (max-width: 45.625em) {
       grid-template-columns: 1fr;
+      grid-row-gap: 4rem;
     }
 
     @media only screen and (min-width: 65em) {
-      padding: 6rem 12vw;
+      padding: 6rem 0;
     }
   }
 `
