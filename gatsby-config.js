@@ -1,10 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Headshot on the Go`,
-    description: `A mobile photography service that specializes in headshot photography services for undergraduate, graduate students, and young professionals.`,
+    title: `Headshots on the Go`,
+    description: `Helping young professionals accelerate their career by making sure they give the best first impression. Update your headshot profile picture today!`,
     author: `@mayafilmz`,
     email: "mayafilmsphotovideo@gmail.com",
     bookingLink: "https://square.site/book/PXQFBMDDJM5AJ/headshot-on-the-go",
+    socialMedia: {
+      instagram: "https://www.instagram.com/headshotonthego/",
+      linkedin: "https://www.linkedin.com/company/maya-films",
+      email: "mailto:mayafilmsphotovideo@gmail.com",
+    },
   },
   plugins: [
     `gatsby-plugin-react-svg`,
