@@ -79,12 +79,6 @@ const PricingInfo = styled.div`
   line-height: 1.7;
   padding: 3.5rem 1rem 3rem;
   text-align: center;
-
-  h2 {
-    color: ${({ color }) => color};
-    text-decoration: underline;
-    text-decoration-color: var(--color-text-dark);
-  }
 `
 
 const LocationInfo = styled.section`
@@ -110,7 +104,7 @@ export default function Pricing({ data }) {
       }) => (
         <PricingCard color={color} key={id}>
           <div className="Main">
-            <h1>{packageName}</h1>
+            <h1>{packageTagname}</h1>
             <p>starting at</p>
             <p className="Price">${price}*</p>
             <a href={data.site.siteMetadata.bookingLink}>
@@ -123,8 +117,7 @@ export default function Pricing({ data }) {
               </Button>
             </a>
           </div>
-          <PricingInfo color={color}>
-            <h2>{packageTagname}</h2>
+          <PricingInfo>
             {packageDetails.map((detailString, index) => (
               <p key={index}>{detailString}</p>
             ))}
