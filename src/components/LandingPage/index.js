@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(8, 0.2fr);
+  grid-template-rows: repeat(2, 0.5fr) repeat(4, 0.2fr) repeat(2, 0.5fr);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
 
@@ -54,7 +54,7 @@ export const ImageGrid = styled.div`
 
   @media only screen and (max-width: 91em) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1.5fr 1fr 1.5fr;
+    grid-template-rows: 0.7fr 1fr 0.7fr;
 
     .Image1 {
       grid-area: 1 / 1 / 2 / 2;
@@ -85,13 +85,7 @@ export const ImageGrid = styled.div`
   }
 
   @media only screen and (max-width: 50em) {
-    grid-template-rows: 0.4fr 1fr 0.4fr;
     grid-column-gap: 0.3rem;
-    .Image2,
-    .Image3,
-    .Image4 {
-      object-position: 45%;
-    }
   }
 `
 export const MiddleContent = styled.section`
