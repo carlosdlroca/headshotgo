@@ -8,15 +8,17 @@ import satisfactionPng from "../images/satisfaction_guarantee.png"
 import TextContainer from "../components/TextContainer"
 import Button from "../components/Button"
 import { FeaturesContainer, Feature } from "../components/Features"
+import { ImageGrid, MiddleContent } from "../components/LandingPage"
 
 import { FadeInContainer } from "../components/Animations/FadeIn"
 
 import ChoicesSvg from "../images/illustrations/choices-colour.svg"
 import UnlockSvg from "../images/illustrations/unlock.svg"
 import LevelUpSvg from "../images/illustrations/lifting-colour.svg"
-
 import BlobBlue from "../images/illustrations/BlobBlue.svg"
 import BlobPurple from "../images/illustrations/BlobPurple.svg"
+
+import LandingGridImage from "../components/LandingPage/LandingGridImage"
 
 const IndexPage = ({ data }) => {
   const renderPriceCards = useCallback(() => {
@@ -35,15 +37,27 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       <SEO title="Home" />
-      <TextContainer>
-        <FadeInContainer duration=".96s">
-          <h1>We are Headshots-on-the-GO!</h1>
-        </FadeInContainer>
-        <p>{data.site.siteMetadata.description}</p>
-        <Link to="/portfolio">
-          <Button>Visit Portfolio</Button>
-        </Link>
-      </TextContainer>
+      <ImageGrid>
+        <LandingGridImage imgName="Image1" />
+        <LandingGridImage imgName="Image2" />
+        <LandingGridImage imgName="Image3" />
+        <LandingGridImage imgName="Image4" />
+        <LandingGridImage imgName="Image5" />
+        <LandingGridImage imgName="Image6" />
+        <LandingGridImage imgName="Image7" />
+        <LandingGridImage imgName="Image8" />
+        <MiddleContent>
+          <TextContainer>
+            <FadeInContainer duration=".96s">
+              <h1>We are Headshots-on-the-GO!</h1>
+            </FadeInContainer>
+            <p>{data.site.siteMetadata.description}</p>
+            <Link to="/portfolio">
+              <Button>Visit Portfolio</Button>
+            </Link>
+          </TextContainer>
+        </MiddleContent>
+      </ImageGrid>
 
       <FeaturesContainer>
         <TextContainer>
@@ -77,20 +91,15 @@ const IndexPage = ({ data }) => {
         </Feature>
         <Feature>
           <div className="Illustration">
-            <BlobBlue />
             <LevelUpSvg />
+            <BlobBlue />
           </div>
           <Feature.Content>
             <h1>Level up your career</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur consequatur distinctio deleniti debitis consectetur
-              dolor explicabo, excepturi maxime! Illo optio non obcaecati
-              nostrum rem sint itaque, temporibus sunt deleniti nobis.Corrupti
-              veniam ut ipsam non doloribus neque. Adipisci dicta, rerum numquam
-              inventore laudantium commodi? Eligendi, quibusdam cumque debitis
-              vitae et quaerat consequatur expedita similique, fugit mollitia
-              quam cum recusandae impedit!
+              dolor expl.
             </p>
           </Feature.Content>
         </Feature>
