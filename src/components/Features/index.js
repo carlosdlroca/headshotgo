@@ -27,15 +27,19 @@ export const Feature = styled.div`
   }
 
   & .Illustration {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
     position: relative;
     width: 90%;
     transform: scale(1);
     .Blob {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
-      width: 100%;
       z-index: -1;
       transform: scale(2);
     }
@@ -44,6 +48,7 @@ export const Feature = styled.div`
   @media only screen and (max-width: 47em) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    display: grid;
 
     &:nth-of-type(even) {
       grid-template-columns: 1fr;
@@ -60,12 +65,19 @@ export const Feature = styled.div`
       grid-column: 1 / 2;
       grid-row: 1 / 2;
       margin: 0 auto;
+      position: relative;
+      .Blob {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1.5);
+      }
     }
 
     .Illustration {
       svg {
-        height: 16rem;
-        width: 16rem;
+        margin: 0 auto;
+        height: 16rem !important;
+        width: 16rem !important;
       }
     }
 
@@ -73,6 +85,10 @@ export const Feature = styled.div`
       grid-column: 1 / 2;
       grid-row: 2 / 3;
     }
+  }
+
+  @media only screen and (max-width: 42em) {
+    grid-row-gap: 3rem;
   }
 `
 
