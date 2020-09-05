@@ -7,11 +7,6 @@ export const ImageGrid = styled.div`
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
 
-  [class*="Image"] {
-    object-fit: cover;
-    object-position: 10%;
-  }
-
   .gatsby-image-wrapper {
     width: 100%;
     height: 100%;
@@ -69,9 +64,9 @@ export const ImageGrid = styled.div`
     background: linear-gradient(145deg, papayawhip, palevioletred);
   }
 
-  @media only screen and (max-width: 91em) {
+  @media only screen and (max-width: 65em) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.7fr 1fr 0.7fr;
+    grid-template-rows: 0.7fr 0.8fr 0.7fr;
 
     .Image1 {
       grid-area: 1 / 1 / 2 / 2;
@@ -108,13 +103,45 @@ export const ImageGrid = styled.div`
   }
 
   @media only screen and (max-width: 34.375em) {
-    grid-template-rows: 0.35fr 1fr 0.35fr;
+    grid-template-rows: 0.5fr 0.9fr 0.5fr;
+
+    .gatsby-image-wrapper {
+      img {
+        object-position: center 30% !important;
+      }
+    }
+
+    .Image3,
+    .Image6 {
+      img {
+        object-position: center center !important;
+      }
+    }
   }
 `
 export const MiddleContent = styled.section`
   grid-area: 3 / 3 / 7 / 9;
+  display: grid;
+  place-items: center;
+  h1 {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.7;
+    width: 70%;
+  }
 
-  @media only screen and (max-width: 91em) {
+  @media only screen and (max-width: 65em) {
     grid-area: 2 / 1/ 3 / 4;
+  }
+
+  @media only screen and (max-width: 34.5em) {
+    h1,
+    p,
+    a {
+      padding: 1.4rem 0;
+    }
   }
 `
