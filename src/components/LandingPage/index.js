@@ -106,6 +106,10 @@ export const ImageGrid = styled.div`
   @media only screen and (max-width: 50em) {
     grid-column-gap: 0.3rem;
   }
+
+  @media only screen and (max-width: 34.375em) {
+    grid-template-rows: 0.35fr 1fr 0.35fr;
+  }
 `
 export const MiddleContent = styled.section`
   grid-area: 3 / 3 / 7 / 9;
