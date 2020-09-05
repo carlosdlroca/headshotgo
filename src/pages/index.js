@@ -46,6 +46,8 @@ const IndexPage = ({ data }) => {
         <LandingGridImage imgName="Image6" />
         <LandingGridImage imgName="Image7" />
         <LandingGridImage imgName="Image8" />
+        <LandingGridImage imgName="Image9" />
+        <div className="Image10"></div>
         <MiddleContent>
           <TextContainer>
             <FadeInContainer duration=".96s">
