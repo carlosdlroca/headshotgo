@@ -26,13 +26,5 @@ export default function LandingGridImage(props) {
   )
   if (!match) return <span>no image</span>
 
-  const { node: { childImageSharp } = {} } = match
-  return (
-    <Img
-      fluid={childImageSharp.fluid}
-      {...props}
-      objectFit="cover"
-      className={props.imgName}
-    />
-  )
+  return <Img {...match.node.childImageSharp} className={props.imgName} />
 }
