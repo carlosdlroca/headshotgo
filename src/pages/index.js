@@ -1,9 +1,9 @@
-import React, { useCallback } from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
-import Card from "../components/Card"
 import FullWidth from "../components/FullWidth"
+import PageTitle from "../components/Pages/PageTitle"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
 import TextContainer from "../components/TextContainer"
 import Button from "../components/Button"
@@ -21,19 +21,6 @@ import BlobPurple from "../images/illustrations/BlobPurple.svg"
 import LandingGridImage from "../components/LandingPage/LandingGridImage"
 
 const IndexPage = ({ data }) => {
-  const renderPriceCards = useCallback(() => {
-    return data.allPricesJson.edges.map(
-      ({ node: { price, packageName, color, id } }) => (
-        <Card key={id} color={color}>
-          <h1>{packageName} Package</h1>
-          <p className="price">${price}</p>
-          <Link className="pricing-link" to="/pricing">
-            <Button>Learn more</Button>
-          </Link>
-        </Card>
-      )
-    )
-  }, [data.allPricesJson.edges])
   return (
     <div>
       <SEO title="Home" />
@@ -108,8 +95,10 @@ const IndexPage = ({ data }) => {
       </FeaturesContainer>
 
       <FullWidth>
-        <h1>Check out our Packages</h1>
-        <div className="cards">{renderPriceCards()}</div>
+        <PageTitle>Ready to Sign up?</PageTitle>
+        <Link to="/pricing">
+          <Button>View our Prices</Button>
+        </Link>
       </FullWidth>
 
       <img
