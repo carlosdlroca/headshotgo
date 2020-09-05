@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 export default function LandingGridImage(props) {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { relativePath: { regex: "/landing/" } }) {
+      allFile(filter: { relativePath: { regex: "/landingpage_images/" } }) {
         edges {
           node {
             id
