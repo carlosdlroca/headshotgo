@@ -32,8 +32,7 @@ export const Feature = styled.div`
     grid-template-rows: 1fr;
 
     position: relative;
-    width: 90%;
-    transform: scale(1);
+    width: 70%;
     .Blob {
       grid-row: 1 / 2;
       grid-column: 1 / 2;
@@ -41,7 +40,7 @@ export const Feature = styled.div`
       top: 0;
       left: 0;
       z-index: -1;
-      transform: scale(2);
+      transform: scale(1.7);
     }
   }
 
@@ -97,7 +96,7 @@ Feature.Content = styled.div`
   place-content: center;
   padding: 1rem 10rem;
   h1 {
-    font-size: clamp(2rem, 2.1vw, 3rem);
+    font-size: clamp(2.4rem, 2.6vw, 3.6rem);
     color: var(--color-primary);
   }
 
