@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { FadeInAnimation } from "../Animations/FadeIn"
 
 export default styled.h1`
-  font-size: 3.4rem;
+  font-size: clamp(2.5rem, 3.5vw, 4.2rem);
   text-align: center;
   color: var(--color-primary);
   margin: 3rem 0 5rem;
