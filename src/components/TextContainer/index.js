@@ -10,9 +10,9 @@ export default styled.section`
   }
 
   h1 {
-    font-size: clamp(5rem, 3vw, 6rem);
+    font-size: clamp(3.4rem, 2.5vw, 4rem);
     color: var(--color-primary);
-    line-height: 1.9;
+    line-height: 1.2;
   }
 
   p {
