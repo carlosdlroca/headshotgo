@@ -10,8 +10,6 @@ import Button from "../components/Button"
 import { FeaturesContainer, Feature } from "../components/Features"
 import { ImageGrid, MiddleContent } from "../components/LandingPage"
 
-import { FadeInContainer } from "../components/Animations/FadeIn"
-
 import ChoicesSvg from "../images/illustrations/choices-colour.svg"
 import UnlockSvg from "../images/illustrations/unlock.svg"
 import LevelUpSvg from "../images/illustrations/lifting-colour.svg"
@@ -36,15 +34,12 @@ const IndexPage = ({ data }) => {
         <LandingGridImage imgName="Image9" />
         <div className="Image10"></div>
         <MiddleContent>
-          <TextContainer>
-            <FadeInContainer duration=".96s">
-              <h1>We are Headshots-on-the-GO!</h1>
-            </FadeInContainer>
-            <p>{data.site.siteMetadata.description}</p>
-            <Link to="/portfolio">
-              <Button>Visit Portfolio</Button>
-            </Link>
-          </TextContainer>
+          <PageTitle>We are Headshots-on-the-GO!</PageTitle>
+
+          <p>{data.site.siteMetadata.description}</p>
+          <Link to="/portfolio">
+            <Button>Visit Portfolio</Button>
+          </Link>
         </MiddleContent>
       </ImageGrid>
 
