@@ -23,33 +23,50 @@ export const ImageGrid = styled.div`
     }
   }
 
+  /* Top Left */
   .Image1 {
     grid-area: 1 / 1 / 5 / 3;
   }
+  /* Bottom Left */
   .Image2 {
     grid-area: 5 / 1 / 9 / 3;
   }
+  /* Top Right  */
   .Image3 {
     grid-area: 1 / 9/ 5 / 11;
   }
+  /* Bottom Right  */
   .Image4 {
     grid-area: 5 / 9/ 9 / 11;
   }
 
+  /* Top Center Images Outer  */
   .Image5 {
     grid-area: 1 / 3 / 3 / 5;
   }
 
   .Image6 {
-    grid-area: 1 / 7/ 3 / 9;
+    grid-area: 1 / 7 / 3 / 9;
   }
 
+  /* Bottom Center Images Outer  */
   .Image7 {
     grid-area: -3 / 3 / -1 / 5;
   }
 
   .Image8 {
     grid-area: -3 / 7/ -1 /9;
+  }
+
+  /* Top Center Picture */
+  .Image9 {
+    grid-area: 1 / 5 / 3/ 7;
+  }
+
+  /* Bottom Center Picture  */
+  .Image10 {
+    grid-area: -3/ 5/ -1 / 7;
+    background: linear-gradient(145deg, papayawhip, palevioletred);
   }
 
   @media only screen and (max-width: 91em) {
@@ -78,7 +95,9 @@ export const ImageGrid = styled.div`
     }
 
     .Image7,
-    .Image8 {
+    .Image8,
+    .Image9,
+    .Image10 {
       display: none;
       visibility: hidden;
     }
