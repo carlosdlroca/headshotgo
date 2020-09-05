@@ -20,6 +20,18 @@ export default createGlobalStyle`
     html {
         font-size: 62.5%;
         font-family: 'Roboto', sans-serif;
+
+        @media only screen and (max-width: 65em) {
+            font-size: 56.25%;
+        }
+
+        @media only screen and (max-width: 55em) {
+            font-size: 50%;
+        }
+
+        @media only screen and (max-width: 45em) {
+            font-size: 43.75%;
+        }
     }
 
     a {
