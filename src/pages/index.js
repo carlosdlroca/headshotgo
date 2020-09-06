@@ -82,8 +82,7 @@ const IndexPage = ({ data }) => {
             <h1>Level up your career</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur consequatur distinctio deleniti debitis consectetur
-              dolor expl.
+              Aspernatur.
             </p>
           </Feature.Content>
         </Feature>

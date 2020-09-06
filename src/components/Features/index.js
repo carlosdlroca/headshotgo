@@ -11,9 +11,9 @@ export const FeaturesContainer = styled.section`
 
 export const Feature = styled.div`
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 3.2fr;
   &:nth-of-type(even) {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3.2fr 1fr;
     .Illustration {
       grid-row: 1 / 2;
       grid-column: 2 / 3;
@@ -23,6 +23,10 @@ export const Feature = styled.div`
       grid-row: 1 / 2;
       grid-column: 1 / 2;
       text-align: right;
+
+      @media only screen and (min-width: 50em) {
+        justify-self: end;
+      }
     }
   }
 
@@ -96,12 +100,12 @@ Feature.Content = styled.div`
   place-content: center;
   padding: 1rem 10rem;
   h1 {
-    font-size: clamp(2.4rem, 2.6vw, 3.6rem);
+    font-size: clamp(3rem, 2.6vw, 3.6rem);
     color: var(--color-primary);
   }
 
   p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--color-text-light);
   }
 `
