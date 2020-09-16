@@ -6,7 +6,7 @@ module.exports = {
     email: "mayafilmsphotovideo@gmail.com",
     bookingLink: "https://square.site/book/PXQFBMDDJM5AJ/headshot-on-the-go",
     socialMedia: {
-      instagram: "https://www.instagram.com/headshotonthego/",
+      instagram: "https://www.instagram.com/headshotsonthego/",
       linkedin: "https://www.linkedin.com/company/maya-films",
       email: "mailto:mayafilmsphotovideo@gmail.com",
     },
