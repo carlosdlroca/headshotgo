@@ -15,14 +15,20 @@ export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {
     return data.allPricesJson.edges.map(
       ({
-        node: { id, color, price, packageName, packageTagname, packageDetails },
+        node: { id, color, price, packageName, packageDetails, psRetouch },
       }) => (
         <PricingCard color={color} key={id}>
           <div className="Main">
-            <h1>{packageTagname}</h1>
+            <h1>{packageName}</h1>
             <p>starting at</p>
-            <p className="Price">${price}*</p>
-            <a href={data.site.siteMetadata.bookingLink}>
+            <p className="Price">
+              <sup>$</sup>
+              {price}*
+            </p>
+            <a
+              className="BookNowLink"
+              href={data.site.siteMetadata.bookingLink}
+            >
               <Button
                 bgColor={"#fff"}
                 color={"var(--color-primary)"}
@@ -36,6 +42,7 @@ export default function Pricing({ data }) {
             {packageDetails.map((detailString, index) => (
               <p key={index}>{detailString}</p>
             ))}
+            {psRetouch && <p className="psRetouch">Photoshop skin retouch</p>}
           </PricingInfo>
         </PricingCard>
       )
@@ -45,30 +52,38 @@ export default function Pricing({ data }) {
     <div>
       <SEO title="Our Prices" />
       <PageTitle>Our Packages</PageTitle>
-      <PricingCards>{renderPrices()}</PricingCards>
+      <PricingCards>
+        {renderPrices()}
+        <p className="LocationComment">
+          *Location of Choice (price varies)
+          <br />
+          See pricing below
+        </p>
+      </PricingCards>
       <LocationInfo>
         <h1>Location Prices</h1>
         <ol>
           <li>
-            UCLA/Westwood area, USC, LACC, LAFS, and other colleges/locations{" "}
-            <strong>1-10 miles</strong> from KTLA, free
+            If the location is <strong>1-5 miles</strong> from Mid City, Los
+            Angeles then you will <strong>NOT</strong> be charged a
+            transportation fee.
           </li>
           <li>
-            <strong>11 - 30 miles</strong> from KTLA (
-            <em>not including Westwood/UCLA area</em>
-            ), I charge <strong>$0.25 / mile</strong>
+            If the location is <strong>6-10 miles</strong> from Mid City, Los
+            Angeles then you will be charged <strong>$0.50/mile</strong>.
+            <p>bring 1 friend to the shoot to opt out of this fee</p>
           </li>
           <li>
-            <strong>31 - 50 miles</strong> from KTLA, I charge{" "}
-            <strong>$0.50 / mile</strong>
+            If the location is <strong>11-30 miles</strong> from Mid City, Los
+            Angeles then you will be charged <strong>$0.75/mile</strong>.
+            <p>bring 2 friends to the shoot to opt out of this fee.</p>
+          </li>
+          <li>
+            If the location is <strong>31-50 miles</strong> from Mid City, Los
+            Angeles then you will be charged <strong>$1.00/mile</strong>.
+            <p>bring 3+ friends to the shoot to opt out of this fee</p>
           </li>
         </ol>
-        <p>
-          <em>
-            * Location cost will not apply if you bring 3 more friends with you
-            to the shoot and have them book me on the same day.
-          </em>
-        </p>
       </LocationInfo>
     </div>
   )
@@ -85,11 +100,11 @@ export const pageQuery = graphql`
       edges {
         node {
           packageName
-          packageTagname
           packageDetails
           id
           price
           color
+          psRetouch
         }
       }
     }
