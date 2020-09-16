@@ -56,8 +56,10 @@ const IndexPage = ({ data }) => {
           <Feature.Content>
             <h1>Tell a Story</h1>
             <p>
-              This is text about some content that i think you would like to
-              learn about
+              First impressions matter! Someone will judge and make a decision
+              about your character within seconds of meeting you. Decide your
+              narrative for yourself, and showcase the qualities and personality
+              you want your audience to see!
             </p>
           </Feature.Content>
         </Feature>
@@ -69,8 +71,11 @@ const IndexPage = ({ data }) => {
           <Feature.Content>
             <h1>Unlock New Possibilities</h1>
             <p>
-              This is text about some content that i think you would like to
-              learn about
+              Would you want to hire someone who looked unhygienic, distracted,
+              unprepared, or as if they didn’t have the drive to do work?
+              Chances are you decided no. Providing employers and your
+              networking accounts with professional representation of yourself
+              increases the probability of people being more interested in you.
             </p>
           </Feature.Content>
         </Feature>
@@ -82,8 +87,10 @@ const IndexPage = ({ data }) => {
           <Feature.Content>
             <h1>Level up your career</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur.
+              You have to look the part to be the part! While having the
+              knowledge and expertise in your field is important, it’s equally
+              important to reflect the level of professionalism you hold. Think
+              of your headshot as the finishing cherry on top of your career!
             </p>
           </Feature.Content>
         </Feature>
