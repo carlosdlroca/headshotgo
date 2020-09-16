@@ -24,12 +24,6 @@ export default function Navbar({ openSidebar }) {
           <Link to="/portfolio">Our Work</Link>
         </NavbarLink>
         <NavbarLink>
-          <Link to="/who-we-are">Who We Are</Link>
-        </NavbarLink>
-        <NavbarLink>
-          <Link to="/team">Our Team</Link>
-        </NavbarLink>
-        <NavbarLink>
           <Link to="/pricing">Pricing</Link>
         </NavbarLink>
       </NavbarLinks>

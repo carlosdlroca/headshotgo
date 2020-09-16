@@ -18,12 +18,6 @@ function Sidebar({ isOpen, closeSidebar }) {
         <Link onClick={closeSidebar} to="/portfolio">
           Our Work
         </Link>
-        <Link onClick={closeSidebar} to="/who-we-are">
-          Who We Are
-        </Link>
-        <Link onClick={closeSidebar} to="/team">
-          Our Team
-        </Link>
         <Link onClick={closeSidebar} to="/pricing">
           Pricing
         </Link>
