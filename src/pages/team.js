@@ -135,7 +135,6 @@ function renderIcon(linkType) {
 }
 
 function renderTeamMembers(data) {
-  console.table(data)
   return data.allTeamsJson.edges.map(
     ({ node: { memberName, memberTitle, memberDescription, memberLinks } }) => (
       <TeamMemberContainer key={memberName}>
