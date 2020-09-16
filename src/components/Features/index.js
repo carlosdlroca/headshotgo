@@ -105,7 +105,7 @@ Feature.Content = styled.div`
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--color-text-light);
   }
 `
