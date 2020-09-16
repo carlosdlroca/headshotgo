@@ -61,7 +61,6 @@ export const ImageGrid = styled.div`
   /* Bottom Center Picture  */
   .Image10 {
     grid-area: -3/ 5/ -1 / 7;
-    background: linear-gradient(145deg, papayawhip, palevioletred);
   }
 
   @media only screen and (max-width: 65em) {
