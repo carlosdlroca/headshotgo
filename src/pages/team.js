@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import FullWidth from "../components/FullWidth"
 import SEO from "../components/seo"
 import PageTitle from "../components/Pages/PageTitle"
@@ -20,10 +21,11 @@ const TeamMembers = styled.div``
 const TeamMemberContainer = styled(FullWidth)`
   display: grid;
   grid-template-columns: 0.5fr 1fr;
-  padding-left: 12vw;
-  padding-right: 12vw;
-
+  padding: 2rem 5vw;
+  --clip1: 14%;
+  --clip2: calc(100% - var(--clip1));
   .TeamMemberImage {
+    width: 85%;
     svg {
       height: 80%;
       width: 80%;
@@ -33,16 +35,19 @@ const TeamMemberContainer = styled(FullWidth)`
   .TeamMemberInformation {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     line-height: 1.7;
     .Name {
+      font-size: clamp(3rem, 3vw, 3.1rem);
+      color: var(--color-primary);
       text-decoration: underline;
     }
 
     .Description {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
+      color: var(--color-text-light);
     }
 
     .Links {
@@ -59,7 +64,7 @@ const TeamMemberContainer = styled(FullWidth)`
 
   &:nth-of-type(2n) {
     grid-template-columns: 1fr 0.5fr;
-    background-color: white;
+    background: none;
     .TeamMemberImage {
       grid-column: 2 / span 1;
     }
@@ -72,125 +77,112 @@ const TeamMemberContainer = styled(FullWidth)`
   &:nth-of-type(2n + 1) {
     padding-top: 10rem;
     padding-bottom: 10rem;
-    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% var(--clip1), 100% var(--clip2), 0 100%);
   }
 
   &:first-child {
     padding-bottom: 10rem;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% var(--clip2), 0 100%);
   }
 
   &:last-child {
     padding-top: 10rem;
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% var(--clip1), 100% 100%, 0 100%);
   }
 
-  @media only screen and (max-width: 47.25em) {
+  @media only screen and (max-width: 52.4em) {
     &&& {
       grid-template-columns: 1fr;
-      grid-template-rows: 0.6fr 1fr;
-
+      grid-template-rows: 0.8fr 1fr;
+      clip-path: unset;
+      padding: 2rem 2vw;
       .TeamMemberImage {
         grid-column: 1 / -1;
-        grid-row: 1 / span 1;
+        grid-row: 1 / 2;
+        width: 50%;
+        margin: 0 auto;
       }
 
       .TeamMemberInformation {
-        grid-row: 2 / -1;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        font-size: 2rem;
+        .Name {
+          /* font-size: 4rem; */
+        }
       }
     }
   }
 `
 
-export default function OurTeam() {
+function renderIcon(linkType) {
+  switch (linkType) {
+    case "twitter":
+      return <TwitterSvg />
+    case "instagram":
+      return <InstagramSvg />
+    case "linkedin":
+      return <LinkedInSvg />
+    case "facebook":
+      return <FacebookSvg />
+    case "youtube":
+      return <YoutubeSvg />
+    case "email":
+      return <EmailSvg />
+    default:
+      return null
+  }
+}
+
+function renderTeamMembers(data) {
+  console.table(data)
+  return data.allTeamsJson.edges.map(
+    ({ node: { memberName, memberTitle, memberDescription, memberLinks } }) => (
+      <TeamMemberContainer key={memberName}>
+        <div className="TeamMemberImage"></div>
+        <section className="TeamMemberInformation">
+          <h1 className="Name">{memberName}</h1>
+          <h2 className="Title">{memberTitle}</h2>
+          <p className="Description">{memberDescription}</p>
+          <ul className="Links">
+            {memberLinks &&
+              memberLinks.length > 0 &&
+              memberLinks.map(({ linkType, linkUrl }) => (
+                <li className="Link" key={linkUrl}>
+                  <a href={linkUrl}>{renderIcon(linkType)}</a>
+                </li>
+              ))}
+          </ul>
+        </section>
+      </TeamMemberContainer>
+    )
+  )
+}
+
+export default function OurTeam({ data }) {
   return (
     <>
       <SEO title="Our Team" />
       <PageTitle>Meet Our Team</PageTitle>
-      <TeamMembers>
-        <TeamMemberContainer>
-          <div className="TeamMemberImage">
-            <Peep1 />
-          </div>
-          <section className="TeamMemberInformation">
-            <h1 className="Name">Juan Maya Hernandez</h1>
-            <h2 className="Description">
-              Juan Maya Hernandez is a 20 year old entrepreneur, content
-              creator, and photographer. As a current undergraduate student at
-              UCLA, he is pursuing a Bachelor's of Science in Atmospheric &
-              Oceanic Sciences/Mathematics. Hindered by his citizenship status,
-              he has created opportunities for himself through his networking
-              capabilities and his desire to learn. His status, his family, and
-              friends motivate Juan to continue to pursue his goals and
-              aspirations. He hopes to one day make a larger impact on his
-              family and the undocumented community by becoming the first
-              millionaire in his family.
-            </h2>
-            <ul className="Links">
-              <li className="Link" aria-label="Twitter">
-                <a href="https://twitter.com/mayafilmz">
-                  <TwitterSvg />
-                </a>
-              </li>
-              <li className="Link" aria-label="Instagram">
-                <a href="https://www.instagram.com/mayafilmz/">
-                  <InstagramSvg />
-                </a>
-              </li>
-              <li className="Link" aria-label="Linked In">
-                <a href="https://www.linkedin.com/in/juan-maya-hernandez-075aa316b/">
-                  <LinkedInSvg />
-                </a>
-              </li>
-              <li className="Link" aria-label="Facebook">
-                <a href="https://www.facebook.com/MayaFilmz/">
-                  <FacebookSvg />
-                </a>
-              </li>
-              <li className="Link" aria-label="Youtube">
-                <a href="https://www.youtube.com/channel/UCOKvLVp6g2ID4pGJQgegc4A?view_as=subscriber/">
-                  <YoutubeSvg />
-                </a>
-              </li>
-              <li className="Link" aria-label="Email">
-                <a href="mailto:mayafilmsphotovideo@gmail.com">
-                  <EmailSvg />
-                </a>
-              </li>
-            </ul>
-          </section>
-        </TeamMemberContainer>
-        <TeamMemberContainer>
-          <div className="TeamMemberImage">
-            <Peep2 />
-          </div>
-          <section className="TeamMemberInformation">
-            <h1 className="Name">Damaris Esquivel</h1>
-            <h2 className="Description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              consequuntur, eum blanditiis ad possimus eius et accusantium omnis
-              suscipit qui earum culpa quo aspernatur nobis illo quasi in iure!
-              Magnam.
-            </h2>
-            <ul className="Links"></ul>
-          </section>
-        </TeamMemberContainer>
-        <TeamMemberContainer>
-          <div className="TeamMemberImage">
-            <Peep3 />
-          </div>
-          <section className="TeamMemberInformation">
-            <h1 className="Name">Carlos De La Roca</h1>
-            <h2 className="Description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              consequuntur, eum blanditiis ad possimus eius et accusantium omnis
-              suscipit qui earum culpa quo aspernatur nobis illo quasi in iure!
-              Magnam.
-            </h2>
-            <ul className="Links"></ul>
-          </section>
-        </TeamMemberContainer>
-      </TeamMembers>
+      <TeamMembers>{renderTeamMembers(data)}</TeamMembers>
     </>
   )
 }
+
+export const pageQuery = graphql`
+  query {
+    allTeamsJson {
+      edges {
+        node {
+          memberName
+          memberTitle
+          memberDescription
+          memberLinks {
+            linkType
+            linkUrl
+          }
+        }
+      }
+    }
+  }
+`
