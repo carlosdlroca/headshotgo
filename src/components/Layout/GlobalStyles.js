@@ -34,6 +34,10 @@ export default createGlobalStyle`
         }
     }
 
+    body {
+        background-color: #fdfdff;
+    }
+
     a {
         text-decoration: none;
     }
