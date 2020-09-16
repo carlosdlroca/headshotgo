@@ -4,7 +4,7 @@ export const SidebarContainer = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100vh;
-  width: min(80vw, 30rem);
+  width: min(80vw, 35rem);
 
   position: fixed;
   top: 0;
@@ -43,9 +43,9 @@ export const SidebarContent = styled.li`
   a {
     border-radius: 0.5rem;
     color: var(--color-secondary);
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
     margin-bottom: 1.5rem;
     transition: all 0.2s ease-out;
     &:hover,
@@ -53,5 +53,10 @@ export const SidebarContent = styled.li`
       background-color: var(--color-quaternary);
       color: var(--color-primary);
     }
+  }
+
+  img {
+    width: 50%;
+    margin: auto auto 0;
   }
 `
