@@ -32,6 +32,7 @@ const IndexPage = ({ data }) => {
         <LandingGridImage imgName="Image7" />
         <LandingGridImage imgName="Image8" />
         <LandingGridImage imgName="Image9" />
+        <LandingGridImage imgName="Image10" />
         <div className="Image10"></div>
         <MiddleContent>
           <PageTitle>We are Headshots-on-the-GO!</PageTitle>
