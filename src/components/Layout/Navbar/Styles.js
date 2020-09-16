@@ -4,7 +4,7 @@ export const NavbarContainer = styled.nav`
   position: sticky;
   top: 0;
   z-index: 98;
-  padding: 0.5rem 3rem;
+  padding: 1.2rem 3rem;
 
   display: flex;
   align-items: center;
@@ -14,8 +14,8 @@ export const NavbarContainer = styled.nav`
 
   .Logo {
     img {
-      width: 7rem;
-      height: 7rem;
+      height: 11rem;
+      width: 11rem;
     }
   }
 
@@ -23,6 +23,7 @@ export const NavbarContainer = styled.nav`
     svg,
     svg path {
       fill: var(--color-primary);
+      cursor: pointer;
     }
     @media only screen and (min-width: 65.63em) {
       display: none;
