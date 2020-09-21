@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Form = styled.form`
-  width: min(95vw, 110rem);
+  width: min(95vw, 90rem);
   margin: 0 auto;
 
   button {
