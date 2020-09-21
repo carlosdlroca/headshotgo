@@ -1,7 +1,55 @@
 import styled from "styled-components"
 
-export const Form = styled.form``
-export const InputGroup = styled.p``
-export const Label = styled.label``
-export const Input = styled.input``
-export const TextArea = styled.textarea``
+export const Form = styled.form`
+  width: min(95vw, 110rem);
+  margin: 0 auto;
+
+  button {
+    border-radius: 0.4rem;
+    @media only screen and (max-width: 50em) {
+      font-size: 3rem;
+    }
+  }
+`
+export const InputGroup = styled.p`
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: 50em) {
+      margin-bottom: 5rem;
+    }
+  }
+`
+export const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: clamp(2.1rem, 2.3vw, 2rem);
+
+  @media only screen and (max-width: 50em) {
+    font-size: 3rem;
+  }
+`
+export const Input = styled.input`
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: 500;
+  width: 100%;
+  &:focus {
+    outline-color: var(--color-primary);
+  }
+  @media only screen and (max-width: 50em) {
+    font-size: 2.5rem;
+  }
+`
+export const TextArea = styled.textarea`
+  font-size: 2rem;
+  padding: 0.4rem;
+  width: 100%;
+  min-height: 15rem;
+
+  @media only screen and (max-width: 50em) {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+`
