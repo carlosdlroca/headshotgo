@@ -11,6 +11,7 @@ export default function ContactPage() {
       <SEO title="Contact" />
       <PageTitle>Contact Us</PageTitle>
       <Form name="contact" method="POST" data-netlify="true" action="/contact">
+        <input type="hidden" name="form-name" value="contact" />
         <InputGroup>
           <Label>
             Name
