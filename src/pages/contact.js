@@ -10,7 +10,7 @@ export default function ContactPage() {
     <ContactPageContainer>
       <SEO title="Contact" />
       <PageTitle>Contact Us</PageTitle>
-      <Form name="contact" method="POST" data-netlify="true">
+      <Form name="contact" method="POST" data-netlify="true" netlify>
         <InputGroup>
           <Label>
             Name
