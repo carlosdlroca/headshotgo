@@ -22,6 +22,9 @@ function Sidebar({ isOpen, closeSidebar }) {
         <Link onClick={closeSidebar} to="/pricing">
           Pricing
         </Link>
+        <Link onClick={closeSidebar} to="/contact">
+          Contact Us
+        </Link>
         <img src={Logo} alt="Headshot-on-the-go" />
       </SidebarContent>
     </SidebarContainer>

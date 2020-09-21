@@ -26,6 +26,9 @@ export default function Navbar({ openSidebar }) {
         <NavbarLink>
           <Link to="/pricing">Pricing</Link>
         </NavbarLink>
+        <NavbarLink>
+          <Link to="/contact">Contact</Link>
+        </NavbarLink>
       </NavbarLinks>
     </NavbarContainer>
   )
