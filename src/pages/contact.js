@@ -40,7 +40,7 @@ export default function ContactPage() {
           </Label>
         </InputGroup>
         <InputGroup>
-          <Button type="submit">Submit</Button>
+          <Button>Submit</Button>
         </InputGroup>
       </Form>
     </ContactPageContainer>
