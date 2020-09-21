@@ -3,20 +3,13 @@ import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
 import FullWidth from "../components/FullWidth"
-import PageTitle from "../components/Pages/PageTitle"
+import PageTitle from "../PageComponents/PageTitle"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
-import TextContainer from "../components/TextContainer"
+import TextContainer from "../PageComponents/TextContainer"
 import Button from "../components/Button"
-import { FeaturesContainer, Feature } from "../components/Features"
-import { ImageGrid, MiddleContent } from "../components/LandingPage"
+import { ImageGrid, MiddleContent } from "../PageComponents/LandingPage"
 
-import ChoicesSvg from "../images/illustrations/choices-colour.svg"
-import UnlockSvg from "../images/illustrations/unlock.svg"
-import LevelUpSvg from "../images/illustrations/lifting-colour.svg"
-import BlobBlue from "../images/illustrations/BlobBlue.svg"
-import BlobPurple from "../images/illustrations/BlobPurple.svg"
-
-import LandingGridImage from "../components/LandingPage/LandingGridImage"
+import LandingGridImage from "../PageComponents/LandingPage/LandingGridImage"
 
 const IndexPage = ({ data }) => {
   return (
@@ -33,7 +26,6 @@ const IndexPage = ({ data }) => {
         <LandingGridImage imgName="Image8" />
         <LandingGridImage imgName="Image9" />
         <LandingGridImage imgName="Image10" />
-        <div className="Image10"></div>
         <MiddleContent>
           <PageTitle>We are Headshots-on-the-GO!</PageTitle>
 
@@ -43,58 +35,6 @@ const IndexPage = ({ data }) => {
           </Link>
         </MiddleContent>
       </ImageGrid>
-
-      <FeaturesContainer>
-        <TextContainer>
-          <h1>Why Headshot photography?</h1>
-        </TextContainer>
-        <Feature>
-          <div className="Illustration">
-            <ChoicesSvg />
-            <BlobBlue />
-          </div>
-          <Feature.Content>
-            <h1>Tell a Story</h1>
-            <p>
-              First impressions matter! Someone will judge and make a decision
-              about your character within seconds of meeting you. Decide your
-              narrative for yourself, and showcase the qualities and personality
-              you want your audience to see!
-            </p>
-          </Feature.Content>
-        </Feature>
-        <Feature>
-          <div className="Illustration">
-            <UnlockSvg />
-            <BlobPurple />
-          </div>
-          <Feature.Content>
-            <h1>Unlock New Possibilities</h1>
-            <p>
-              Would you want to hire someone who looked unhygienic, distracted,
-              unprepared, or as if they didn’t have the drive to do work?
-              Chances are you decided no. Providing employers and your
-              networking accounts with professional representation of yourself
-              increases the probability of people being more interested in you.
-            </p>
-          </Feature.Content>
-        </Feature>
-        <Feature>
-          <div className="Illustration">
-            <LevelUpSvg />
-            <BlobBlue />
-          </div>
-          <Feature.Content>
-            <h1>Level up your career</h1>
-            <p>
-              You have to look the part to be the part! While having the
-              knowledge and expertise in your field is important, it’s equally
-              important to reflect the level of professionalism you hold. Think
-              of your headshot as the finishing cherry on top of your career!
-            </p>
-          </Feature.Content>
-        </Feature>
-      </FeaturesContainer>
 
       <FullWidth>
         <PageTitle>Ready to Sign up?</PageTitle>

@@ -1,7 +1,7 @@
 import React from "react"
 import Gallery from "../components/Gallery"
 import SEO from "../components/seo"
-import PageTitle from "../components/Pages/PageTitle"
+import PageTitle from "../PageComponents/PageTitle"
 
 export default function PortfolioPage() {
   return (

@@ -1,15 +1,15 @@
 import React, { useCallback } from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import PageTitle from "../components/Pages/PageTitle"
+import PageTitle from "../PageComponents/PageTitle"
 import Button from "../components/Button"
 
 import {
   PricingCards,
   PricingCard,
   PricingInfo,
-} from "../components/Pages/pricing/PricingCard"
-import { LocationInfo } from "../components/Pages/pricing/LocationInfo"
+} from "../PageComponents/Pricing/PricingCard"
+import { LocationInfo } from "../PageComponents/Pricing/LocationInfo"
 
 export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {

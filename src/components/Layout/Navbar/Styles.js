@@ -17,6 +17,13 @@ export const NavbarContainer = styled.nav`
       height: 11rem;
       width: 11rem;
     }
+
+    @media only screen and (min-width: 60em) {
+      img {
+        height: 7rem;
+        width: 7rem;
+      }
+    }
   }
 
   #openSidebarButton {

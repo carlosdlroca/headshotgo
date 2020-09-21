@@ -1,7 +1,7 @@
 import React from "react"
 
 import SEO from "../components/seo"
-import TextContainer from "../components/TextContainer"
+import TextContainer from "../PageComponents/TextContainer"
 import Button from "../components/Button"
 import { Link } from "gatsby"
 

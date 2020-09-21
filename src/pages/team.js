@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import FullWidth from "../components/FullWidth"
 import SEO from "../components/seo"
-import PageTitle from "../components/Pages/PageTitle"
+import PageTitle from "../PageComponents/PageTitle"
 import styled from "styled-components"
 
 import TwitterSvg from "../images/socialmedia/twitter.svg"

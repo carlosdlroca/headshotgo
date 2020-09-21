@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
-import { ContactPageContainer } from "../components/Pages/Contact"
+import { ContactPageContainer } from "../PageComponents/Contact"
 import { Form, InputGroup, Label, Input, TextArea } from "../components/Form"
 import Button from "../components/Button"
 

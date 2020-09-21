@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { FadeInAnimation } from "../Animations/FadeIn"
+import { FadeInAnimation } from "../components/Animations/FadeIn"
 
 export default styled.h1`
   font-size: clamp(3.4rem, 2.5vw, 4rem);
