@@ -33,7 +33,10 @@ export default function Layout({ children }) {
     <AppContainer>
       <GlobalStyles />
       <Helmet>
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+        <link
+          href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
       <Navbar openSidebar={openSidebar} />
       <MainContent>{children}</MainContent>
