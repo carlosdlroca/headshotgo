@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(2, 0.5fr) repeat(4, 0.2fr) repeat(2, 0.5fr);
+  grid-template-rows: repeat(2, 0.5fr) repeat(4, 0.3fr) repeat(2, 0.5fr);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
 
@@ -152,11 +152,19 @@ export const ThreeItems = styled.section`
   align-items: center;
   padding: 10rem 2rem;
 
+  background: #fdfdff;
+  border-radius: 1rem;
+  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
+
+  width: 80%;
+  margin: 1rem auto 20rem;
+
   .Item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
     .ItemTitle {
       font-size: clamp(3.1rem, 2vw, 3.6rem);
       margin-bottom: 2rem;
@@ -169,14 +177,8 @@ export const ThreeItems = styled.section`
     }
 
     .ItemDescription {
-      font-size: 2rem;
+      font-size: 1.6rem;
       padding: 1rem 1.3rem;
-      &:before {
-        content: "";
-        display: inline-block;
-        width: 4rem;
-        height: 2rem;
-      }
     }
 
     @media only screen and (max-width: 50em) {
@@ -186,12 +188,12 @@ export const ThreeItems = styled.section`
       }
 
       .ItemDescription {
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
   }
 
-  @media only screen and (max-width: 39em) {
+  @media only screen and (max-width: 50em) {
     grid-template-columns: 1fr;
     grid-row-gap: 20rem;
   }
