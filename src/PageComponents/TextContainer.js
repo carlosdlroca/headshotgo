@@ -12,9 +12,7 @@ export default styled.section`
   h1 {
     font-size: clamp(3.4rem, 2.5vw, 4rem);
     line-height: 1.2;
-    background-image: linear-gradient(45deg, #845ec2, #00c9a7);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: var(--color-primary);
   }
 
   p {
