@@ -150,18 +150,21 @@ export const ThreeItems = styled.section`
   grid-gap: 5rem;
   align-items: center;
   padding: 10rem 2rem;
+
   .Item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     .ItemTitle {
-      font-size: 3rem;
+      font-size: clamp(3.1rem, 2vw, 3.6rem);
+      margin-bottom: 10rem;
     }
 
     .ItemIcon {
       width: min(20rem, 25vw);
       height: min(20rem, 25vw);
+      margin-bottom: 6rem;
     }
 
     .ItemDescription {
@@ -172,6 +175,17 @@ export const ThreeItems = styled.section`
         display: inline-block;
         width: 4rem;
         height: 2rem;
+      }
+    }
+
+    @media only screen and (max-width: 50em) {
+      grid-column-gap: 0;
+      .ItemTitle {
+        font-size: 3.2rem;
+      }
+
+      .ItemDescription {
+        font-size: 2.4rem;
       }
     }
   }
