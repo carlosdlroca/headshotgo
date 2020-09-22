@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
 import FullWidth from "../components/FullWidth"
+import TextContainer from "../PageComponents/TextContainer"
 import PageTitle from "../PageComponents/PageTitle"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
 import Button from "../components/Button"
@@ -42,6 +43,10 @@ const IndexPage = ({ data }) => {
           </Link>
         </MiddleContent>
       </ImageGrid>
+
+      <TextContainer style={{ marginTop: "5rem" }}>
+        <h1>Why choose us?</h1>
+      </TextContainer>
 
       <ThreeItems>
         <div className="Item">
