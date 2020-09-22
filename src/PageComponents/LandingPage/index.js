@@ -123,6 +123,7 @@ export const MiddleContent = styled.section`
   display: grid;
   place-items: center;
   h1 {
+    font-size: 6rem;
     margin-bottom: 0;
   }
   p {
