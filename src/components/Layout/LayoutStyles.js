@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const AppContainer = styled.div``
 
 export const MainContent = styled.main`
-  padding-top: 3rem;
+  padding-top: 0.5rem;
 `
 
 export const Backdrop = styled.div`
