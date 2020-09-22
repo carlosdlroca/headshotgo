@@ -10,17 +10,17 @@ import EmailSvg from "../images/socialmedia/email.svg"
 export default function renderIcon(linkType) {
   switch (linkType) {
     case "twitter":
-      return <TwitterSvg />
+      return <TwitterSvg className="link-svg" />
     case "instagram":
-      return <InstagramSvg />
+      return <InstagramSvg className="link-svg" />
     case "linkedin":
-      return <LinkedInSvg />
+      return <LinkedInSvg className="link-svg" />
     case "facebook":
-      return <FacebookSvg />
+      return <FacebookSvg className="link-svg" />
     case "youtube":
-      return <YoutubeSvg />
+      return <YoutubeSvg className="link-svg" />
     case "email":
-      return <EmailSvg />
+      return <EmailSvg className="link-svg" />
     default:
       return null
   }
