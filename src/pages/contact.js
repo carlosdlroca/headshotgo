@@ -1,11 +1,15 @@
 import React from "react"
+import { graphql } from "gatsby"
+
 import SEO from "../components/seo"
 import PageTitle from "../PageComponents/PageTitle"
 import { ContactPageContainer } from "../PageComponents/Contact"
 import { Form, InputGroup, Label, Input, TextArea } from "../components/Form"
 import Button from "../components/Button"
 
-export default function ContactPage() {
+import renderIcon from "../utils/renderIcon"
+
+export default function ContactPage({ data }) {
   return (
     <ContactPageContainer>
       <SEO title="Contact" />
@@ -44,6 +48,31 @@ export default function ContactPage() {
           <Button>Submit</Button>
         </InputGroup>
       </Form>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          margin: "5rem auto 1rem",
+          width: "min(30rem, 80vw)",
+        }}
+      >
+        {data.site.siteMetadata.links.map(({ linkType, linkUrl }) => (
+          <a href={linkUrl}>{renderIcon(linkType)}</a>
+        ))}
+      </div>
     </ContactPageContainer>
   )
 }
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        links {
+          linkType
+          linkUrl
+        }
+      }
+    }
+  }
+`
