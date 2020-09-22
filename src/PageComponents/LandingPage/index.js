@@ -144,3 +144,35 @@ export const MiddleContent = styled.section`
     }
   }
 `
+export const ThreeItems = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 5rem;
+  align-items: center;
+  padding: 10rem 2rem;
+  .Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .ItemTitle {
+      font-size: 3rem;
+    }
+
+    .ItemIcon {
+      width: min(20rem, 25vw);
+      height: min(20rem, 25vw);
+    }
+
+    .ItemDescription {
+      font-size: 2rem;
+      padding: 1rem 1.3rem;
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 4rem;
+        height: 2rem;
+      }
+    }
+  }
+`
