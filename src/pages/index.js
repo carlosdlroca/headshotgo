@@ -5,11 +5,18 @@ import SEO from "../components/seo"
 import FullWidth from "../components/FullWidth"
 import PageTitle from "../PageComponents/PageTitle"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
-import TextContainer from "../PageComponents/TextContainer"
 import Button from "../components/Button"
-import { ImageGrid, MiddleContent } from "../PageComponents/LandingPage"
+import {
+  ImageGrid,
+  MiddleContent,
+  ThreeItems,
+} from "../PageComponents/LandingPage"
 
 import LandingGridImage from "../PageComponents/LandingPage/LandingGridImage"
+
+import Rocket from "../images/illustrations/rocket.svg"
+import Gears from "../images/illustrations/gears.svg"
+import Bank from "../images/illustrations/bank.svg"
 
 const IndexPage = ({ data }) => {
   return (
@@ -35,6 +42,41 @@ const IndexPage = ({ data }) => {
           </Link>
         </MiddleContent>
       </ImageGrid>
+
+      <ThreeItems>
+        <div className="Item">
+          <h2 className="ItemTitle">Efficient</h2>
+          <Gears className="ItemIcon" />
+          <p className="ItemDescription">
+            As college students, we know an hour of your day is too much to ask
+            for, our photoshoots typically last 30-45 minutes. We make sure to
+            maximize the number of photos through our sessions. We take 50+
+            images per session to make sure we got the right photo.{" "}
+          </p>
+        </div>
+        <div className="Item">
+          <h2 className="ItemTitle">Affordable</h2>
+          <Bank className="ItemIcon" />
+          <p className="ItemDescription">
+            College in itself is already expensive, why pay another $100 for a
+            service you can get for a much cheaper price. Our most affordable
+            package starts at $15 per image, and our fastest delivery package
+            starts at $25 per image. Get the best bang for your buck at
+            Headshots on the Go!
+          </p>
+        </div>
+        <div className="Item">
+          <h2 className="ItemTitle">Mobile</h2>
+          <Rocket className="ItemIcon" />
+          <p className="ItemDescription">
+            We know scoping out for locations can be hard sometimes and studios
+            might be intimidating. As implied by our name, Headshots on the Go,
+            we offer mobile photography services, meaning that we go to the
+            location of your choice. So you take control of your background,
+            anywhere within 50 miles of Los Angeles County.
+          </p>
+        </div>
+      </ThreeItems>
 
       <FullWidth>
         <PageTitle>Ready to Sign up?</PageTitle>
