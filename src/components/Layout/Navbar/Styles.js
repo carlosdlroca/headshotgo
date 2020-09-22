@@ -52,7 +52,8 @@ export const NavbarLinks = styled.ul`
 
 export const NavbarLink = styled.li`
   a {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-weight: 600;
     border-radius: 0.5rem;
     padding: 1rem 1.5rem;
     display: block;
