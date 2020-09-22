@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const FooterContainer = styled.footer`
   background: var(--color-primary);
-  padding: 5rem;
+  padding: 10rem 10rem 1rem 4rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -13,7 +13,7 @@ export const FooterContainer = styled.footer`
 
   #socialmedia {
     display: grid;
-    grid-template-columns: repeat(3, 6rem);
+    grid-template-columns: repeat(4, 6rem);
     grid-template-rows: auto 1fr;
     margin: 3rem 0;
     justify-self: flex-end;
