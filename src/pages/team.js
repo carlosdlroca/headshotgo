@@ -5,12 +5,7 @@ import SEO from "../components/seo"
 import PageTitle from "../PageComponents/PageTitle"
 import styled from "styled-components"
 
-import TwitterSvg from "../images/socialmedia/twitter.svg"
-import InstagramSvg from "../images/socialmedia/instagram.svg"
-import LinkedInSvg from "../images/socialmedia/linkedin.svg"
-import FacebookSvg from "../images/socialmedia/facebook.svg"
-import YoutubeSvg from "../images/socialmedia/youtube.svg"
-import EmailSvg from "../images/socialmedia/email.svg"
+import renderIcon from "../utils/renderIcon"
 
 const TeamMembers = styled.div``
 
@@ -110,25 +105,6 @@ const TeamMemberContainer = styled(FullWidth)`
     }
   }
 `
-
-function renderIcon(linkType) {
-  switch (linkType) {
-    case "twitter":
-      return <TwitterSvg />
-    case "instagram":
-      return <InstagramSvg />
-    case "linkedin":
-      return <LinkedInSvg />
-    case "facebook":
-      return <FacebookSvg />
-    case "youtube":
-      return <YoutubeSvg />
-    case "email":
-      return <EmailSvg />
-    default:
-      return null
-  }
-}
 
 function renderTeamMembers(data) {
   return data.allTeamsJson.edges.map(
