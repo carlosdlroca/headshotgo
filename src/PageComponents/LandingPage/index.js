@@ -181,7 +181,7 @@ export const ThreeItems = styled.section`
     @media only screen and (max-width: 50em) {
       grid-column-gap: 0;
       .ItemTitle {
-        font-size: 3.2rem;
+        font-size: 6.2rem;
       }
 
       .ItemDescription {
