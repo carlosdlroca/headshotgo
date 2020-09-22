@@ -39,6 +39,7 @@ export default function Footer() {
             instagram
             linkedin
             email
+            facebook
           }
         }
       }

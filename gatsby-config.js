@@ -9,6 +9,7 @@ module.exports = {
       instagram: "https://www.instagram.com/headshotsonthego/",
       linkedin: "https://www.linkedin.com/company/maya-films",
       email: "mailto:mayafilmsphotovideo@gmail.com",
+      facebook: "https://facebook.con/HeadshotsontheGo",
     },
   },
   plugins: [
