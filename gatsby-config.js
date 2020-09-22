@@ -5,12 +5,24 @@ module.exports = {
     author: `@mayafilmz`,
     email: "mayafilmsphotovideo@gmail.com",
     bookingLink: "https://square.site/book/PXQFBMDDJM5AJ/headshot-on-the-go",
-    socialMedia: {
-      instagram: "https://www.instagram.com/headshotsonthego/",
-      linkedin: "https://www.linkedin.com/company/maya-films",
-      email: "mailto:mayafilmsphotovideo@gmail.com",
-      facebook: "https://facebook.con/HeadshotsontheGo",
-    },
+    links: [
+      {
+        linkType: "instagram",
+        linkUrl: "https://www.instagram.com/headshotsonthego/",
+      },
+      {
+        linkType: "linkedin",
+        linkUrl: "https://www.linkedin.com/company/maya-films",
+      },
+      {
+        linkType: "email",
+        linkUrl: "mailto:mayafilmsphotovideo@gmail.com",
+      },
+      {
+        linkType: "facebook",
+        linkUrl: "https://facebook.con/HeadshotsontheGo",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-svg`,
