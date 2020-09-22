@@ -102,7 +102,7 @@ export const ImageGrid = styled.div`
   }
 
   @media only screen and (max-width: 34.375em) {
-    grid-template-rows: 0.5fr 0.9fr 0.5fr;
+    grid-template-rows: 0.7fr 0.9fr 0.7fr;
 
     .gatsby-image-wrapper {
       img {
@@ -123,14 +123,18 @@ export const MiddleContent = styled.section`
   display: grid;
   place-items: center;
   h1 {
-    font-size: 4.4rem;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
   p {
     font-size: 1.8rem;
     text-align: center;
     line-height: 1.7;
     width: 70%;
+  }
+
+  button {
+    background-image: linear-gradient(135deg, #2c73d2, #845ec2);
+    font-size: 3rem;
   }
 
   @media only screen and (max-width: 65em) {
@@ -156,7 +160,7 @@ export const ThreeItems = styled.section`
   border-radius: 1rem;
   box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
 
-  width: 80%;
+  width: min(150rem, 95vw);
   margin: 1rem auto 20rem;
 
   .Item {
@@ -168,6 +172,8 @@ export const ThreeItems = styled.section`
     .ItemTitle {
       font-size: clamp(3.1rem, 2vw, 3.6rem);
       margin-bottom: 2rem;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .ItemIcon {
@@ -179,6 +185,22 @@ export const ThreeItems = styled.section`
     .ItemDescription {
       font-size: 1.6rem;
       padding: 1rem 1.3rem;
+    }
+
+    &:nth-child(1) {
+      .ItemTitle {
+        background-image: linear-gradient(135deg, #2c73d2, #845ec2 50%);
+      }
+    }
+    &:nth-child(2) {
+      .ItemTitle {
+        background-image: linear-gradient(45deg, #845ec2, #ff6f91);
+      }
+    }
+    &:nth-child(3) {
+      .ItemTitle {
+        background-image: linear-gradient(135deg, #ff6f91, #ffc75f);
+      }
     }
 
     @media only screen and (max-width: 50em) {
