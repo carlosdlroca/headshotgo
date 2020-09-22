@@ -51,11 +51,25 @@ export default createGlobalStyle`
     }
 
     .Logo {
-    img {
-      height: 15rem;
-      width: 15rem;
-      object-fit: contain;
+        img {
+            height: 15rem;
+            width: 15rem;
+            object-fit: contain;
+        }    
     }
-  }
+
+   .link-svg {
+        fill: var(--color-primary);
+        path {
+            fill: var(--color-primary);
+            transition: fill .2s ease;
+        }
+
+        &:hover {
+            path {
+                fill: var(--color-secondary);
+            }
+        }
+    }
 
 `
