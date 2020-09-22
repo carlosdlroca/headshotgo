@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(2, 0.5fr) repeat(4, 0.3fr) repeat(2, 0.5fr);
+  grid-template-rows: repeat(2, 0.35fr) repeat(4, 0.18fr) repeat(2, 0.35fr);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
 
@@ -134,11 +134,16 @@ export const MiddleContent = styled.section`
 
   button {
     background-image: linear-gradient(135deg, #2c73d2, #845ec2);
-    font-size: 3rem;
   }
 
   @media only screen and (max-width: 65em) {
     grid-area: 2 / 1/ 3 / 4;
+  }
+
+  @media only screen and (max-width: 50em) {
+    button {
+      font-size: 3.2rem;
+    }
   }
 
   @media only screen and (max-width: 34.5em) {
