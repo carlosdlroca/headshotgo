@@ -123,7 +123,7 @@ export const MiddleContent = styled.section`
   display: grid;
   place-items: center;
   h1 {
-    font-size: 6rem;
+    font-size: 4.4rem;
     margin-bottom: 0;
   }
   p {
@@ -159,13 +159,13 @@ export const ThreeItems = styled.section`
     justify-content: space-between;
     .ItemTitle {
       font-size: clamp(3.1rem, 2vw, 3.6rem);
-      margin-bottom: 10rem;
+      margin-bottom: 2rem;
     }
 
     .ItemIcon {
-      width: min(20rem, 25vw);
+      width: min(12rem, 20vw);
       height: min(20rem, 25vw);
-      margin-bottom: 6rem;
+      margin-bottom: 2rem;
     }
 
     .ItemDescription {
@@ -182,12 +182,17 @@ export const ThreeItems = styled.section`
     @media only screen and (max-width: 50em) {
       grid-column-gap: 0;
       .ItemTitle {
-        font-size: 6.2rem;
+        font-size: 5rem;
       }
 
       .ItemDescription {
-        font-size: 2.4rem;
+        font-size: 3rem;
       }
     }
+  }
+
+  @media only screen and (max-width: 39em) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20rem;
   }
 `
