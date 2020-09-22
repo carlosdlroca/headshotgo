@@ -12,10 +12,6 @@ import FacebookSvg from "../images/socialmedia/facebook.svg"
 import YoutubeSvg from "../images/socialmedia/youtube.svg"
 import EmailSvg from "../images/socialmedia/email.svg"
 
-import Peep1 from "../images/peeps/peep-54.svg"
-import Peep2 from "../images/peeps/peep-15.svg"
-import Peep3 from "../images/peeps/peep-46.svg"
-
 const TeamMembers = styled.div``
 
 const TeamMemberContainer = styled(FullWidth)`
