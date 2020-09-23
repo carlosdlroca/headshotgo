@@ -141,6 +141,9 @@ export const MiddleContent = styled.section`
   }
 
   @media only screen and (max-width: 50em) {
+    h1 {
+      font-size: 3rem;
+    }
     button {
       font-size: 3.2rem;
     }
