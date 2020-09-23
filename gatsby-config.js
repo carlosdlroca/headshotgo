@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         linkType: "facebook",
-        linkUrl: "https://facebook.con/HeadshotsontheGo",
+        linkUrl: "https://facebook.com/HeadshotsontheGo",
       },
     ],
   },
