@@ -83,14 +83,8 @@ const IndexPage = ({ data }) => {
         </div>
       </ThreeItems>
 
-      <FullWidth>
-        <PageTitle>Ready to Sign up?</PageTitle>
-        <Link to="/pricing">
-          <Button>View our Prices</Button>
-        </Link>
-      </FullWidth>
-
       <img
+        loading="lazy"
         src={satisfactionPng}
         alt="Satisfaction Guaranteed"
         style={{
