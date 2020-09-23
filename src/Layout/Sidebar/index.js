@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Logo from "../../../images/HeadshotsOnTheGo.png"
+import Logo from "../../images/HeadshotsOnTheGo.png"
 import { SidebarContainer, SidebarContent } from "./Styles"
 import CloseSvg from "./close.svg"
 

@@ -2,8 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FooterContainer, Copyright } from "./Styles"
 
-import Logo from "../../../images/HeadshotsOnTheGo.png"
-import renderIcon from "../../../utils/renderIcon"
+import Logo from "../../images/HeadshotsOnTheGo.png"
+import renderIcon from "../../utils/renderIcon"
 
 export default function Footer() {
   const data = useStaticQuery(graphql`

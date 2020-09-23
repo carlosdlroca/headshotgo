@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { NavbarContainer, NavbarLinks, NavbarLink } from "./Styles"
 import MenuSvg from "./menu.svg"
-import Logo from "../../../images/HeadshotsOnTheGo.png"
+import Logo from "../../images/HeadshotsOnTheGo.png"
 
 export default function Navbar({ openSidebar }) {
   return (
