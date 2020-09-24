@@ -57,7 +57,7 @@ export const WhyChooseUs = styled.section`
     @media only screen and (max-width: 50em) {
       grid-column-gap: 0;
       .ItemTitle {
-        font-size: 7rem;
+        font-size: 5.4rem;
       }
 
       .ItemDescription {
