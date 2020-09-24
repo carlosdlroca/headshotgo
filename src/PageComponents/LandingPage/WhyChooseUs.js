@@ -12,7 +12,7 @@ export const WhyChooseUs = styled.section`
   box-shadow: 0 0 2rem 0.4rem var(--color-quaternary);
 
   width: min(150rem, 95vw);
-  margin: 1rem auto 20rem;
+  margin: 1rem auto 10rem;
 
   .Item {
     display: flex;
@@ -57,17 +57,38 @@ export const WhyChooseUs = styled.section`
     @media only screen and (max-width: 50em) {
       grid-column-gap: 0;
       .ItemTitle {
-        font-size: 5rem;
+        font-size: 7rem;
       }
 
       .ItemDescription {
         font-size: 2rem;
+        width: 85%;
+        line-height: 1.7;
+      }
+      &:nth-child(1) {
+        .ItemTitle {
+          background-image: linear-gradient(
+            to bottom,
+            #2c73d2 15%,
+            #845ec2 85%
+          );
+        }
+      }
+      &:nth-child(2) {
+        .ItemTitle {
+          background-image: linear-gradient(to bottom, #845ec2 35%, #ff6f91);
+        }
+      }
+      &:nth-child(3) {
+        .ItemTitle {
+          background-image: linear-gradient(to bottom, #ff6f91 35%, #ffc75f);
+        }
       }
     }
   }
 
   @media only screen and (max-width: 50em) {
     grid-template-columns: 1fr;
-    grid-row-gap: 20rem;
+    grid-row-gap: 10rem;
   }
 `
