@@ -9,6 +9,10 @@ export const Form = styled.form`
     @media only screen and (max-width: 50em) {
       font-size: 3rem;
     }
+    @media only screen and (max-width: 45em) {
+      background: white;
+      color: var(--color-primary);
+    }
   }
 `
 export const InputGroup = styled.p`
@@ -28,6 +32,7 @@ export const Label = styled.label`
 
   @media only screen and (max-width: 50em) {
     font-size: 3rem;
+    color: white;
   }
 `
 export const Input = styled.input`
@@ -35,6 +40,9 @@ export const Input = styled.input`
   padding: 1rem;
   font-weight: 500;
   width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   &:focus {
     outline-color: var(--color-primary);
   }

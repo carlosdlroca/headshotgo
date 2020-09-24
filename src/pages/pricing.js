@@ -11,6 +11,7 @@ import {
   PricingInfo,
 } from "../PageComponents/Pricing/PricingCard"
 import { LocationInfo } from "../PageComponents/Pricing/LocationInfo"
+import Checkmark from "../PageComponents/Pricing/checkmark.svg"
 
 export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {
@@ -46,6 +47,7 @@ export default function Pricing({ data }) {
                   fontWeight: detailString.includes(1) ? "700" : "normal",
                 }}
               >
+                <Checkmark />
                 {detailString}
               </p>
             ))}

@@ -4,7 +4,7 @@ export const PricingCards = styled.div`
   display: grid;
   grid-row-gap: 3rem;
   margin: 10rem auto 5rem;
-  width: min(97%, 120rem);
+  width: min(85vw, 120rem);
 
   .LocationComment {
     font-size: 2.2rem;
@@ -35,17 +35,22 @@ export const PricingCard = styled.div`
     flex-direction: column;
     align-items: center;
     h1 {
-      font-size: clamp(2.5rem, 2.5vw, 3rem);
+      font-size: 3rem;
       margin-bottom: 2rem;
-      text-decoration: underline;
-      text-decoration-color: ${({ color }) => color};
       text-align: center;
+
+      background: linear-gradient(
+        to right,
+        ${({ color }) => color} 50%,
+        #ff5555
+      );
+      color: transparent;
+      -webkit-background-clip: text;
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       line-height: 1.3;
-      text-align: center;
     }
 
     .Price {
@@ -70,6 +75,13 @@ export const PricingCard = styled.div`
     text-decoration-color: var(--color-text-dark);
     color: ${({ color }) => color};
   }
+
+  @media only screen and (max-width: 50em) {
+    .Main h1 {
+      font-size: 4rem;
+    }
+  }
+
   @media only screen and (max-width: 31.25em) {
     & > *:not(:last-child) {
       margin-bottom: 2rem;
@@ -90,4 +102,13 @@ export const PricingInfo = styled.div`
   line-height: 1.7;
   padding: 0 1rem 3rem;
   text-align: center;
+  svg {
+    height: 2rem;
+    width: 2rem;
+    fill: #44ee77;
+  }
+
+  @media only screen and (max-width: 47em) {
+    font-size: 2.1rem;
+  }
 `

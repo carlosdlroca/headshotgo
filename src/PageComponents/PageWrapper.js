@@ -2,12 +2,14 @@ import styled, { keyframes } from "styled-components"
 
 const BackgroundAnimation = keyframes`
   from {
-    height: 0vh;
+    transform: translateY(-100%);
     opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   to {
-    height: 55vh;
+    transform: translateY(0);
     opacity: 1;
+clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
 `
 
@@ -27,7 +29,7 @@ export default styled.div`
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     z-index: -1;
 
-    animation: ${BackgroundAnimation} 0.6s ease;
+    animation: ${BackgroundAnimation} 0.85s ease;
 
     @media only screen and (max-width: 50em) {
       height: 80vh;
