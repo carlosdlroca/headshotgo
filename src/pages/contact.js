@@ -5,8 +5,6 @@ import SEO from "../components/seo"
 import PageTitle from "../PageComponents/PageTitle"
 import { ContactPageContainer } from "../PageComponents/Contact"
 import { Form, InputGroup, Label, Input, TextArea } from "../components/Form"
-import FullWidth from "../components/FullWidth"
-import TextContainer from "../PageComponents/TextContainer"
 import Button from "../components/Button"
 
 import renderIcon from "../utils/renderIcon"
@@ -63,15 +61,6 @@ export default function ContactPage({ data }) {
           <a href={linkUrl}>{renderIcon(linkType)}</a>
         ))}
       </div>
-      <FullWidth>
-        <TextContainer>
-          <h1>Ready to Sign Up?</h1>
-
-          <Link to="/pricing">
-            <Button>Book Now</Button>
-          </Link>
-        </TextContainer>
-      </FullWidth>
     </ContactPageContainer>
   )
 }
