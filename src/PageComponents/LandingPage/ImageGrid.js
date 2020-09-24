@@ -6,7 +6,7 @@ export const ImageGrid = styled.div`
   grid-template-rows: repeat(2, 0.35fr) repeat(4, 0.18fr) repeat(2, 0.35fr);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-
+  margin-top: 0.6rem;
   .gatsby-image-wrapper {
     width: 100%;
     height: 100%;

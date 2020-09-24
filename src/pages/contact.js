@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import SEO from "../components/seo"
 import PageTitle from "../PageComponents/PageTitle"
@@ -13,7 +13,7 @@ export default function ContactPage({ data }) {
   return (
     <ContactPageContainer>
       <SEO title="Contact" />
-      <PageTitle>Contact Us</PageTitle>
+      <PageTitle color>Contact Us</PageTitle>
       <Form name="contact" method="POST" data-netlify="true" action="/contact">
         <input type="hidden" name="form-name" value="contact" />
         <InputGroup>

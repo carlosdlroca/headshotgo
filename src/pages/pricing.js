@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import PageTitle from "../PageComponents/PageTitle"
 import Button from "../components/Button"
+import PageWrapper from "../PageComponents/PageWrapper"
 
 import {
   PricingCards,
@@ -14,16 +15,15 @@ import { LocationInfo } from "../PageComponents/Pricing/LocationInfo"
 export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {
     return data.allPricesJson.edges.map(
-      ({
-        node: { id, color, price, packageName, packageDetails, psRetouch },
-      }) => (
-        <PricingCard color={color} key={id}>
+      ({ node: { color, price, packageName, packageDetails, psRetouch } }) => (
+        <PricingCard color={color} key={packageName}>
           <div className="Main">
             <h1>{packageName}</h1>
             <p>starting at</p>
             <p className="Price">
               <sup>$</sup>
-              {price}*
+              {price}
+              <sup>*</sup>
             </p>
             <a
               className="BookNowLink"
@@ -40,7 +40,14 @@ export default function Pricing({ data }) {
           </div>
           <PricingInfo>
             {packageDetails.map((detailString, index) => (
-              <p key={index}>{detailString}</p>
+              <p
+                key={index}
+                style={{
+                  fontWeight: detailString.includes(1) ? "700" : "normal",
+                }}
+              >
+                {detailString}
+              </p>
             ))}
             {psRetouch && <p className="psRetouch">Photoshop skin retouch</p>}
           </PricingInfo>
@@ -49,7 +56,7 @@ export default function Pricing({ data }) {
     )
   }, [data.site.siteMetadata.bookingLink, data.allPricesJson.edges])
   return (
-    <div>
+    <PageWrapper>
       <SEO title="Our Prices" />
       <PageTitle>Our Packages</PageTitle>
       <PricingCards>
@@ -85,7 +92,7 @@ export default function Pricing({ data }) {
           </li>
         </ol>
       </LocationInfo>
-    </div>
+    </PageWrapper>
   )
 }
 
