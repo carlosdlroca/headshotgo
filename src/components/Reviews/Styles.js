@@ -44,14 +44,15 @@ export const ReviewHeader = styled.div`
   margin-bottom: 8rem;
 
   h1 {
+    color: var(--color-primary);
     font-size: clamp(2rem, 5vw, 5rem);
     text-align: center;
-    color: var(--color-primary);
   }
 
   p {
-    font-size: 1.8rem;
     color: var(--color-text-light);
+    font-size: 1.8rem;
+    text-align: center;
   }
 `
 
