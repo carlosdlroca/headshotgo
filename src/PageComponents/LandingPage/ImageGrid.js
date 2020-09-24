@@ -123,12 +123,12 @@ export const MiddleContent = styled.section`
   display: grid;
   place-items: center;
   h1 {
-    margin-bottom: 2rem;
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
   }
   p {
     font-size: 1.8rem;
     text-align: center;
-    line-height: 1.7;
     width: 70%;
   }
 
@@ -138,6 +138,9 @@ export const MiddleContent = styled.section`
 
   @media only screen and (max-width: 65em) {
     grid-area: 2 / 1/ 3 / 4;
+    p {
+      line-height: 1.7;
+    }
   }
 
   @media only screen and (max-width: 50em) {
