@@ -23,7 +23,7 @@ export default styled.div`
     top: 0;
     left: 0;
 
-    height: 55vh;
+    height: 60vh;
     width: 100%;
     background: var(--color-primary);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);

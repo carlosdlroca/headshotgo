@@ -29,10 +29,10 @@ export const Label = styled.label`
   flex-direction: column;
   align-items: flex-start;
   font-size: clamp(2.1rem, 2.3vw, 2rem);
+  color: white;
 
   @media only screen and (max-width: 50em) {
     font-size: 3rem;
-    color: white;
   }
 `
 export const Input = styled.input`
