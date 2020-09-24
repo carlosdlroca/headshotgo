@@ -63,6 +63,10 @@ export const ReviewBox = styled.div`
   box-shadow: 0 0 2rem 0.2rem var(--color-tertiary);
   border-radius: 1rem;
   padding: 2rem;
+
+  @media only screen and (max-width: 50em) {
+    display: flex;
+  }
 `
 
 ReviewBox.Author = styled.h2`
@@ -75,7 +79,8 @@ ReviewBox.Text = styled.p`
   color: var(--color-text-dark);
 
   @media only screen and (max-width: 50em) {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    line-height: 1.7;
   }
 `
 ReviewBox.Image = styled.div`
