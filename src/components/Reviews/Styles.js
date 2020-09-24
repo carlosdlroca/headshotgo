@@ -61,13 +61,28 @@ export const ReviewBox = styled.div`
   display: grid;
   place-items: center;
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 2rem 0.2rem var(--color-tertiary);
+  border-top: 1rem solid var(--color-primary);
   border-radius: 1rem;
+  box-shadow: 0 0 2rem 0.2rem var(--color-tertiary);
   padding: 2rem;
-  border-top: 3rem solid var(--color-primary);
+  position: relative;
+  .Quote {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    border-radius: 50%;
+    border: 0.1rem solid var(--color-primary);
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-50%, -75%);
+    svg {
+      fill: var(--color-primary);
+    }
+  }
+
   @media only screen and (max-width: 50em) {
     display: flex;
-    border-top-width: 1rem;
   }
 `
 
