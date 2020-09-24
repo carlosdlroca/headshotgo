@@ -87,10 +87,10 @@ const IndexPage = ({ data }) => {
 
       <FullWidth>
         <TextContainer>
-          <h1>Ready to Sign Up?</h1>
+          <h1>Invest in your future</h1>
 
           <Link to="/pricing">
-            <Button>Book Now</Button>
+            <Button>Book Today</Button>
           </Link>
         </TextContainer>
       </FullWidth>
