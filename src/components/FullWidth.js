@@ -16,11 +16,11 @@ export default styled.section`
 
   button {
     font-size: 2rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 
   @media only screen and (max-width: 50em) {
-    padding: 10rem 1rem;
+    padding: 5rem 1rem;
 
     h1 {
       font-size: 5.2rem;
