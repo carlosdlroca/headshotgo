@@ -83,8 +83,6 @@ const IndexPage = ({ data }) => {
         </div>
       </WhyChooseUs>
 
-      <Reviews />
-
       <FullWidth>
         <TextContainer>
           <h1>Invest in your future</h1>
@@ -95,13 +93,15 @@ const IndexPage = ({ data }) => {
         </TextContainer>
       </FullWidth>
 
+      <Reviews />
+
       <img
         loading="lazy"
         src={satisfactionPng}
         alt="Satisfaction Guaranteed"
         style={{
-          width: "25rem",
-          margin: "2rem auto",
+          width: "35rem",
+          margin: "2rem auto 10rem",
           display: "block",
         }}
       />
