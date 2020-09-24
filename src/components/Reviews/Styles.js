@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ReviewsContainer = styled.section`
   width: min(110rem, 95vw);
-  margin: -5rem auto 20rem;
+  margin: 0 auto 20rem;
 `
 
 export const ReviewBoxes = styled.div`
@@ -10,7 +10,7 @@ export const ReviewBoxes = styled.div`
   grid-template-columns: repeat(3, 1fr);
 
   grid-gap: 10rem;
-  /* 
+
   & > *:nth-child(4),
   & > *:nth-child(7),
   & > *:nth-child(10) {
@@ -21,20 +21,20 @@ export const ReviewBoxes = styled.div`
   & > *:nth-child(5),
   & > *:nth-child(8),
   & > *:nth-child(11) {
-    transform: translateY(3rem);
+    transform: translateY(4.4rem);
   }
 
   & > *:nth-of-type(3n) {
-    transform: translateY(6rem);
-  } */
+    transform: translateY(7.4rem);
+  }
 
   @media only screen and (max-width: 50em) {
     grid-template-columns: 1fr;
     grid-column-gap: 0.2rem;
-    grid-row-gap: 10rem;
-    /* & > *:nth-of-type(n) {
+    grid-row-gap: 12rem;
+    & > *:nth-of-type(n) {
       transform: translateY(0);
-    } */
+    }
   }
 `
 
@@ -85,14 +85,18 @@ export const ReviewBox = styled.div`
     }
 
     @media only screen and (max-width: 50em) {
-      height: 7rem;
-      width: 7rem;
       transform: translateY(-85%);
+
+      svg {
+        height: 60%;
+        width: 60%;
+      }
     }
   }
 
   @media only screen and (max-width: 50em) {
     display: flex;
+    padding: 3rem 2rem;
   }
 `
 
