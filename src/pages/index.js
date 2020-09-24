@@ -96,7 +96,6 @@ const IndexPage = ({ data }) => {
       <Reviews />
 
       <img
-        loading="lazy"
         src={satisfactionPng}
         alt="Satisfaction Guaranteed"
         style={{
