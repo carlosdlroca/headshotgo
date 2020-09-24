@@ -1,19 +1,34 @@
 import styled from "styled-components"
 
 export default styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: ${({ bgColor }) =>
     bgColor ? bgColor : "var(--color-quaternary)"};
   color: var(--color-text-dark);
   padding: 3rem 1rem;
   width: 100%;
-  min-height: 50vh;
+  margin-bottom: 20rem;
 
   h1 {
-    font-size: clamp(2.8rem, 3vw, 4rem);
+    font-size: 4rem;
     text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  button {
+    font-size: 2rem;
+    margin-top: 10rem;
+  }
+
+  @media only screen and (max-width: 50em) {
+    padding: 10rem 1rem;
+
+    h1 {
+      font-size: 5.2rem;
+    }
+
+    button {
+      font-size: 3rem;
+      padding: 2rem 5rem;
+    }
   }
 `
