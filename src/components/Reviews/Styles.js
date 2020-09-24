@@ -32,6 +32,7 @@ export const ReviewBoxes = styled.div`
   @media only screen and (max-width: 50em) {
     grid-template-columns: 1fr;
     grid-column-gap: 0.2rem;
+    grid-row-gap: 10rem;
     /* & > *:nth-of-type(n) {
       transform: translateY(0);
     } */
@@ -51,7 +52,7 @@ export const ReviewHeader = styled.div`
 
   p {
     color: var(--color-text-light);
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
   }
 `
@@ -63,9 +64,10 @@ export const ReviewBox = styled.div`
   box-shadow: 0 0 2rem 0.2rem var(--color-tertiary);
   border-radius: 1rem;
   padding: 2rem;
-
+  border-top: 3rem solid var(--color-primary);
   @media only screen and (max-width: 50em) {
     display: flex;
+    border-top-width: 1rem;
   }
 `
 
