@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
-import FullWidth from "../components/FullWidth"
 import TextContainer from "../PageComponents/TextContainer"
 import PageTitle from "../PageComponents/PageTitle"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
@@ -10,10 +9,10 @@ import Button from "../components/Button"
 import {
   ImageGrid,
   MiddleContent,
-  ThreeItems,
-} from "../PageComponents/LandingPage"
-
+} from "../PageComponents/LandingPage/ImageGrid"
+import { WhyChooseUs } from "../PageComponents/LandingPage/WhyChooseUs"
 import LandingGridImage from "../PageComponents/LandingPage/LandingGridImage"
+import Reviews from "../components/Reviews"
 
 import Rocket from "../images/illustrations/rocket.svg"
 import Gears from "../images/illustrations/gears.svg"
@@ -48,7 +47,7 @@ const IndexPage = ({ data }) => {
         <h1>Why choose us?</h1>
       </TextContainer>
 
-      <ThreeItems>
+      <WhyChooseUs>
         <div className="Item">
           <h2 className="ItemTitle">Efficient</h2>
           <Gears className="ItemIcon" />
@@ -81,7 +80,9 @@ const IndexPage = ({ data }) => {
             anywhere within 50 miles of Los Angeles County.
           </p>
         </div>
-      </ThreeItems>
+      </WhyChooseUs>
+
+      <Reviews />
 
       <img
         loading="lazy"
