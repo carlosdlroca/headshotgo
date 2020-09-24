@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
+import FullWidth from "../components/FullWidth"
 import TextContainer from "../PageComponents/TextContainer"
 import PageTitle from "../PageComponents/PageTitle"
 import satisfactionPng from "../images/satisfaction_guarantee.png"
@@ -83,6 +84,16 @@ const IndexPage = ({ data }) => {
       </WhyChooseUs>
 
       <Reviews />
+
+      <FullWidth>
+        <TextContainer>
+          <h1>Ready to Sign Up?</h1>
+
+          <Link to="/pricing">
+            <Button>Book Now</Button>
+          </Link>
+        </TextContainer>
+      </FullWidth>
 
       <img
         loading="lazy"
