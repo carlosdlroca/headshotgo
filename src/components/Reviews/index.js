@@ -25,7 +25,7 @@ export default function Reviews() {
   return (
     <ReviewsContainer>
       <ReviewHeader>
-        <h1>All of out customers love our service</h1>
+        <h1>Our Customers Love Us</h1>
         <p>
           We aim to provide our customers with fast and professional photography
           services.
