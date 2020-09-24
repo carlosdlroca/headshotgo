@@ -38,14 +38,7 @@ export const PricingCard = styled.div`
       font-size: 3rem;
       margin-bottom: 2rem;
       text-align: center;
-
-      background: linear-gradient(
-        to right,
-        ${({ color }) => color} 50%,
-        #ff5555
-      );
-      color: transparent;
-      -webkit-background-clip: text;
+      color: ${({ color }) => color};
     }
 
     p {
