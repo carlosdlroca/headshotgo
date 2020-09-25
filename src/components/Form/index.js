@@ -6,6 +6,7 @@ export const Form = styled.form`
 
   button {
     border-radius: 0.4rem;
+    box-shadow: 0 1rem 0.1rem rgba(0, 0, 0, 0.5);
     @media only screen and (max-width: 50em) {
       font-size: 3rem;
     }
