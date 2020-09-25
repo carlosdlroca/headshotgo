@@ -31,7 +31,7 @@ export const ReviewBoxes = styled.div`
   @media only screen and (max-width: 50em) {
     grid-template-columns: 1fr;
     grid-column-gap: 0.2rem;
-    grid-row-gap: 12rem;
+    grid-row-gap: 9rem;
     & > *:nth-of-type(n) {
       transform: translateY(0);
     }
