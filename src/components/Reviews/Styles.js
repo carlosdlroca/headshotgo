@@ -62,7 +62,7 @@ export const ReviewBox = styled.div`
   display: grid;
   place-items: center;
   background: rgba(255, 255, 255, 0.2);
-  border-bottom: 1rem solid var(--color-primary);
+  border-bottom: 0.7rem solid var(--color-primary);
   border-radius: 1rem;
   box-shadow: 0 0 2rem 0.2rem var(--color-tertiary);
   padding: 2rem;
@@ -85,7 +85,7 @@ export const ReviewBox = styled.div`
     }
 
     @media only screen and (max-width: 50em) {
-      transform: translateY(-85%);
+      transform: translateY(-50%);
 
       svg {
         height: 60%;
@@ -94,9 +94,32 @@ export const ReviewBox = styled.div`
     }
   }
 
+  .Stars {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.2rem 2rem;
+    background: var(--color-primary);
+    width: min(50rem, 55%);
+    border-radius: 1rem;
+    svg {
+      fill: yellow;
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+
   @media only screen and (max-width: 50em) {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 3rem 2rem;
+    .Stars {
+      svg {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
   }
 `
 
@@ -108,9 +131,11 @@ ReviewBox.Text = styled.p`
   font-size: 1.6rem;
   line-height: 1.3;
   color: var(--color-text-dark);
+  margin-bottom: 2rem;
 
   @media only screen and (max-width: 50em) {
     font-size: 2.3rem;
+    margin-bottom: 5rem;
     line-height: 1.7;
   }
 `

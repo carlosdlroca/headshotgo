@@ -7,6 +7,7 @@ import {
   ReviewBox,
 } from "./Styles"
 import QuoteSvg from "./quotes.svg"
+import StarSvg from "./star.svg"
 
 export default function Reviews() {
   const data = useStaticQuery(graphql`
@@ -44,6 +45,13 @@ export default function Reviews() {
                 <ReviewBox.Image>{authorImageName}</ReviewBox.Image>
               )}
               {text && <ReviewBox.Text>{text}</ReviewBox.Text>}
+              <div className="Stars">
+                <StarSvg />
+                <StarSvg />
+                <StarSvg />
+                <StarSvg />
+                <StarSvg />
+              </div>
             </ReviewBox>
           )
         )}
