@@ -72,4 +72,9 @@ export default createGlobalStyle`
         }
     }
 
+    ::selection {
+        background: var(--color-primary);
+        color: white;
+    }
+
 `
