@@ -36,6 +36,8 @@ export const WhyChooseUs = styled.section`
     .ItemDescription {
       font-size: 1.6rem;
       padding: 1rem 1.3rem;
+      line-height: 1.6;
+      color: var(--color-text-light);
     }
 
     &:nth-child(1) {
