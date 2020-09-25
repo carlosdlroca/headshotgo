@@ -6,7 +6,7 @@ export default styled.section`
   color: var(--color-text-dark);
   padding: 3rem 1rem;
   width: 100%;
-  margin-bottom: 20rem;
+  margin-bottom: 8rem;
 
   h1 {
     font-size: 4rem;
