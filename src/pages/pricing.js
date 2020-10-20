@@ -35,7 +35,7 @@ export default function Pricing({ data }) {
                 color={"var(--color-primary)"}
                 aria-label="book now"
               >
-                Book Now
+                Text/Call Us
               </Button>
             </a>
           </div>
