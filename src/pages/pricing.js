@@ -26,10 +26,7 @@ export default function Pricing({ data }) {
               {price}
               <sup>*</sup>
             </p>
-            <a
-              className="BookNowLink"
-              href={data.site.siteMetadata.bookingLink}
-            >
+            <a className="BookNowLink" href={data.site.siteMetadata.phone}>
               <Button
                 bgColor={"#fff"}
                 color={"var(--color-primary)"}
@@ -103,6 +100,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         bookingLink
+        phone
       }
     }
     allPricesJson {

@@ -5,6 +5,7 @@ module.exports = {
     author: `@mayafilmz`,
     email: "mayafilmsphotovideo@gmail.com",
     bookingLink: "https://square.site/book/PXQFBMDDJM5AJ/headshot-on-the-go",
+    phone: "tel:+13234916109",
     links: [
       {
         linkType: "instagram",
