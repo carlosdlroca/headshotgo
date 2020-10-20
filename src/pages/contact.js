@@ -61,11 +61,13 @@ export default function ContactPage({ data }) {
             display: "flex",
             justifyContent: "space-around",
             margin: "5rem auto 1rem",
-            width: "min(30rem, 80vw)",
+            width: "min(50rem, 80vw)",
           }}
         >
           {data.site.siteMetadata.links.map(({ linkType, linkUrl }) => (
-            <a href={linkUrl}>{renderIcon(linkType)}</a>
+            <a key={linkType} href={linkUrl}>
+              {renderIcon(linkType)}
+            </a>
           ))}
         </div>
       </ContactPageContainer>
