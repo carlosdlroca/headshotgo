@@ -10,10 +10,6 @@ export const Form = styled.form`
     @media only screen and (max-width: 50em) {
       font-size: 3rem;
     }
-    @media only screen and (max-width: 45em) {
-      background: white;
-      color: var(--color-primary);
-    }
   }
 `
 export const InputGroup = styled.p`
