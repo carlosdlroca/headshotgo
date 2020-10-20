@@ -22,6 +22,10 @@ module.exports = {
         linkType: "facebook",
         linkUrl: "https://facebook.com/HeadshotsontheGo",
       },
+      {
+        linkType: "phone",
+        linkUrl: "tel:+13234916109",
+      },
     ],
   },
   plugins: [
