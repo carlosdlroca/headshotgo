@@ -14,15 +14,8 @@ export const NavbarContainer = styled.nav`
 
   .Logo {
     img {
-      height: 11rem;
-      width: 11rem;
-    }
-
-    @media only screen and (min-width: 60em) {
-      img {
-        height: 7rem;
-        width: 7rem;
-      }
+      height: 7rem;
+      width: 7rem;
     }
   }
 
