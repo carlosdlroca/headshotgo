@@ -36,7 +36,7 @@ export default function Reviews() {
       <ReviewBoxes>
         {data.allReviewsJson.edges.map(
           ({ node: { text, author, authorImageName } }) => (
-            <ReviewBox>
+            <ReviewBox key={text}>
               <div className="Quote">
                 <QuoteSvg />
               </div>
