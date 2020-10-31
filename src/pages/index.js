@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
         <LandingGridImage imgName="Image9" />
         <LandingGridImage imgName="Image10" />
         <MiddleContent>
-          <PageTitle color={true}>We are Headshots on the GO!</PageTitle>
+          <PageTitle color={"true"}>We are Headshots on the GO!</PageTitle>
 
           <p>{data.site.siteMetadata.description}</p>
           <Link to="/portfolio">
