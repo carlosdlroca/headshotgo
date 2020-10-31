@@ -45,7 +45,7 @@ export const ReviewBox = styled.div`
   border-radius: 1rem;
   padding: 1rem 2rem;
   display: grid;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2), 1rem 1rem var(--color-secondary);
   .Title {
     font-size: 2rem;
     color: steelblue;
