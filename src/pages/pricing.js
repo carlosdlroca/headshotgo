@@ -53,7 +53,11 @@ export default function Pricing({ data }) {
         </PricingCard>
       )
     )
-  }, [data.site.siteMetadata.bookingLink, data.allPricesJson.edges])
+  }, [
+    //data.site.siteMetadata.bookingLink,
+    data.allPricesJson.edges,
+    data.site.siteMetadata.phone,
+  ])
   return (
     <PageWrapper>
       <SEO title="Our Prices" />

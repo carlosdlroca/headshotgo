@@ -6,7 +6,6 @@ import PageTitle from "../PageComponents/PageTitle"
 import { ContactPageContainer } from "../PageComponents/Contact"
 import { Form, InputGroup, Label, Input, TextArea } from "../components/Form"
 import Button from "../components/Button"
-import PageWrapper from "../PageComponents/PageWrapper"
 
 import renderIcon from "../utils/renderIcon"
 
