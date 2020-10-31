@@ -6,8 +6,6 @@ import {
   ReviewHeader,
   ReviewBox,
 } from "./Styles"
-import QuoteSvg from "./quotes.svg"
-import StarSvg from "./star.svg"
 
 export default function Reviews() {
   const data = useStaticQuery(graphql`
@@ -37,21 +35,9 @@ export default function Reviews() {
         {data.allReviewsJson.edges.map(
           ({ node: { text, author, authorImageName } }) => (
             <ReviewBox key={text}>
-              <div className="Quote">
-                <QuoteSvg />
-              </div>
               {author && <ReviewBox.Author>{author}</ReviewBox.Author>}
-              {authorImageName && (
-                <ReviewBox.Image>{authorImageName}</ReviewBox.Image>
-              )}
+              <span className="Title">Valued Customer</span>
               {text && <ReviewBox.Text>{text}</ReviewBox.Text>}
-              <div className="Stars">
-                <StarSvg />
-                <StarSvg />
-                <StarSvg />
-                <StarSvg />
-                <StarSvg />
-              </div>
             </ReviewBox>
           )
         )}

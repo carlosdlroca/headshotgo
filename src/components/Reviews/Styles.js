@@ -11,23 +11,6 @@ export const ReviewBoxes = styled.div`
 
   grid-gap: 10rem;
 
-  & > *:nth-child(4),
-  & > *:nth-child(7),
-  & > *:nth-child(10) {
-    transform: translateY(0);
-  }
-
-  & > *:nth-child(2),
-  & > *:nth-child(5),
-  & > *:nth-child(8),
-  & > *:nth-child(11) {
-    transform: translateY(4.4rem);
-  }
-
-  & > *:nth-of-type(3n) {
-    transform: translateY(7.4rem);
-  }
-
   @media only screen and (max-width: 50em) {
     grid-template-columns: 1fr;
     grid-column-gap: 0.2rem;
@@ -41,7 +24,7 @@ export const ReviewBoxes = styled.div`
 export const ReviewHeader = styled.div`
   display: grid;
   place-items: center;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   padding-bottom: 5rem;
 
   h1 {
@@ -59,66 +42,19 @@ export const ReviewHeader = styled.div`
 `
 
 export const ReviewBox = styled.div`
-  display: grid;
-  place-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  border-bottom: 0.7rem solid var(--color-primary);
   border-radius: 1rem;
-  box-shadow: 0 0 2rem 0.2rem var(--color-tertiary);
-  padding: 2rem;
-  position: relative;
-  .Quote {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white;
-    border-radius: 50%;
-    border: 0.1rem solid var(--color-primary);
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4) inset;
-    width: 5rem;
-    height: 5rem;
-    transform: translate(-50%, -50%);
-    display: grid;
-    place-items: center;
-    svg {
-      fill: var(--color-primary);
-    }
-
-    @media only screen and (max-width: 50em) {
-      transform: translateY(-50%);
-
-      svg {
-        height: 60%;
-        width: 60%;
-      }
-    }
-  }
-
-  .Stars {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.2rem 2rem;
-    background: var(--color-primary);
-    width: min(50rem, 55%);
-    border-radius: 1rem;
-    svg {
-      fill: yellow;
-      height: 4rem;
-      width: 4rem;
-    }
+  padding: 1rem 2rem;
+  display: grid;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  .Title {
+    font-size: 2rem;
+    color: steelblue;
+    font-weight: 600;
   }
 
   @media only screen and (max-width: 50em) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 2rem;
-    .Stars {
-      svg {
-        height: 4rem;
-        width: 4rem;
-      }
+    .Title {
+      font-size: 2.2rem;
     }
   }
 `
@@ -126,20 +62,19 @@ export const ReviewBox = styled.div`
 ReviewBox.Author = styled.h2`
   font-size: 2.2rem;
   color: var(--color-primary);
+  @media only screen and (max-width: 50em) {
+    font-size: 4rem;
+  }
 `
 ReviewBox.Text = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.3;
-  color: var(--color-text-dark);
+  color: #333;
   margin-bottom: 2rem;
 
   @media only screen and (max-width: 50em) {
-    font-size: 2.3rem;
+    font-size: 2rem;
     margin-bottom: 5rem;
     line-height: 1.7;
   }
-`
-ReviewBox.Image = styled.div`
-  border-radius: 50%;
-  border: 0.2rem solid white;
 `
