@@ -32,6 +32,14 @@ export default function Footer() {
       <div className="Logo">
         <img src={Logo} alt="Headshots on the go" />
       </div>
+      <div className="Schedule">
+        <span>
+          Customer Service: <u>Mon-Fri 5pm-7pm</u>
+        </span>
+        <span>
+          Business Hours: <u>Sat-Sun 12pm-7pm</u>
+        </span>
+      </div>
       <ul id="socialmedia">
         <h2>Follow us at: </h2>
         {renderLinks(data)}

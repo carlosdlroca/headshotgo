@@ -5,11 +5,19 @@ export const FooterContainer = styled.footer`
   padding: 10rem 10rem 1rem 4rem;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
   font-size: 1.6rem;
   color: white;
 
-  align-items: center;
+  .Schedule {
+    display: grid;
+    place-items: space-between;
+
+    u {
+      font-size: 1.51em;
+    }
+  }
 
   #socialmedia {
     display: grid;
@@ -40,11 +48,19 @@ export const FooterContainer = styled.footer`
 
   @media only screen and (max-width: 65.63em) {
     grid-template-columns: 1fr;
+    place-items: center;
     padding: 3rem 1rem;
     #socialmedia {
       justify-self: unset;
+
+      grid-template-columns: repeat(5, 6rem);
       h1 {
         flex: 0 0 0;
+      }
+      li {
+        &:not(:last-child) {
+          margin-right: 5rem;
+        }
       }
     }
   }
