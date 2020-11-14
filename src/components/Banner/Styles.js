@@ -27,6 +27,7 @@ export default styled.header`
     font-size: 4rem;
     color: white;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   .offer {
