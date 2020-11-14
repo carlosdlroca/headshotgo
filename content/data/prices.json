@@ -1,7 +1,7 @@
 [
   {
     "packageName": "Most Affordable package",
-    "price": "45.00",
+    "price": "55.00",
     "color": "#55ee88",
     "packageDetails": [
       "3 guaranteed images",
@@ -12,7 +12,7 @@
   },
   {
     "packageName": "Most Popular package",
-    "price": "60.00",
+    "price": "75.00",
     "color": "#5555EE",
     "packageDetails": [
       "3 guaranteed images",
@@ -23,7 +23,7 @@
   },
   {
     "packageName": "Fastest delivery package",
-    "price": "75.00",
+    "price": "85.00",
     "color": "#8855EE",
     "packageDetails": [
       "3 guaranteed images",
