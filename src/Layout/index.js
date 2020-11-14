@@ -2,6 +2,7 @@ import React, { useState, useCallback, useLayoutEffect } from "react"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
+import Banner from "../components/Banner"
 import GlobalStyles from "./GlobalStyles"
 import { Helmet } from "react-helmet"
 
@@ -38,6 +39,7 @@ export default function Layout({ children }) {
           rel="stylesheet"
         />
       </Helmet>
+      <Banner />
       <Navbar openSidebar={openSidebar} />
       <MainContent>{children}</MainContent>
       <Footer />
