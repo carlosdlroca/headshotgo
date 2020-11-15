@@ -39,7 +39,7 @@ export default function Layout({ children }) {
           rel="stylesheet"
         />
       </Helmet>
-      {/* <Banner /> */}
+      <Banner />
       <Navbar openSidebar={openSidebar} />
       <MainContent>{children}</MainContent>
       <Footer />

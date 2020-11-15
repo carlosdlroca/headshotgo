@@ -47,11 +47,11 @@ export const NavbarLink = styled.li`
   a {
     font-size: 2rem;
     font-weight: 600;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     padding: 1rem 1.5rem;
     display: block;
     text-decoration: none;
-    color: var(--color-secondary);
+    color: var(--color-primary);
     transition: color 0.2s ease;
   }
 
@@ -59,7 +59,7 @@ export const NavbarLink = styled.li`
     background: var(--color-quaternary);
     cursor: pointer;
     a {
-      color: var(--color-primary);
+      color: var(--color-secondary);
     }
   }
 

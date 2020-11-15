@@ -7,14 +7,6 @@ export default function Banner() {
 
   return (
     <StyledBanner closed={closed}>
-      <section className="Details">
-        <h1 className="Title">Promotion! January 2021</h1>
-        <p className="offer">
-          <span className="package aff">Affordable</span> &{" "}
-          <span className="package pop">Popular</span>packages
-          <p> 21% off only in January 2021. Book Now</p>
-        </p>
-      </section>
       <section className="buttons">
         <Link to="/pricing">
           <button className="Link">View Pricing</button>

@@ -133,7 +133,7 @@ export const MiddleContent = styled.section`
   }
 
   button {
-    background-image: linear-gradient(135deg, #2c73d2, #845ec2);
+    background-image: var(--color-primary);
   }
 
   @media only screen and (max-width: 65em) {
