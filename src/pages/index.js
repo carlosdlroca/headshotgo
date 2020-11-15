@@ -13,7 +13,6 @@ import {
 } from "../PageComponents/LandingPage/ImageGrid"
 import { WhyChooseUs } from "../PageComponents/LandingPage/WhyChooseUs"
 import LandingGridImage from "../PageComponents/LandingPage/LandingGridImage"
-import Reviews from "../components/Reviews"
 
 import Rocket from "../images/illustrations/rocket.svg"
 import Gears from "../images/illustrations/gears.svg"
@@ -92,8 +91,6 @@ const IndexPage = ({ data }) => {
           </Link>
         </TextContainer>
       </FullWidth>
-
-      <Reviews />
 
       <img
         src={satisfactionPng}
