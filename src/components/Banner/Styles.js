@@ -14,6 +14,7 @@ export default styled.header`
 
   @media only screen and (max-width: 65em) {
     min-height: 45rem;
+    background-size: contain;
     button {
       font-size: 2.4rem;
       padding: 1rem 1.8rem;
