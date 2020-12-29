@@ -16,21 +16,43 @@ import Checkmark from "../PageComponents/Pricing/checkmark.svg"
 export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {
     return data.allPricesJson.edges.map(
-      ({ node: { color, price, packageName, packageDetails, psRetouch } }) => (
-        <PricingCard color={color} key={packageName}>
+      ({
+        node: {
+          color,
+          price,
+          packageName,
+          packageDetails,
+          psRetouch,
+          discount,
+        },
+      }) => (
+        <PricingCard
+          color={color}
+          key={packageName}
+          discount={discount ? "true" : null}
+        >
           <div className="Main">
             <h1>{packageName}</h1>
             <p>starting at</p>
             <p className="Price">
-              <sup>$</sup>
-              {price}
-              <sup>*</sup>
+              {discount ? <p className="Sale">Sale!!!</p> : null}
+              <div>
+                <sup>$</sup>
+                <span>{price}</span>
+                <sup>*</sup>
+              </div>
+              {discount ? (
+                <h1 className="DiscountPrice">
+                  ${Number(price) - Math.ceil(Number(price) * discount)} *
+                </h1>
+              ) : null}
             </p>
             <a className="BookNowLink" href={data.site.siteMetadata.phone}>
               <Button
                 bgColor={"#fff"}
                 color={"var(--color-primary)"}
-                aria-label="book now"
+                aria-label="call us"
+                big="true"
               >
                 Call Us
               </Button>
@@ -41,7 +63,9 @@ export default function Pricing({ data }) {
               <p
                 key={index}
                 style={{
-                  fontWeight: detailString.includes(1) ? "700" : "normal",
+                  fontWeight: detailString.includes("business")
+                    ? "700"
+                    : "normal",
                 }}
               >
                 <Checkmark />
@@ -116,6 +140,7 @@ export const pageQuery = graphql`
           price
           color
           psRetouch
+          discount
         }
       }
     }

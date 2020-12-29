@@ -4,11 +4,11 @@ export const PricingCards = styled.div`
   display: grid;
   grid-row-gap: 3rem;
   margin: 10rem auto 5rem;
-  width: min(85vw, 120rem);
+  width: min(95vw, 120rem);
 
   .LocationComment {
     font-size: 2.2rem;
-    color: var(--color-text-light);
+    color: var(--color-white-2);
   }
 
   @media only screen and (max-width: 52.5em) and (min-width: 40em) {
@@ -17,7 +17,7 @@ export const PricingCards = styled.div`
 
   @media only screen and (min-width: 52.5em) {
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 2.3vw;
+    grid-column-gap: 2vw;
   }
 `
 
@@ -36,7 +36,6 @@ export const PricingCard = styled.div`
     align-items: center;
     h1 {
       font-size: 3rem;
-      margin-bottom: 2rem;
       text-align: center;
       color: ${({ color }) => color};
     }
@@ -53,6 +52,37 @@ export const PricingCard = styled.div`
         font-size: 0.5em;
       }
     }
+
+    ${({ discount }) => {
+      if (discount == "true") {
+        return `
+          .Price {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: .4fr 1fr;
+            .Sale{
+              font-size: 2.5rem;
+              text-decoration: underline;
+              color: var(--color-primary);
+              grid-area: 1 / 1 / 2 / 3;
+            }
+            span {
+              text-decoration: line-through;
+              font-size: 2.4rem;
+            }
+            sup {
+              font-size: 1rem;
+              display: none;
+              color: transparent;
+            }
+            h1 {
+              font-size: 4.5rem;
+            }
+          }
+        `
+      }
+    }}
   }
   .BookNowLink {
     margin: 2rem 0;
@@ -102,6 +132,7 @@ export const PricingInfo = styled.div`
   }
 
   @media only screen and (max-width: 47em) {
-    font-size: 2.1rem;
+    font-size: 3rem;
+    line-height: 1.9;
   }
 `

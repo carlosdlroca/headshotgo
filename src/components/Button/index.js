@@ -8,6 +8,13 @@ const Button = styled.button`
   padding: 1rem 2rem;
   transition: all 0.15s ease-out;
 
+  @media only screen and (max-width: 52em) {
+    ${({ big }) => {
+      if (big) {
+        return "font-size: 4rem;\npadding:1.5rem 3.2rem;"
+      }
+    }}
+  }
   &:hover,
   &:focus {
     cursor: pointer;

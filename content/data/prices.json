@@ -4,10 +4,11 @@
     "price": "55.00",
     "color": "#55ee88",
     "packageDetails": [
-      "3 guaranteed images",
+      "10-15 guaranteed images",
       "30 minute photoshoot",
       "2-3 business days delivery"
     ],
+    "discount": 0.21,
     "psRetouch": false
   },
   {
@@ -15,10 +16,11 @@
     "price": "75.00",
     "color": "#5555EE",
     "packageDetails": [
-      "3 guaranteed images",
+      "10-15 guaranteed images",
       "30 minute photoshoot",
       "2-3 business days delivery"
     ],
+    "discount": 0.21,
     "psRetouch": true
   },
   {
@@ -26,10 +28,11 @@
     "price": "85.00",
     "color": "#8855EE",
     "packageDetails": [
-      "3 guaranteed images",
+      "10-15 guaranteed images",
       "30 minute photoshoot",
       "1 business day delivery"
     ],
+    "discount": 0,
     "psRetouch": true
   }
 ]

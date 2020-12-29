@@ -7,6 +7,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.29.2",
+    "gatsby-background-image": "^1.3.1",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-manifest": "^2.9.1",
     "gatsby-plugin-offline": "^3.7.1",
@@ -34,7 +35,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "deploy": "gatsby build && surge public headshotgo.surge.sh",
+    "deploy": "gatsby build && surge public hsgo-test.surge.sh",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",

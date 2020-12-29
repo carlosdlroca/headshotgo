@@ -4,14 +4,14 @@ export const SidebarContainer = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100vh;
-  width: min(80vw, 35rem);
+  width: 100vw;
 
   position: fixed;
   top: 0;
   right: 0;
   z-index: 100;
-  background: white;
-  padding: 1.5rem 0 3rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(0.5rem);
 
   transition: transform 0.2s ease-in;
   transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
@@ -30,7 +30,7 @@ export const SidebarContainer = styled.div`
       cursor: pointer;
       svg,
       svg path {
-        fill: var(--color-primary);
+        fill: var(--text-white-1);
       }
       background: var(--color-quaternary);
     }
@@ -39,24 +39,26 @@ export const SidebarContainer = styled.div`
 export const SidebarContent = styled.li`
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
   a {
+    width: 100%;
+    text-align: center;
     border-radius: 0.5rem;
-    color: var(--color-secondary);
-    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-size: 4rem;
     font-weight: 600;
     padding: 2rem 1rem;
     margin-bottom: 1.5rem;
     transition: all 0.2s ease-out;
     &:hover,
     &:focus {
-      background-color: var(--color-quaternary);
-      color: var(--color-primary);
+      color: var(--color-secondary);
     }
   }
 
   img {
-    width: 50%;
-    margin: auto auto 0;
+    width: min(20rem, 50%);
   }
 `

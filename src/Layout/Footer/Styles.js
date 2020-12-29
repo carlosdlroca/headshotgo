@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FooterContainer = styled.footer`
-  background: var(--color-primary);
+  background: #4338ca;
   padding: 10rem 10rem 1rem 4rem;
 
   display: grid;

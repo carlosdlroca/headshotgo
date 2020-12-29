@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FooterContainer, Copyright } from "./Styles"
 
-import Logo from "../../images/HeadshotsOnTheGo.png"
+import Logo from "../../images/HeadshotsOnTheGoWhite.png"
 import renderIcon from "../../utils/renderIcon"
 
 export default function Footer() {

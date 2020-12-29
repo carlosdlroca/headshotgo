@@ -1,28 +1,28 @@
 import styled from "styled-components"
 
 export const NavbarContainer = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 98;
   padding: 1.2rem 3rem;
 
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  background: white;
-  box-shadow: 0 0.3rem 3rem rgba(0, 0, 0, 0.3);
+  background: transparent;
 
   .Logo {
     img {
-      height: 7rem;
-      width: 7rem;
+      height: 8.5rem;
+      width: 8.5rem;
     }
   }
 
   #openSidebarButton {
     svg,
     svg path {
-      fill: var(--color-primary);
+      fill: var(--text-white-1);
       cursor: pointer;
     }
     @media only screen and (min-width: 65.63em) {
@@ -51,15 +51,14 @@ export const NavbarLink = styled.li`
     padding: 1rem 1.5rem;
     display: block;
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--text-white-1);
     transition: color 0.2s ease;
   }
 
   &:hover {
-    background: var(--color-quaternary);
     cursor: pointer;
     a {
-      color: var(--color-secondary);
+      color: var(--color-primary);
     }
   }
 
