@@ -4,6 +4,7 @@ export const ContactPageContainer = styled.div`
   display: grid;
   place-items: center;
   padding: 10rem 0 5rem;
+  overflow-x: hidden;
 `
 export const ExtraInfo = styled.section`
   display: grid;
