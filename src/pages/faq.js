@@ -37,7 +37,8 @@ const FAQGrid = styled.section`
   .Answer {
     font-size: clamp(1.8rem, 1.2vw, 2.8rem);
     line-height: 1.7;
-    p {
+    span {
+      display: block;
       margin-bottom: 2rem;
     }
 
@@ -65,32 +66,34 @@ export default function faq() {
 
         <h1 className="Question">How can I book my appointment?</h1>
         <p className="Answer">
-          <p>
+          <span>
             You need to first contact us, you can do this through several
             different ways: DM us on instagram (@headshotsonthego), by filling
             out our contact page on our website, or by giving us a call :)
-          </p>
-          <p>We will then send you our booking link for our availability</p>
-          <p>
+          </span>
+          <span>
+            We will then send you our booking link for our availability
+          </span>
+          <span>
             After you have booked with us, we will send you the next steps via
             email.
-          </p>
+          </span>
         </p>
 
         <h1 className="Question">How do I receive my photos?</h1>
         <p className="Answer">
-          <p>
+          <span>
             You will receive your images through an email titled “[Name], Your
             photos are ready!”
-          </p>
-          <p>
+          </span>
+          <span>
             This email will include a google drive folder that will contain all
             your images
-          </p>
-          <p className="Info">
+          </span>
+          <span className="Info">
             *This procedure is tentative as we are constantly looking for ways
             to update our efficiency
-          </p>
+          </span>
         </p>
 
         <h1 className="Question">
