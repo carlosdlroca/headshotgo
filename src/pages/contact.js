@@ -3,7 +3,9 @@ import { graphql } from "gatsby"
 
 import SEO from "../components/seo"
 import PageTitle from "../PageComponents/PageTitle"
-import { ContactPageContainer, ExtraInfo } from "../PageComponents/Contact"
+import {
+  ContactPageContainer /*, ExtraInfo */,
+} from "../PageComponents/Contact"
 import { Form, InputGroup, Label, Input, TextArea } from "../components/Form"
 import Button from "../components/Button"
 

@@ -1,15 +1,13 @@
 import styled from "styled-components"
 
 export default styled.section`
-  background-color: ${({ bgColor }) =>
-    bgColor ? bgColor : "var(--color-quaternary)"};
-  color: var(--color-text-dark);
-  padding: 3rem 1rem;
-  width: 100%;
-  margin-bottom: 8rem;
+  padding: 1rem 1rem 5rem;
 
   h1 {
-    font-size: 4rem;
+    color: var(--color-primary);
+    background: var(--text-white-2);
+    letter-spacing: 0.15rem;
+    font-size: 5rem;
     text-align: center;
     margin-bottom: 3rem;
   }

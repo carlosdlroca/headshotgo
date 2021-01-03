@@ -21,13 +21,13 @@ export default function Navbar({ openSidebar }) {
       </button>
       <NavbarLinks>
         <NavbarLink>
-          <Link to="/portfolio">Our Work</Link>
-        </NavbarLink>
-        <NavbarLink>
           <Link to="/pricing">Pricing</Link>
         </NavbarLink>
         <NavbarLink>
           <Link to="/contact">Contact</Link>
+        </NavbarLink>
+        <NavbarLink>
+          <Link to="/faq">F.A.Q</Link>
         </NavbarLink>
       </NavbarLinks>
     </NavbarContainer>

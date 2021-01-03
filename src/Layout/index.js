@@ -2,7 +2,7 @@ import React, { useState, useCallback, useLayoutEffect } from "react"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
-import Banner from "../components/Banner"
+// import Banner from "../components/Banner"
 import GlobalStyles from "./GlobalStyles"
 import { Helmet } from "react-helmet"
 

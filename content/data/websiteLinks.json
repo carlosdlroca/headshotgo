@@ -1,0 +1,27 @@
+{
+  "email": "mayafilmsphotovideo@gmail.com",
+  "bookingLink": "https://square.site/book/PXQFBMDDJM5AJ/headshot-on-the-go",
+  "phone": "tel:+13234916109",
+  "links": [
+    {
+      "linkType": "instagram",
+      "linkUrl": "https://www.instagram.com/headshotsonthego/"
+    },
+    {
+      "linkType": "linkedin",
+      "linkUrl": "https://www.linkedin.com/company/maya-films"
+    },
+    {
+      "linkType": "email",
+      "linkUrl": "mailto:mayafilmsphotovideo@gmail.com"
+    },
+    {
+      "linkType": "facebook",
+      "linkUrl": "https://facebook.com/HeadshotsontheGo"
+    },
+    {
+      "linkType": "phone",
+      "linkUrl": "tel:+13234916109"
+    }
+  ]
+}

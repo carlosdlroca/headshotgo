@@ -16,9 +16,6 @@ function Sidebar({ isOpen, closeSidebar }) {
         <CloseSvg />
       </button>
       <SidebarContent>
-        <Link onClick={closeSidebar} to="/portfolio">
-          Our Work
-        </Link>
         <Link onClick={closeSidebar} to="/pricing">
           Pricing
         </Link>

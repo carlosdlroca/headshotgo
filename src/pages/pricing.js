@@ -35,7 +35,7 @@ export default function Pricing({ data }) {
             <h1>{packageName}</h1>
             <p>starting at</p>
             <p className="Price">
-              {discount ? <p className="Sale">Sale!!!</p> : null}
+              {discount ? <p className="Sale">New Year Sale!!!</p> : null}
               <div>
                 <sup>$</sup>
                 <span>{price}</span>

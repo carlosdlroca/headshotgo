@@ -79,7 +79,7 @@ export const SectionPrimary = styled(Section)`
 `
 export const SectionSecondary = styled(Section)`
   grid-template-columns: 2fr 1fr;
-
+  background: var(--color-black-1);
   .Content {
     grid-column: 1 / 2;
   }

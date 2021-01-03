@@ -53,8 +53,8 @@ export const PricingCard = styled.div`
       }
     }
 
-    ${({ discount }) => {
-      if (discount == "true") {
+    ${({ discount, color }) => {
+      if (discount === "true") {
         return `
           .Price {
             margin-top: 2rem;
@@ -69,7 +69,9 @@ export const PricingCard = styled.div`
             }
             span {
               text-decoration: line-through;
-              font-size: 2.4rem;
+              color: ${color};
+              opacity: .65;
+              margin-right: 4rem;
             }
             sup {
               font-size: 1rem;

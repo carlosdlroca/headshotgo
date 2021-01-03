@@ -12,6 +12,7 @@ import {
   SectionPrimary,
   SectionSecondary,
 } from "../PageComponents/LandingPage/AlternatingSections"
+import MissionStatement from "../PageComponents/LandingPage/MissonStatement"
 import EfficientSvg from "../images/illustrations/efficient.svg"
 import AffordableSvg from "../images/illustrations/affordable.svg"
 import MobileSvg from "../images/illustrations/mobile.svg"
@@ -21,7 +22,17 @@ const IndexPage = ({ data }) => {
     <div>
       <SEO title="Home" />
       <Header />
-
+      <MissionStatement>
+        Our Mission:{" "}
+        <p>
+          “To help{" "}
+          <span className="highlight">1 Million university students</span> have
+          a professional image regardless of their{" "}
+          <span className="highlight">background</span>,{" "}
+          <span className="highlight">financial status</span>, or{" "}
+          <span className="highlight">race/ethnicity</span>. “
+        </p>
+      </MissionStatement>
       <SectionPrimary>
         <div className="Illustration">
           <EfficientSvg />
@@ -29,24 +40,20 @@ const IndexPage = ({ data }) => {
         <div className="Content">
           <h1 className="Title">Efficient</h1>
           <span className="Text">
-            As college students, we know an hour of your day is too much to ask
-            for, our photoshoots typically last 30-45 minutes. We make sure to
-            maximize the number of photos through our sessions. We take 50+
-            images per session to make sure we got the right photo.{" "}
+            Our process is very efficient, you contact us, you book with us, and
+            you get your photos. Yes, it is that easy!
           </span>
           <Link to="/contact">Book Now</Link>
         </div>
       </SectionPrimary>
-
       <SectionSecondary>
         <div className="Content">
           <h1 className="Title">Affordable</h1>
           <span className="Text">
-            College in itself is already expensive, why pay another $100 for a
-            service you can get for a much cheaper price. Our most affordable
-            package starts at $15 per image, and our fastest delivery package
-            starts at $25 per image. Get the best bang for your buck at
-            Headshots on the Go!
+            Our prices are what separate us from our competition. As students
+            ourselves, we understand how expensive college can be. Our goal is
+            to help every student have a professional image regardless of their
+            financial status.
           </span>
           <Link to="/pricing">View Prices</Link>
         </div>
@@ -54,7 +61,6 @@ const IndexPage = ({ data }) => {
           <AffordableSvg />
         </div>
       </SectionSecondary>
-
       <SectionPrimary color="#6D28D9" buttonColor="#4ADE80">
         <div className="Illustration">
           <MobileSvg />
@@ -62,18 +68,14 @@ const IndexPage = ({ data }) => {
         <div className="Content">
           <h1 className="Title">Mobile</h1>
           <span className="Text">
-            We know scoping out for locations can be hard sometimes and studios
-            might be intimidating. As implied by our name, Headshots on the Go,
-            we offer mobile photography services, meaning that we go to the
-            location of your choice. So you take control of your background,
-            anywhere within 50 miles of Los Angeles County.
+            Being mobile allows us to reach more students in LA County. It also
+            allows us to provide our services out in the open, which helps you
+            feel more comfortable and makes the session more fun!
           </span>
-          <Link to="/contact">Book Now</Link>
+          <Link to="/faq">Learn More</Link>
         </div>
       </SectionPrimary>
-
       <Gallery />
-
       <FullWidth>
         <TextContainer>
           <h1>Invest in your future</h1>
@@ -82,17 +84,16 @@ const IndexPage = ({ data }) => {
             <Button>Book Today</Button>
           </Link>
         </TextContainer>
+        <img
+          src={satisfactionPng}
+          alt="Satisfaction Guaranteed"
+          style={{
+            width: "35rem",
+            margin: "2rem auto",
+            display: "block",
+          }}
+        />
       </FullWidth>
-
-      <img
-        src={satisfactionPng}
-        alt="Satisfaction Guaranteed"
-        style={{
-          width: "35rem",
-          margin: "2rem auto 10rem",
-          display: "block",
-        }}
-      />
     </div>
   )
 }

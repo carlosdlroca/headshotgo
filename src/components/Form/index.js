@@ -78,6 +78,7 @@ export const TextArea = styled.textarea`
   padding: 0.4rem;
   width: 100%;
   min-height: 15rem;
+  resize: none;
 
   @media only screen and (max-width: 50em) {
     font-size: 2.5rem;
