@@ -82,14 +82,14 @@ export default function faq() {
           <p>
             You will receive your images through an email titled “[Name], Your
             photos are ready!”
-            <p>
-              This email will include a google drive folder that will contain
-              all your images
-            </p>
-            <p className="Info">
-              *This procedure is tentative as we are constantly looking for ways
-              to update our efficiency
-            </p>
+          </p>
+          <p>
+            This email will include a google drive folder that will contain all
+            your images
+          </p>
+          <p className="Info">
+            *This procedure is tentative as we are constantly looking for ways
+            to update our efficiency
           </p>
         </p>
 
