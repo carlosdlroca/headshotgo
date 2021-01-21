@@ -26,8 +26,8 @@ const IndexPage = ({ data }) => {
         Our Mission:{" "}
         <p>
           “To help{" "}
-          <span className="highlight">1 Million university students</span> have
-          a professional image regardless of their{" "}
+          <span className="highlight">1 Million university students</span>and
+          young professionals have a professional image, regardless of their{" "}
           <span className="highlight">background</span>,{" "}
           <span className="highlight">financial status</span>, or{" "}
           <span className="highlight">race/ethnicity</span>. “
