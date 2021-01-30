@@ -52,39 +52,6 @@ export const PricingCard = styled.div`
         font-size: 0.5em;
       }
     }
-
-    ${({ discount, color }) => {
-      if (discount === "true") {
-        return `
-          .Price {
-            margin-top: 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: .4fr 1fr;
-            .Sale{
-              font-size: 2.5rem;
-              text-decoration: underline;
-              color: var(--color-primary);
-              grid-area: 1 / 1 / 2 / 3;
-            }
-            span {
-              text-decoration: line-through;
-              color: ${color};
-              opacity: .65;
-              margin-right: 4rem;
-            }
-            sup {
-              font-size: 1rem;
-              display: none;
-              color: transparent;
-            }
-            h1 {
-              font-size: 4.5rem;
-            }
-          }
-        `
-      }
-    }}
   }
   .BookNowLink {
     margin: 2rem 0;

@@ -16,36 +16,17 @@ import Checkmark from "../PageComponents/Pricing/checkmark.svg"
 export default function Pricing({ data }) {
   const renderPrices = useCallback(() => {
     return data.allPricesJson.edges.map(
-      ({
-        node: {
-          color,
-          price,
-          packageName,
-          packageDetails,
-          psRetouch,
-          discount,
-        },
-      }) => (
-        <PricingCard
-          color={color}
-          key={packageName}
-          discount={discount ? "true" : null}
-        >
+      ({ node: { color, price, packageName, packageDetails, psRetouch } }) => (
+        <PricingCard color={color} key={packageName}>
           <div className="Main">
             <h1>{packageName}</h1>
             <p>starting at</p>
             <p className="Price">
-              {discount ? <p className="Sale">New Year Sale!!!</p> : null}
               <div>
                 <sup>$</sup>
                 <span>{price}</span>
                 <sup>*</sup>
               </div>
-              {discount ? (
-                <h1 className="DiscountPrice">
-                  ${Number(price) - Math.ceil(Number(price) * discount)} *
-                </h1>
-              ) : null}
             </p>
             <a className="BookNowLink" href={data.site.siteMetadata.phone}>
               <Button
@@ -140,7 +121,6 @@ export const pageQuery = graphql`
           price
           color
           psRetouch
-          discount
         }
       }
     }
