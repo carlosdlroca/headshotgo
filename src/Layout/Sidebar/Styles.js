@@ -12,7 +12,7 @@ export const SidebarContainer = styled.div`
   z-index: 100;
   background: var(--bg-color);
 
-  transition: transform 0.2s ease-in;
+  transition: transform 0.2s linear;
   transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
 
   #close-sidebar {
