@@ -12,11 +12,9 @@ const Wrapper = styled.div`
 `
 
 const FAQTitle = styled.h1`
-  display: inline-block;
-  font-size: 6rem;
-  color: var(--text-white-1);
+  font-size: clamp(4.5rem, 3vw, 5.5rem);
+  color: var(--color-primary);
   text-align: center;
-  background: var(--color-primary);
 `
 
 const FAQGrid = styled.section`
@@ -28,16 +26,12 @@ const FAQGrid = styled.section`
   width: min(110rem, 95vw);
   margin: 1rem auto 15rem;
 
-  @media only screen and (max-width: 54em) {
-    grid-row-gap: 16rem;
-  }
-
   .Question {
-    font-size: clamp(2.5rem, 1.5vw, 3.5rem);
+    font-size: clamp(3rem, 1.5vw, 3.8rem);
   }
 
   .Answer {
-    font-size: clamp(1.8rem, 1.2vw, 2.8rem);
+    font-size: clamp(2rem, 1.2vw, 2.8rem);
     line-height: 1.7;
     span {
       display: block;
@@ -46,6 +40,23 @@ const FAQGrid = styled.section`
 
     .Info {
       font-weight: bold;
+    }
+  }
+
+  @media only screen and (max-width: 54em) {
+    grid-row-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 1fr;
+
+    .Question {
+      margin-bottom: 1rem;
+      display: inline-block;
+      background: var(--color-primary);
+      color: white;
+      text-align: center;
+    }
+    .Answer {
+      margin-bottom: 10rem;
     }
   }
 `
