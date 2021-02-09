@@ -9,9 +9,6 @@ export default createGlobalStyle`
 
         --bg-color: #0f172a;
 
-        --color-text-dark: #1a2a3a;
-        --color-text-light: #4a5a6a;
-
         --color-black-4: #475569;
         --color-black-3: #334155;
         --color-black-2: #1E293B;
