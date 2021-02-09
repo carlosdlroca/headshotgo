@@ -46,7 +46,6 @@ const FAQGrid = styled.section`
   @media only screen and (max-width: 54em) {
     grid-row-gap: 0;
     grid-template-columns: 1fr;
-    grid-template-rows: 3rem 1fr;
 
     .Question {
       margin-bottom: 1rem;
