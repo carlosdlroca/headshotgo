@@ -61,35 +61,6 @@ const IndexPage = ({ data }) => {
         </div>
       </SectionPrimary>
       <Gallery />
-      <div
-        style={{
-          display: "grid",
-          placeItems: "center",
-          marginBottom: "15rem",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "clamp(4rem, 3vw, 4.5rem)",
-            textAlign: "center",
-            marginBottom: "5rem",
-          }}
-        >
-          Explore and Download your personal headshots
-        </h1>
-        <a
-          href="https://headshotsonthego.pixieset.com/"
-          style={{
-            fontSize: "clamp(2.5rem, 2.5vw, 3rem",
-            borderRadius: "1rem",
-            padding: "1rem 2rem",
-            color: "white",
-            backgroundColor: "var(--color-primary)",
-          }}
-        >
-          View Online Gallery
-        </a>
-      </div>
     </div>
   )
 }
