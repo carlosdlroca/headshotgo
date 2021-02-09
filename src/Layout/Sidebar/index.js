@@ -22,9 +22,6 @@ function Sidebar({ isOpen, closeSidebar }) {
         <Link onClick={closeSidebar} to="/contact">
           Contact Us
         </Link>
-        <Link href="https://square.site/book/PXQFBMDDJM5AJ/headshots-on-the-go">
-          Book Now
-        </Link>
         <Link href="https://headshotsonthego.pixieset.com/">
           Personal Gallery
         </Link>
