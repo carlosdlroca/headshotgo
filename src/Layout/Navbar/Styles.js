@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const NavbarContainer = styled.nav`
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 98;
   padding: 1.2rem 3rem;

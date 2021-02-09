@@ -2,9 +2,7 @@ import styled from "styled-components"
 
 export const AppContainer = styled.div``
 
-export const MainContent = styled.main`
-  padding-top: 10rem;
-`
+export const MainContent = styled.main``
 
 export const Backdrop = styled.div`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
