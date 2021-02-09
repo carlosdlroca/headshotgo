@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const LocationInfo = styled.section`
   background: var(--color-quaternary);
-  color: var(--color-text-dark);
+  color: var(--color-black-1);
   margin: 7rem 0 0;
   padding: 5rem;
   line-height: 1.8;
@@ -18,7 +18,7 @@ export const LocationInfo = styled.section`
       text-decoration-color: var(--color-primary);
     }
     p {
-      color: var(--color-text-light);
+      color: var(--color-black-2);
       font-size: 0.96em;
       font-style: italic;
       &:before {

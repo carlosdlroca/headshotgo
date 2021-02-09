@@ -25,9 +25,9 @@ export const PricingCard = styled.div`
   box-shadow: 0.1rem 0.3rem 1rem rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   overflow: hidden;
-  background: #fff;
+  background: var(--text-white-1);
   .Main {
-    color: var(--color-text-light);
+    color: var(--color-black-2);
     padding: 3rem 1.4rem 0;
     position: relative;
     line-height: 1.7;
@@ -64,7 +64,7 @@ export const PricingCard = styled.div`
   .psRetouch {
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: var(--color-text-dark);
+    text-decoration-color: var(--color-black-3);
     color: ${({ color }) => color};
   }
 
@@ -89,7 +89,7 @@ export const PricingCard = styled.div`
 
 export const PricingInfo = styled.div`
   background: white;
-  color: var(--color-text-light);
+  color: var(--color-black-1);
   font-size: 1.8rem;
   line-height: 1.7;
   padding: 0 1rem 3rem;
