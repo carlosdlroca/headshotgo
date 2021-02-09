@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
             Our process is very efficient, you contact us, you book with us, and
             you get your photos. Yes, it is that easy!
           </span>
-          <Link to="/contact">Book Now</Link>
+          <Link to="/pricing">Book Now</Link>
         </div>
       </SectionPrimary>
       <SectionSecondary>
