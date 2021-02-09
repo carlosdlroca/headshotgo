@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const StyledHeader = styled.header`
-  background-image: url("/la-back.jpg");
+  background-image: url("/header-image.jpg");
   background-size: cover;
   background-position: center;
 
