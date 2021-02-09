@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const ContactPageContainer = styled.div`
   display: grid;
   place-items: center;
-  padding: 10rem 0 5rem;
+  padding: 0 0 5rem;
   overflow-x: hidden;
 `
 export const ExtraInfo = styled.section`

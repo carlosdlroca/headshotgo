@@ -10,8 +10,7 @@ export const SidebarContainer = styled.div`
   top: 0;
   right: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(0.5rem);
+  background: var(--bg-color);
 
   transition: transform 0.2s ease-in;
   transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
@@ -46,7 +45,7 @@ export const SidebarContent = styled.li`
     width: 100%;
     text-align: center;
     border-radius: 0.5rem;
-    color: var(--color-primary);
+    color: var(--text-white-1);
     font-size: 4rem;
     font-weight: 600;
     padding: 2rem 1rem;
@@ -54,11 +53,12 @@ export const SidebarContent = styled.li`
     transition: all 0.2s ease-out;
     &:hover,
     &:focus {
-      color: var(--color-secondary);
+      color: var(--color-primary);
     }
   }
 
   img {
+    margin-top: 5rem;
     width: min(20rem, 50%);
   }
 `

@@ -1,9 +1,7 @@
 import React, { useCallback } from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import PageTitle from "../PageComponents/PageTitle"
 import Button from "../components/Button"
-import PageWrapper from "../PageComponents/PageWrapper"
 
 import {
   PricingCards,
@@ -28,14 +26,17 @@ export default function Pricing({ data }) {
                 <sup>*</sup>
               </div>
             </p>
-            <a className="BookNowLink" href={data.site.siteMetadata.phone}>
+            <a
+              className="BookNowLink"
+              href={data.site.siteMetadata.bookingLink}
+            >
               <Button
                 bgColor={"#fff"}
                 color={"var(--color-primary)"}
-                aria-label="call us"
+                aria-label="Book Now"
                 big="true"
               >
-                Call Us
+                Book Now
               </Button>
             </a>
           </div>
@@ -64,9 +65,8 @@ export default function Pricing({ data }) {
     data.site.siteMetadata.phone,
   ])
   return (
-    <PageWrapper>
+    <div>
       <SEO title="Our Prices" />
-      <PageTitle>Our Packages</PageTitle>
       <PricingCards>
         {renderPrices()}
         <p className="LocationComment">
@@ -100,7 +100,7 @@ export default function Pricing({ data }) {
           </li>
         </ol>
       </LocationInfo>
-    </PageWrapper>
+    </div>
   )
 }
 

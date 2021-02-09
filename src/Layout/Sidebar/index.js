@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Logo from "../../images/HeadshotsOnTheGo.png"
+import Logo from "../../images/HeadshotsOnTheGoWhite.png"
 import { SidebarContainer, SidebarContent } from "./Styles"
 import CloseSvg from "./close.svg"
 
@@ -21,6 +21,12 @@ function Sidebar({ isOpen, closeSidebar }) {
         </Link>
         <Link onClick={closeSidebar} to="/contact">
           Contact Us
+        </Link>
+        <Link href="https://square.site/book/PXQFBMDDJM5AJ/headshots-on-the-go">
+          Book Now
+        </Link>
+        <Link href="https://headshotsonthego.pixieset.com/">
+          Personal Gallery
         </Link>
         <Link onClick={closeSidebar} to="/faq">
           F.A.Q

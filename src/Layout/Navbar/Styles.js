@@ -10,7 +10,6 @@ export const NavbarContainer = styled.nav`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
 
   .Logo {
     img {
@@ -55,10 +54,11 @@ export const NavbarLink = styled.li`
     transition: color 0.2s ease;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     a {
-      color: var(--color-primary);
+      text-decoration: underline;
     }
   }
 

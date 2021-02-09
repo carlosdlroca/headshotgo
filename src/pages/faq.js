@@ -4,17 +4,19 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  padding: 25rem 0 10rem;
-
-  .highlight {
-  }
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
 `
 
 const FAQTitle = styled.h1`
+  display: inline-block;
   font-size: 6rem;
   color: var(--text-white-1);
   text-align: center;
-  margin-bottom: 10rem;
+  background: var(--color-primary);
 `
 
 const FAQGrid = styled.section`

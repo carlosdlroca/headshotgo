@@ -2,9 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
-import FullWidth from "../components/FullWidth"
-import TextContainer from "../PageComponents/TextContainer"
-import satisfactionPng from "../images/satisfaction_guarantee.png"
 import Button from "../components/Button"
 import Header from "../PageComponents/LandingPage/Header"
 import Gallery from "../components/Gallery"
@@ -12,7 +9,6 @@ import {
   SectionPrimary,
   SectionSecondary,
 } from "../PageComponents/LandingPage/AlternatingSections"
-import MissionStatement from "../PageComponents/LandingPage/MissonStatement"
 import EfficientSvg from "../images/illustrations/efficient.svg"
 import AffordableSvg from "../images/illustrations/affordable.svg"
 import MobileSvg from "../images/illustrations/mobile.svg"
@@ -22,17 +18,6 @@ const IndexPage = ({ data }) => {
     <div>
       <SEO title="Home" />
       <Header />
-      <MissionStatement>
-        Our Mission:{" "}
-        <p>
-          “To help{" "}
-          <span className="highlight">1 Million university students</span>and
-          young professionals have a professional image, regardless of their{" "}
-          <span className="highlight">background</span>,{" "}
-          <span className="highlight">financial status</span>, or{" "}
-          <span className="highlight">race/ethnicity</span>. “
-        </p>
-      </MissionStatement>
       <SectionPrimary>
         <div className="Illustration">
           <EfficientSvg />
@@ -76,24 +61,35 @@ const IndexPage = ({ data }) => {
         </div>
       </SectionPrimary>
       <Gallery />
-      <FullWidth>
-        <TextContainer>
-          <h1>Invest in your future</h1>
-
-          <Link to="/pricing">
-            <Button>Book Today</Button>
-          </Link>
-        </TextContainer>
-        <img
-          src={satisfactionPng}
-          alt="Satisfaction Guaranteed"
+      <div
+        style={{
+          display: "grid",
+          placeItems: "center",
+          marginBottom: "15rem",
+        }}
+      >
+        <h1
           style={{
-            width: "35rem",
-            margin: "2rem auto",
-            display: "block",
+            fontSize: "clamp(4rem, 3vw, 4.5rem)",
+            textAlign: "center",
+            marginBottom: "5rem",
           }}
-        />
-      </FullWidth>
+        >
+          Explore and Download your personal headshots
+        </h1>
+        <a
+          href="https://headshotsonthego.pixieset.com/"
+          style={{
+            fontSize: "clamp(2.5rem, 2.5vw, 3rem",
+            borderRadius: "1rem",
+            padding: "1rem 2rem",
+            color: "white",
+            backgroundColor: "var(--color-primary)",
+          }}
+        >
+          View Online Gallery
+        </a>
+      </div>
     </div>
   )
 }

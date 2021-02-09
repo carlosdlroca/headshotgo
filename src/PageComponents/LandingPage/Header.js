@@ -54,8 +54,7 @@ export default function Header() {
     <StyledHeader>
       <h1>Headshots On The Go</h1>
       <span>
-        Helping college students have a professional image. Update your Headshot
-        profile <u>today</u>!
+        On a mission to help every university student have a professional image!
       </span>
 
       <Link to="/contact">Book Now</Link>

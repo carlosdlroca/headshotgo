@@ -4,10 +4,9 @@ import SEO from "../components/seo"
 import TextContainer from "../PageComponents/TextContainer"
 import Button from "../components/Button"
 import { Link } from "gatsby"
-import PageWrapper from "../PageComponents/PageWrapper"
 
 const NotFoundPage = () => (
-  <PageWrapper>
+  <div>
     <SEO title="404: Not found" />
     <TextContainer>
       <h1>Oops! Incorrect Page!</h1>
@@ -17,7 +16,7 @@ const NotFoundPage = () => (
         <Button>Our Work</Button>
       </Link>
     </TextContainer>
-  </PageWrapper>
+  </div>
 )
 
 export default NotFoundPage
