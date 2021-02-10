@@ -18,6 +18,7 @@ const StyledHeader = styled.header`
     font-size: 6rem;
     text-align: center;
     line-height: 1.8;
+    text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 1);
   }
 
   span {
@@ -26,6 +27,7 @@ const StyledHeader = styled.header`
     line-height: 1.8;
     text-align: center;
     margin: 3rem 0 8rem;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 1);
   }
   a {
     line-height: 1.8;
