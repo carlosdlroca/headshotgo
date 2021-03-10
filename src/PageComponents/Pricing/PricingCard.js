@@ -25,7 +25,7 @@ export const PricingCard = styled.div`
   box-shadow: 0.1rem 0.3rem 1rem rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   overflow: hidden;
-  background: var(--text-white-1);
+  background: #fff;
   .Main {
     color: var(--color-black-2);
     padding: 3rem 1.4rem 0;
