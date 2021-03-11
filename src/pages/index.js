@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
-import Button from "../components/Button"
 import Header from "../PageComponents/LandingPage/Header"
 import Gallery from "../components/Gallery"
 import {

@@ -60,9 +60,8 @@ export default function Pricing({ data }) {
       )
     )
   }, [
-    //data.site.siteMetadata.bookingLink,
+    data.site.siteMetadata.bookingLink,
     data.allPricesJson.edges,
-    data.site.siteMetadata.phone,
   ])
   return (
     <div>
