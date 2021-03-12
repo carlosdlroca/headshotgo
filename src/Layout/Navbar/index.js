@@ -2,14 +2,19 @@ import React from "react"
 import { Link } from "gatsby"
 import { NavbarContainer, NavbarLinks, NavbarLink } from "./Styles"
 import MenuSvg from "./menu.svg"
-import Logo from "../../images/HeadshotsOnTheGoWhite.png"
+import LightLogo from "../../images/HeadshotsOnTheGoWhite.png"
+import DarkLogo from "../../images/HeadshotsOnTheGo.png"
 
-export default function Navbar({ openSidebar }) {
+export default function Navbar({ openSidebar, isSticky }) {
   return (
-    <NavbarContainer>
+    <NavbarContainer style={{
+      "--nav-bg-color": isSticky ? "#FFF" : null,
+      "--nav-shadow": isSticky ? "0 1rem 1rem rgba(0,0,0,0.5)" : "none",
+      "--sidebarButton-fill": isSticky ? "var(--bg-color)" : null
+    }}>
       <Link to="/">
         <div className="Logo">
-          <img src={Logo} alt="Headshots on the go" />
+          <img src={isSticky ? DarkLogo : LightLogo} alt="Headshots on the go" />
         </div>
       </Link>
       <button
@@ -19,7 +24,10 @@ export default function Navbar({ openSidebar }) {
       >
         <MenuSvg />
       </button>
-      <NavbarLinks>
+      <NavbarLinks style={{
+        "--navlink-color": isSticky ? "var(--bg-color)" : null,
+        "--navlink-shadow": isSticky ? "none" : null
+      }}>
         <NavbarLink>
           <Link to="/pricing">Pricing</Link>
         </NavbarLink>

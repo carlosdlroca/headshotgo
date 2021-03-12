@@ -10,6 +10,7 @@ import { AppContainer, MainContent, Backdrop } from "./LayoutStyles"
 
 export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isSticky, setIsSticky] = useState(false)
 
   const openSidebar = useCallback(() => {
     setIsOpen(true)
@@ -25,9 +26,21 @@ export default function Layout({ children }) {
         closeSidebar()
       }
     }
+    function onAppScroll(e) {
+      if (window.scrollY > 0) {
+        setIsSticky(true)
+      } else {
+        setIsSticky(false)
+      }
+    }
 
     window.addEventListener("resize", onResize)
-    return () => window.removeEventListener("resize", onResize)
+    window.addEventListener("scroll", onAppScroll)
+
+    return () => {
+      window.removeEventListener("resize", onResize)
+      window.removeEventListener("scroll", onAppScroll)
+    }
   }, [closeSidebar])
 
   return (
@@ -40,7 +53,7 @@ export default function Layout({ children }) {
         />
       </Helmet>
       {/* <Banner /> */}
-      <Navbar openSidebar={openSidebar} />
+      <Navbar openSidebar={openSidebar} isSticky={isSticky} />
       <MainContent>{children}</MainContent>
       <Footer />
       <Sidebar closeSidebar={closeSidebar} isOpen={isOpen} />

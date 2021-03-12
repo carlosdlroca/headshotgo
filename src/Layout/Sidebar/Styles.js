@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const SidebarContainer = styled.div`
   display: grid;
-  grid-template-rows: auto 1fr;
+  place-items: center;
   height: 100vh;
   width: 100vw;
 
@@ -16,22 +16,28 @@ export const SidebarContainer = styled.div`
   transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
 
   #close-sidebar {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+
     display: block;
     justify-self: flex-end;
-    margin-right: 1.5rem;
+    
+    background: #fff;
+    border-radius: .5rem;
+    transition: .2s;
     svg,
     svg path {
-      fill: var(--color-secondary);
+      fill: #ff6666;
     }
-
     &:hover,
     &:focus {
       cursor: pointer;
       svg,
       svg path {
-        fill: var(--text-white-1);
+        fill: #fff;
       }
-      background: var(--color-quaternary);
+      background: #ff6666;
     }
   }
 `

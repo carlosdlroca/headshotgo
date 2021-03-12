@@ -1,15 +1,19 @@
 import styled from "styled-components"
 
 export const NavbarContainer = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 98;
-  padding: 1.2rem 3rem;
-
+  
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  
+  background-color: var(--nav-bg-color, transparent);
+  box-shadow: var(--nav-shadow);
+  padding: 2rem 3rem;
+  transition: .4s;
 
   .Logo {
     img {
@@ -21,7 +25,7 @@ export const NavbarContainer = styled.nav`
   #openSidebarButton {
     svg,
     svg path {
-      fill: var(--text-white-1);
+      fill: var(--sidebarButton-fill, var(--text-white-1));
       cursor: pointer;
     }
     @media only screen and (min-width: 65.63em) {
@@ -30,7 +34,7 @@ export const NavbarContainer = styled.nav`
   }
 
   @media only screen and (min-width: 75em) {
-    padding: 0.5rem 12vw;
+    padding: 1rem 12vw;
   }
 `
 
@@ -44,13 +48,14 @@ export const NavbarLinks = styled.ul`
 
 export const NavbarLink = styled.li`
   a {
+    display: block;
+    border-radius: 1rem;
+    color: var(--navlink-color, --text-white-1);
     font-size: 2rem;
     font-weight: 600;
-    border-radius: 1rem;
     padding: 1rem 1.5rem;
-    display: block;
     text-decoration: none;
-    color: var(--text-white-1);
+    text-shadow: 0 0 1rem var(--navlink-shadow, rgba(0,0,0,.5));
     transition: color 0.2s ease;
   }
 

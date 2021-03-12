@@ -22,9 +22,9 @@ function Sidebar({ isOpen, closeSidebar }) {
         <Link onClick={closeSidebar} to="/contact">
           Contact Us
         </Link>
-        <Link href="https://headshotsonthego.pixieset.com/">
+        <a href="https://headshotsonthego.pixieset.com/">
           Personal Gallery
-        </Link>
+        </a>
         <Link onClick={closeSidebar} to="/faq">
           F.A.Q
         </Link>
