@@ -51,7 +51,7 @@ export default function GraduationPage({ data }) {
                 <li className="pricing-card-details_item">7 - 9 day delivery</li>
                 <li className="pricing-card-details_item">Free Headshot</li>
               </ul>
-              <a className="pricing-card-button" href={data.site.siteMetadata.bookingLink}>Buy Package</a>
+              <a className="pricing-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
           </div>
           <div className="pricing-card pricing-card--large">
@@ -65,7 +65,7 @@ export default function GraduationPage({ data }) {
                 <li className="pricing-card-details_item">5 - 7 day delivery</li>
                 <li className="pricing-card-details_item">3 Free Headshots</li>
               </ul>
-              <a className="pricing-card-button pricing-card-button--large" href={data.site.siteMetadata.bookingLink}>Buy Package</a>
+              <a className="pricing-card-button pricing-card-button--large" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
           </div>
           <div className="pricing-card">
@@ -82,7 +82,7 @@ export default function GraduationPage({ data }) {
                 <li className="pricing-card-details_item">Get featured on <a id="tiktok-link" href="https://www.tiktok.com/@jmayaphoto?lang=en">@Jmayaphoto</a></li>
                 <a id="link-link" href="#pricing-information"><i># More Information</i></a>
               </ul>
-              <a className="pricing-card-button" href={data.site.siteMetadata.bookingLink}>Buy Package</a>
+              <a className="pricing-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
           </div>
         </div>
