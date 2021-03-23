@@ -134,7 +134,7 @@ export default function faq() {
         </p>
 
         <h1 className="Question">
-          How can I support your business and staying in touch?
+          How can I support your business and stay in touch?
         </h1>
         <p className="Answer">
           You can support us by tagging us on social media, and spreading the
