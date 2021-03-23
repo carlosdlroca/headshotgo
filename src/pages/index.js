@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-
-import SEO from "../components/seo"
+import {Helmet} from 'react-helmet';
 import Header from "../PageComponents/LandingPage/Header"
 import Gallery from "../components/Gallery"
 import {
@@ -15,7 +14,23 @@ import MobileSvg from "../images/illustrations/mobile.svg"
 const IndexPage = ({ data }) => {
   return (
     <div>
-      <SEO title="Home" />
+      <Helmet>
+        <title>Headshots-on-the-Go</title>
+        <meta name="title" content="Headshots-on-the-Go" />
+        <meta name="description" content="Helping young professionals accelerate their career by making sure they give the best first impression. Update your headshot profile picture today!"/>
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://headshotgo.com"/>
+        <meta property="og:title" content="Headshots-on-the-Go"/>
+        <meta property="og:description" content="Helping young professionals accelerate their career by making sure they give the best first impression. Update your headshot profile picture today!"/>
+        <meta property="og:image" content="https://headshotgo.com/header-image.jpg"/>
+
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://headshotgo.com"/>
+        <meta property="twitter:title" content="Headshots-on-the-Go"/>
+        <meta property="twitter:description" content="Helping young professionals accelerate their career by making sure they give the best first impression. Update your headshot profile picture today!"/>
+        <meta property="twitter:image" content="https://headshotgo.com/header-image.jpg"></meta>
+      </Helmet>
       <Header />
       <SectionPrimary>
         <div className="Illustration">
@@ -27,7 +42,7 @@ const IndexPage = ({ data }) => {
             Our process is very efficient, you contact us, you book with us, and
             you get your photos. Yes, it is that easy!
           </span>
-          <Link to="/pricing">Book Now</Link>
+          <Link to="/headshots">Book Now</Link>
         </div>
       </SectionPrimary>
       <SectionSecondary>
@@ -39,7 +54,7 @@ const IndexPage = ({ data }) => {
             to help every student have a professional image regardless of their
             financial status.
           </span>
-          <Link to="/pricing">View Prices</Link>
+          <Link to="/headshots">View Prices</Link>
         </div>
         <div className="Illustration">
           <AffordableSvg />

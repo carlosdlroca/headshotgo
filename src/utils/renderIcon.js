@@ -7,6 +7,7 @@ import FacebookSvg from "../images/socialmedia/facebook.svg"
 import YoutubeSvg from "../images/socialmedia/youtube.svg"
 import EmailSvg from "../images/socialmedia/email.svg"
 import PhoneSvg from "../images/socialmedia/phone.svg"
+import TikTokSvg from "../images/socialmedia/tiktok.svg"
 
 export default function renderIcon(linkType) {
   switch (linkType) {
@@ -22,8 +23,10 @@ export default function renderIcon(linkType) {
       return <YoutubeSvg className="link-svg" />
     case "email":
       return <EmailSvg className="link-svg" />
-    case "phone":
-      return <PhoneSvg className="link-svg" />
+      case "phone":
+        return <PhoneSvg className="link-svg" />
+      case "tiktok":
+      return <TikTokSvg className="link-svg" />
     default:
       return null
   }

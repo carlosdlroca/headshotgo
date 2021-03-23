@@ -1,0 +1,254 @@
+.hs-page {
+  min-height: 100vh;
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+.hs-page-topInfo {
+  width: min(100vw, 175rem);
+  text-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.hs-page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--bg-color);
+}
+
+.topInfo--innerContainer {
+  display: flex;
+  align-items: center;
+  font-size: clamp(2rem, 2.5vw, 5rem);
+}
+
+.topInfo--innerContainer a {
+  color: currentColor;
+}
+
+.AuthorLink:hover,
+.AuthorLink:focus,
+.AuthorLink:active {
+  color: #ef2950;
+}
+
+.hs-cards {
+  --hs-cards-width: min(130rem, 95vw);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  width: var(--hs-cards-width);
+  margin: 0 auto;
+  transform: translateY(-15rem);
+  --hsCard-title-fontsize: 3.5rem;
+  --hsCard-best-deal-fontsize: 1.5rem;
+  --hsCard-hs-fontsize: clamp(3.2rem, 2.5vw, 6rem);
+  --hsCard-details-item-fontsize: 2rem;
+  --hsCard-button-fontsize: 1.6rem;
+  --hsCard-buttonLarge-fontsize: 2rem;
+  --hsCard-body-padding: 4rem;
+  --hsCard-large-borderSize: 0.4rem;
+
+  --hsCard-details-item-marginbottom: 1rem;
+}
+
+.hs-card {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #fff;
+  box-shadow: 0 0px 1rem rgba(0, 0, 0, 0.5);
+
+  --card-border-radius: 1.2rem;
+  border-radius: var(--card-border-radius);
+}
+
+.hs-card.hs-card--large {
+  z-index: 80;
+  border: var(--hsCard-large-borderSize) solid var(--color-primary);
+  position: relative;
+}
+
+@media (min-width: 63em) {
+  .hs-card.hs-card--large {
+    transform: translateY(-5rem);
+  }
+}
+
+.hs-card.purple.hs-card--large {
+  border-color: #9966ff;
+}
+
+.hs-card.purple.hs-card--large::before {
+  background-color: #9966ff;
+}
+
+.hs-card.hs-card--large::before {
+  content: "Best Deal";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-primary);
+  color: white;
+  font-size: var(--hsCard-best-deal-fontsize);
+  padding: 0.7rem 1.6rem;
+  border-radius: 1rem;
+}
+
+.hs-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #111827;
+  padding: 4.8rem 2.4rem 4rem;
+}
+
+.hs-card_title {
+  font-size: var(--hsCard-title-fontsize);
+  font-weight: 500;
+}
+
+.hs-card.green .hs-card_title {
+  color: #334155;
+}
+
+.hs-card.purple .hs-card_title {
+  color: #9966ff;
+}
+
+.hs-card.blue .hs-card_title {
+  color: #6677ff;
+}
+
+.hs-card_price {
+  font-size: var(--hsCard-hs-fontsize);
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.hs-card_price-hours {
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  color: #9ca3af;
+  margin-left: 1rem;
+}
+
+.hs-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+
+  background-color: var(--text-white-1);
+  border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+  color: #6b7280;
+  padding: var(--hsCard-body-padding);
+}
+
+.hs-card-details_item {
+  font-size: var(--hsCard-details-item-fontsize);
+  line-height: 1.6;
+  margin-bottom: var(--hsCard-details-item-marginbottom);
+}
+.hs-card-details_item strong {
+  color: var(--color-primary);
+}
+
+.hs-card-details_item::before {
+  content: url("/check-solid.svg");
+  margin-right: 1.5rem;
+}
+
+a[href="#pricing-information"],
+a[href="#pricing-information"]:visited {
+  display: block;
+  font-size: var(--hsCard-details-item-fontsize);
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.hs-card-button {
+  background-color: #fff;
+  color: #06b6d4;
+  font-size: var(--hsCard-button-fontsize);
+  font-weight: 500;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  padding: 1.6rem 2.4rem;
+  text-align: center;
+
+  transition: all 0.2s ease;
+}
+
+.hs-card-button:hover,
+.hs-card-button:focus,
+.hs-card-button:active {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.hs-card-button.hs-card-button--large {
+  background-color: rgb(31, 41, 55);
+  color: #fff;
+  font-size: var(--hsCard-buttonLarge-fontsize);
+}
+
+.hs-card-button.hs-card-button--large:hover,
+.hs-card-button.hs-card-button--large:focus,
+.hs-card-button.hs-card-button--large:active {
+  background-color: #374151;
+}
+
+.times-svg {
+  --size: 4rem;
+  height: var(--size);
+  width: var(--size);
+}
+
+@media (max-width: 30em) {
+}
+
+@media (max-width: 72.5em) {
+  .hs-cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    transform: translateY(-15rem);
+
+    --hs-cards-width: 87.5vw;
+    --hsCard-title-fontsize: 4.8rem;
+    --hsCard-best-deal-fontsize: 2.5rem;
+    --hsCard-hs-fontsize: 4.2rem;
+    --hsCard-details-item-fontsize: 2rem;
+    --hsCard-button-fontsize: 2rem;
+    --hsCard-buttonLarge-fontsize: 2.5rem;
+    --hsCard-body-padding: 1.5rem;
+    --hsCard-large-borderSize: 0.8rem;
+    --hsCard-details-item-marginbottom: 2rem;
+  }
+  .hs-card {
+    margin-bottom: 5rem;
+  }
+
+  .hs-card-header {
+    padding: 2rem 1.2rem;
+  }
+
+  .hs-page-topInfo {
+    height: 50vw;
+    text-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.8);
+  }
+  .hs-card-button {
+    margin-top: 5rem;
+  }
+}
+
+.hsPageInformation {
+  padding-bottom: 10rem;
+}
+
+.Package-Card li span {
+  font-size: 0.9em;
+  color: #64748b;
+}

@@ -11,25 +11,6 @@ export const Form = styled.form`
       font-size: 3rem;
     }
   }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("https://images.unsplash.com/photo-1534190760961-74e8c1c5c3da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-    background-size: cover;
-    background-position: center;
-    border-radius: 0.4rem;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    transform: scale(1.1) rotateZ(-10deg);
-
-    @media only screen and (max-width: 55em) {
-      transform: rotate(-11deg);
-    }
-  }
 `
 export const InputGroup = styled.p`
   position: relative;

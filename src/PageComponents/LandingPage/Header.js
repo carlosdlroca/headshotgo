@@ -59,7 +59,7 @@ export default function Header() {
         On a mission to help every university student have a professional image!
       </span>
 
-      <Link href="/pricing">Book Now</Link>
+      <Link href="/headshots">Book Now</Link>
     </StyledHeader>
   )
 }

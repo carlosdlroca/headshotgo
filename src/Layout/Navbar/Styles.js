@@ -4,7 +4,6 @@ export const NavbarContainer = styled.nav`
   position: fixed;
   top: 0;
   z-index: 98;
-  
   display: flex;
   width: 100%;
   align-items: center;
@@ -12,13 +11,14 @@ export const NavbarContainer = styled.nav`
   
   background-color: var(--nav-bg-color, transparent);
   box-shadow: var(--nav-shadow);
-  padding: 2rem 3rem;
+  padding: 0 3rem;
   transition: .4s;
 
   .Logo {
+    margin: 1rem 0;
     img {
-      height: 8.5rem;
-      width: 8.5rem;
+      height: 8rem;
+      width: 8rem;
     }
   }
 
@@ -34,40 +34,45 @@ export const NavbarContainer = styled.nav`
   }
 
   @media only screen and (min-width: 75em) {
-    padding: 1rem 12vw;
+    padding: 0 12vw;
   }
 `
 
 export const NavbarLinks = styled.ul`
-  display: flex;
-
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: stretch;
+  align-self: stretch;
   @media only screen and (max-width: 65.63em) {
     display: none;
   }
 `
 
 export const NavbarLink = styled.li`
-  a {
-    display: block;
-    border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  user-select: none;
+  a, span {
+    display: grid;
+    place-items: center;
     color: var(--navlink-color, --text-white-1);
     font-size: 2rem;
     font-weight: 600;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     text-shadow: 0 0 1rem var(--navlink-shadow, rgba(0,0,0,.5));
-    transition: color 0.2s ease;
+    transition: .3s;
+    background-color: inherit;
+
+    height: 100%;
+    width: 100%;
   }
 
   &:hover,
   &:focus {
     cursor: pointer;
-    a {
-      text-decoration: underline;
-    }
-  }
-
-  &:not(:last-child) {
-    margin-right: 2vw;
+    background: var(--link-hover, rgba(241, 245, 249, 0.4));
   }
 `

@@ -1,20 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
 import { NavbarContainer, NavbarLinks, NavbarLink } from "./Styles"
+import DropdownMenu from './DropdownMenu';
+import { Link } from "gatsby"
 import MenuSvg from "./menu.svg"
 import LightLogo from "../../images/HeadshotsOnTheGoWhite.png"
 import DarkLogo from "../../images/HeadshotsOnTheGo.png"
 
-export default function Navbar({ openSidebar, isSticky }) {
+export default function Navbar({ openSidebar, isSticky, dropDownIsOpen, toggleDropdown}) {
+
   return (
     <NavbarContainer style={{
-      "--nav-bg-color": isSticky ? "#FFF" : null,
-      "--nav-shadow": isSticky ? "0 1rem 1rem rgba(0,0,0,0.5)" : "none",
-      "--sidebarButton-fill": isSticky ? "var(--bg-color)" : null
-    }}>
+      "--nav-bg-color": isSticky || dropDownIsOpen ? "#FFF" : null,
+      "--nav-shadow": isSticky || dropDownIsOpen ? "0 1rem 1rem rgba(0,0,0,0.5)" : null,
+      "--sidebarButton-fill": isSticky || dropDownIsOpen? "var(--bg-color)" : null
+    }}
+      onClick={toggleDropdown}
+    >
       <Link to="/">
         <div className="Logo">
-          <img src={isSticky ? DarkLogo : LightLogo} alt="Headshots on the go" />
+          <img src={isSticky || dropDownIsOpen ? DarkLogo : LightLogo} alt="Headshots on the go" />
         </div>
       </Link>
       <button
@@ -25,11 +29,11 @@ export default function Navbar({ openSidebar, isSticky }) {
         <MenuSvg />
       </button>
       <NavbarLinks style={{
-        "--navlink-color": isSticky ? "var(--bg-color)" : null,
-        "--navlink-shadow": isSticky ? "none" : null
+        "--navlink-color": isSticky || dropDownIsOpen ? "var(--bg-color)" : null,
+        "--navlink-shadow": isSticky || dropDownIsOpen ? "none" : null
       }}>
         <NavbarLink>
-          <Link to="/pricing">Pricing</Link>
+          <span id="services">Services</span>
         </NavbarLink>
         <NavbarLink>
           <Link to="/contact">Contact</Link>
@@ -37,7 +41,12 @@ export default function Navbar({ openSidebar, isSticky }) {
         <NavbarLink>
           <Link to="/faq">F.A.Q</Link>
         </NavbarLink>
+        <DropdownMenu isOpen={dropDownIsOpen}>
+            <Link to="/headshots">Headshots Go</Link>
+            <Link to="/graduation">Graduation</Link>
+          </DropdownMenu>
       </NavbarLinks>
+      
     </NavbarContainer>
   )
 }

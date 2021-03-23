@@ -1,0 +1,24 @@
+.CollapseContainer {
+  display: block;
+}
+
+.CollapseContainer p {
+  text-align: center;
+  color: var(--text-white-1);
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 2rem 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease-out;
+}
+
+.CollapseContainer p:hover,
+.CollapseContainer p:focus {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.CollapseLinks {
+  display: var(--CollapseLinks-Display, none);
+  flex-direction: column;
+}

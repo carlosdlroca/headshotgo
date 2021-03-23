@@ -4,7 +4,8 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import PageTitle from "../PageComponents/PageTitle"
 import {
-  ContactPageContainer /*, ExtraInfo */,
+  ContactPageContainer,
+  ContactInfo
 } from "../PageComponents/Contact"
 import { Form, InputGroup, Label, Input, TextArea } from "../components/Form"
 import Button from "../components/Button"
@@ -56,34 +57,32 @@ export default function ContactPage({ data }) {
           <Button>Submit</Button>
         </InputGroup>
       </Form>
+      
+      <ContactInfo color="var(--color-primary)">
+        <h1>The graduation portrait experience</h1>
+        <p>&emsp;You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!</p>
+        <p>&emsp;As a current UCLA undergraduate student, I understand the hard work that it takes to graduate. Congratulations!! You did it! This is a BIG accomplishment!</p>
+        <p>&emsp;I want to invite you to book with me and allow me to capture these moments for you! I have been taking photos since 2016, and have worked with artists such as Damian Lemar Hudson, Leo Black, have worked with startups, photographed Blackstone LaunchPad events, and accumulated 100K+ likes, 6.1k+ followers on TikTok, 85k+ video views on YouTube, 8.4k+ followers on Instagram and 4k+ karma on Reddit!</p>
+        <h1></h1>
+      </ContactInfo>
 
-      {/* <ExtraInfo>
-        <h1 className="MainTitle">Extra Information</h1>
-        <div className="SubSection">
-          <h2 className="SubTitle">Hours Of Operation</h2>
-          <p className="SubText">
-            I 
-          </p>
-        </div>
-        <div className="SubSection">
-          <h2 className="SubTitle">Second Title</h2>
-          <p className="SubText">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            numquam odit soluta veritatis, libero in incidunt nobis commodi quia
-            quisquam ipsa! Quos, tempora non? Ratione possimus placeat
-            distinctio praesentium minus!
-          </p>
-        </div>
-        <div className="SubSection">
-          <h2 className="SubTitle">Third Title</h2>
-          <p className="SubText">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            iure beatae perferendis facere a nam, consectetur, harum repellendus
-            minus quia fugiat adipisci modi. Sunt inventore ratione, atque quas
-            impedit tempore.
-          </p>
-        </div>
-      </ExtraInfo> */}
+      <ContactInfo color="#66FF77">
+        <h1>Campus Locations</h1>
+        <p>
+          &emsp;I am based in Mid City, Los Angeles but I would love to travel to you wherever you are in Southern California!
+        </p>
+        <p>
+          &emsp;The majority of my photoshoots are for my community at UCLA, but I am always looking to expand my network to other college campuses including:
+          <ul>
+            <li>USC</li>
+            <li>CSU Los Angeles</li>
+            <li>CSU Long Beach</li>
+          </ul>
+        </p>
+        <p>
+          And much more! Let me know how I could help!
+        </p>
+      </ContactInfo>
 
       <div
         style={{
@@ -99,6 +98,7 @@ export default function ContactPage({ data }) {
           </a>
         ))}
       </div>
+
     </ContactPageContainer>
   )
 }

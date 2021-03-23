@@ -1,0 +1,43 @@
+.contact-form-container {
+  padding: 5rem 9rem;
+  background-color: white;
+  color: var(--bg-color);
+  margin: 0 auto;
+  width: min(95vw, 80rem);
+  border-radius: 1rem;
+}
+
+#contact-form-general {
+  display: flex;
+  flex-direction: column;
+  color: #1e293b;
+}
+
+.ContactTitle {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.3rem;
+  line-height: 1.7;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 60em) {
+  .input-group {
+    font-size: 1.8rem;
+  }
+
+  .input-group input {
+    margin-bottom: 1rem;
+  }
+}

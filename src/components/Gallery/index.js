@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Grid, Tile } from "./Grid"
-import Img from "gatsby-image"
+import {GatsbyImage} from "gatsby-plugin-image"
 import { Lightbox } from "react-modal-image"
 import useGallery from "./useGallery"
 
@@ -29,7 +29,7 @@ export default function Gallery() {
       <Grid>
         {images.map((image, idx) => (
           <Tile key={image.id} onClick={() => setShownImageIndex(idx)}>
-            <Img alt={image.name} fluid={image.fluid} {...imgStyles} />
+            <GatsbyImage alt={image.name} image={image.gatsbyImageData} {...imgStyles} />
           </Tile>
         ))}
       </Grid>

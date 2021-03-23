@@ -2,10 +2,10 @@ import styled from "styled-components"
 
 export const SidebarContainer = styled.div`
   display: grid;
-  place-items: center;
   height: 100vh;
   width: 100vw;
 
+  padding-top: 15rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -45,7 +45,7 @@ export const SidebarContent = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   padding: 1rem 0;
   a {
     width: 100%;

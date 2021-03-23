@@ -9,9 +9,7 @@ const useGallery = () => {
           name
           publicURL
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }

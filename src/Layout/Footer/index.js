@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FooterContainer, Copyright } from "./Styles"
-
+import ContactForm from "../../components/ContactForm";
 import Logo from "../../images/HeadshotsOnTheGoWhite.png"
 import renderIcon from "../../utils/renderIcon"
 
@@ -28,6 +28,11 @@ export default function Footer() {
     ))
   }
   return (
+    <div>
+    <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", padding: "5rem 0"}}>
+
+      <ContactForm />
+      </div>
     <FooterContainer>
       <div className="Logo">
         <img src={Logo} alt="Headshots on the go" />
@@ -49,5 +54,6 @@ export default function Footer() {
         Reserved
       </Copyright>
     </FooterContainer>
+    </div>
   )
 }

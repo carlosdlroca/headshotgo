@@ -11,6 +11,15 @@ import { AppContainer, MainContent, Backdrop } from "./LayoutStyles"
 export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
+  const [dropDownIsOpen, setDropDownIsOpen] = useState(false)
+
+  function toggleDropdown(e) {
+    if(e.target.id === "services") {
+      setDropDownIsOpen(!dropDownIsOpen);
+    } else {
+      setDropDownIsOpen(false);
+    }
+  }
 
   const openSidebar = useCallback(() => {
     setIsOpen(true)
@@ -53,8 +62,8 @@ export default function Layout({ children }) {
         />
       </Helmet>
       {/* <Banner /> */}
-      <Navbar openSidebar={openSidebar} isSticky={isSticky} />
-      <MainContent>{children}</MainContent>
+      <Navbar openSidebar={openSidebar} isSticky={isSticky} toggleDropdown={toggleDropdown} dropDownIsOpen={dropDownIsOpen} />
+      <MainContent onClick={toggleDropdown}>{children}</MainContent>
       <Footer />
       <Sidebar closeSidebar={closeSidebar} isOpen={isOpen} />
       <Backdrop tabIndex="-1" onClick={closeSidebar} isOpen={isOpen} />
