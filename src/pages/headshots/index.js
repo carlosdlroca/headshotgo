@@ -46,7 +46,7 @@ export default function HeadshotsPage({data}) {
                 <li className="hs-card-details_item">2 - 3 day delivery</li>
                 <a href="#pricing-information"><i># Pricing Information</i></a>
               </ul>
-              <a className="hs-card-button" href={data.site.siteMetadata.bookingLink}>Buy Package</a>
+              <a className="hs-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
           </div>
           <div className="hs-card hs-card--large purple">
@@ -62,7 +62,7 @@ export default function HeadshotsPage({data}) {
                 <li className="hs-card-details_item"><strong>Free Photoshop Retouch</strong></li>
                 <a href="#pricing-information"><i># Pricing Information</i></a>
               </ul>
-              <a className="hs-card-button hs-card-button--large" href={data.site.siteMetadata.bookingLink}>Buy Package</a>
+              <a className="hs-card-button hs-card-button--large" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
           </div>
           <div className="hs-card blue">
@@ -78,7 +78,7 @@ export default function HeadshotsPage({data}) {
                 <li className="hs-card-details_item"><strong>Free Photoshop Retouch</strong></li>
                 <a href="#pricing-information"><i># Pricing Information</i></a>
               </ul>
-              <a className="hs-card-button" href={data.site.siteMetadata.bookingLink}>Buy Package</a>
+              <a className="hs-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
           </div>
         </div>
