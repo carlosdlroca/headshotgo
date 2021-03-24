@@ -35,7 +35,7 @@ export default function GraduationPage({ data }) {
             <h2 className="topInfo--subtitle">A collaboration with <a className="AuthorLink-Grad" href={"https://www.tiktok.com/@jmayaphoto?lang=en"}>JMayaPhoto</a></h2> */}
             <div className="welcome-message-container">
               <h3 className="welcome-message-main">Los Àngeles & Southern California Graduation Portraits</h3>
-              <h4 className="welcome-message-sub">Welcome class of <strong>{new Date().getFullYear()}</strong></h4>
+              <h4 className="welcome-message-sub">Welcome Class of <strong>{new Date().getFullYear()}</strong></h4>
             </div>
           </div>
         </Hero>
