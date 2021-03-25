@@ -426,6 +426,9 @@
 }
 
 @media (max-width: 72.5em) {
+  .Grid-Title {
+    font-size: 5rem;
+  }
   .topInfo--innerContainer {
     text-align: center;
   }
@@ -477,6 +480,9 @@
 }
 
 @media (max-width: 26em) {
+  .Grid-Title {
+    font-size: 3rem;
+  }
   .topInfo--subtitle {
     font-size: 2rem;
   }
