@@ -43,7 +43,7 @@ export default function HeadshotsPage({data}) {
               <ul className="hs-card-details">
                 <li className="hs-card-details_item">10 - 15 guaranteed images</li>
                 <li className="hs-card-details_item">20 minute photoshoot</li>
-                <li className="hs-card-details_item">2 - 3 day delivery</li>
+                <li className="hs-card-details_item">5 - 7 day delivery</li>
                 <a href="#pricing-information"><i># Pricing Information</i></a>
               </ul>
               <a className="hs-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
@@ -58,7 +58,7 @@ export default function HeadshotsPage({data}) {
               <ul className="hs-card-details">
                 <li className="hs-card-details_item">10 - 15 images</li>
                 <li className="hs-card-details_item">30 minute photoshoot</li>
-                <li className="hs-card-details_item">2 - 3 day delivery</li>
+                <li className="hs-card-details_item">3 - 5 day delivery</li>
                 <li className="hs-card-details_item"><strong>Free Photoshop Retouch</strong></li>
                 <a href="#pricing-information"><i># Pricing Information</i></a>
               </ul>
@@ -74,7 +74,7 @@ export default function HeadshotsPage({data}) {
               <ul className="hs-card-details">
                 <li className="hs-card-details_item">10 - 15 images</li>
                 <li className="hs-card-details_item">30 minute photoshoot</li>
-                <li className="hs-card-details_item">1 business day delivery</li>
+                <li className="hs-card-details_item">1 - 2 day delivery</li>
                 <li className="hs-card-details_item"><strong>Free Photoshop Retouch</strong></li>
                 <a href="#pricing-information"><i># Pricing Information</i></a>
               </ul>
