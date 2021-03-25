@@ -89,15 +89,16 @@ export default function GraduationPage({ data }) {
       </header>
       <section className="PricingPageInformation">
         <div className="GraduationImages-Grid">
-          <GraduationImage name="image1" />
-          <GraduationImage name="image2" />
-          <GraduationImage name="image3" />
-          <GraduationImage name="image4" />
-          <GraduationImage name="image5" />
-          <GraduationImage name="image6" />
-          <GraduationImage name="image7" />
-          <GraduationImage name="image8" />
-          <GraduationImage name="image9" />
+          <div className="Grid-Title">Class of 2021</div>
+          <GraduationImage name="image1" className="image1"/>
+          <GraduationImage name="image2" className="image2" />
+          <GraduationImage name="image3" className="image3" />
+          <GraduationImage name="image4" className="image4 top" />
+          <GraduationImage name="image5" className="image5" />
+          <GraduationImage name="image6" className="image6" />
+          <GraduationImage name="image7" className="image7" />
+          <GraduationImage name="image8" className="image8" />
+          <GraduationImage name="image9" className="image9 top" />
         </div>
 
         <div id="pricing-information" className="PricingInfo-Details">
