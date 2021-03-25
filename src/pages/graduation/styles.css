@@ -434,6 +434,7 @@
   }
   .GraduationImages-Grid {
     transform: translateY(0);
+    grid-gap: 1rem;
   }
 
   .pricing-page-topInfo {
