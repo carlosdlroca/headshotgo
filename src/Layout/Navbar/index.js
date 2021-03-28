@@ -42,7 +42,7 @@ export default function Navbar({ openSidebar, isSticky, dropDownIsOpen, toggleDr
           <Link to="/faq">F.A.Q</Link>
         </NavbarLink>
         <DropdownMenu isOpen={dropDownIsOpen}>
-            <Link to="/headshots">Headshots Go</Link>
+            <Link to="/headshots">Headshots</Link>
             <Link to="/graduation">Graduation</Link>
           </DropdownMenu>
       </NavbarLinks>

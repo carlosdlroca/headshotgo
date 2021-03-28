@@ -36,47 +36,47 @@ export default function HeadshotsPage({data}) {
         <div className="hs-cards">
           <div className="hs-card green">
             <div className="hs-card-header">
-              <div className="hs-card_title">Most Affordable Package</div>
+              <div className="hs-card_title">Affordable Headshot Package</div>
               <div className="hs-card_price">$55 <span className="hs-card_price-hours"></span></div>
             </div>
             <div className="hs-card-body">
               <ul className="hs-card-details">
-                <li className="hs-card-details_item">10 - 15 guaranteed images</li>
+                <li className="hs-card-details_item">3 - 5 images</li>
                 <li className="hs-card-details_item">20 minute photoshoot</li>
                 <li className="hs-card-details_item">5 - 7 day delivery</li>
-                <a href="#pricing-information"><i># Pricing Information</i></a>
+                <a href="#pricing-information"><i># Travel Fee Information</i></a>
               </ul>
               <a className="hs-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
           </div>
           <div className="hs-card hs-card--large purple">
             <div className="hs-card-header">
-              <div className="hs-card_title">Most Popular Package</div>
+              <div className="hs-card_title">Popular Headshot Package</div>
               <div className="hs-card_price">$75 <span className="hs-card_price-hours"></span></div>
             </div>
             <div className="hs-card-body">
               <ul className="hs-card-details">
-                <li className="hs-card-details_item">10 - 15 images</li>
-                <li className="hs-card-details_item">30 minute photoshoot</li>
+                <li className="hs-card-details_item">5 - 10 images</li>
+                <li className="hs-card-details_item">25 minute photoshoot</li>
                 <li className="hs-card-details_item">3 - 5 day delivery</li>
-                <li className="hs-card-details_item"><strong>Free Photoshop Retouch</strong></li>
-                <a href="#pricing-information"><i># Pricing Information</i></a>
+                <li className="hs-card-details_item"><strong>Free Photoshop skin softening</strong></li>
+                <a href="#pricing-information"><i># Travel Fee Information</i></a>
               </ul>
               <a className="hs-card-button hs-card-button--large" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
           </div>
           <div className="hs-card blue">
             <div className="hs-card-header">
-              <div className="hs-card_title">Fastest Delivery Package</div>
-              <div className="hs-card_price">$85 <span className="hs-card_price-hours"></span></div>
+              <div className="hs-card_title">Gold Headshot Package</div>
+              <div className="hs-card_price">$80 <span className="hs-card_price-hours"></span></div>
             </div>
             <div className="hs-card-body">
               <ul className="hs-card-details">
                 <li className="hs-card-details_item">10 - 15 images</li>
                 <li className="hs-card-details_item">30 minute photoshoot</li>
-                <li className="hs-card-details_item">1 - 2 day delivery</li>
+                <li className="hs-card-details_item">1 - 3 day delivery</li>
                 <li className="hs-card-details_item"><strong>Free Photoshop Retouch</strong></li>
-                <a href="#pricing-information"><i># Pricing Information</i></a>
+                <a href="#pricing-information"><i># Travel Fee Information</i></a>
               </ul>
               <a className="hs-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
@@ -86,7 +86,7 @@ export default function HeadshotsPage({data}) {
       <section className="PricingPageInformation">
         <Gallery />
         <div id="pricing-information" className="PricingInfo-Details">
-          <h2>Pricing Information</h2>
+          <h2>Travel Fee</h2>
           <div className="Package-Card Basic">
             <h3 className="Package-Title">Location Prices</h3>
             <ul className="Package-Details">
