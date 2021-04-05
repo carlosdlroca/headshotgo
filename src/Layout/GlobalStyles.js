@@ -18,6 +18,9 @@ export default createGlobalStyle`
         --text-white-2: #F1F5F9;
         --text-white-3: #E2E8F0;
         --text-white-4:#CBD5E1;
+
+        --color-UCLA-blue: rgb(0, 128, 193);
+        --color-UCLA-yellow: rgb(255, 193, 56);
     }
     
     *, *::before, *::after {
