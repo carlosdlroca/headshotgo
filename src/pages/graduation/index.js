@@ -1,5 +1,5 @@
 import React from 'react';
-import {graphql} from "gatsby";
+import { graphql } from "gatsby";
 import Hero from './Hero';
 
 import { Helmet } from "react-helmet"
@@ -12,21 +12,21 @@ export default function GraduationPage({ data }) {
       <Helmet>
         <title>Graduation Packages x JMayaPhoto | Headshots-on-the-Go</title>
         <meta name="title" content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go" />
-        <meta name="description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!"/>
+        <meta name="description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://headshotgo.com/graduation" />
         <meta property="og:title" content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go" />
-        <meta property="og:description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!"/>
-        <meta property="og:image" content="https://headshotgo.com/graduation-header.jpg"/>
+        <meta property="og:description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!" />
+        <meta property="og:image" content="https://headshotgo.com/graduation-header.jpg" />
 
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://headshotgo.com/graduation"/>
-        <meta property="twitter:title" content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go"/>
-        <meta property="twitter:description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!"/>
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://headshotgo.com/graduation" />
+        <meta property="twitter:title" content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go" />
+        <meta property="twitter:description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!" />
         <meta property="twitter:image" content="https://headshotgo.com/graduation-header.jpg"></meta>
         <meta property="twitter:image:alt" content="A compilation of graduation photographs from different happy clients"></meta>
-        
+
       </Helmet>
       <header className="pricing-page-header">
         <Hero className="pricing-page-topInfo">
@@ -43,7 +43,7 @@ export default function GraduationPage({ data }) {
           <div className="pricing-card">
             <div className="pricing-card-header">
               <div className="pricing-card_title">Basic Package</div>
-              <div className="pricing-card_price">$350 <span className="pricing-card_price-hours">per hour</span></div>
+              <div className="pricing-card_price">$200 <span className="pricing-card_price-hours">per hour</span></div>
             </div>
             <div className="pricing-card-body">
               <ul className="pricing-card-details">
@@ -57,7 +57,7 @@ export default function GraduationPage({ data }) {
           <div className="pricing-card pricing-card--large">
             <div className="pricing-card-header">
               <div className="pricing-card_title pricing-card_title--premium">Premium Package</div>
-              <div className="pricing-card_price">$400 <span className="pricing-card_price-hours">per hour</span></div>
+              <div className="pricing-card_price">$270 <span className="pricing-card_price-hours">per hour</span></div>
             </div>
             <div className="pricing-card-body">
               <ul className="pricing-card-details">
@@ -71,7 +71,7 @@ export default function GraduationPage({ data }) {
           <div className="pricing-card">
             <div className="pricing-card-header">
               <div className="pricing-card_title pricing-card_title--gold">Gold Package</div>
-              <div className="pricing-card_price">$430 <span className="pricing-card_price-hours">per hour</span></div>
+              <div className="pricing-card_price">$300 <span className="pricing-card_price-hours">per hour</span></div>
             </div>
             <div className="pricing-card-body">
               <ul className="pricing-card-details">
@@ -91,7 +91,7 @@ export default function GraduationPage({ data }) {
       <section className="PricingPageInformation">
         <div className="GraduationImages-Grid">
           <div className="Grid-Title">Class of 2021</div>
-          <GraduationImage name="image1" className="image1"/>
+          <GraduationImage name="image1" className="image1" />
           <GraduationImage name="image2" className="image2" />
           <GraduationImage name="image3" className="image3" />
           <GraduationImage name="image4" className="image4 top" />
