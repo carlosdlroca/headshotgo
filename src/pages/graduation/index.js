@@ -49,7 +49,6 @@ export default function GraduationPage({ data }) {
               <ul className="pricing-card-details">
                 <li className="pricing-card-details_item">20 - 30 images</li>
                 <li className="pricing-card-details_item">7 - 9 day delivery</li>
-                <li className="pricing-card-details_item">Free Headshot</li>
               </ul>
               <a className="pricing-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
             </div>
