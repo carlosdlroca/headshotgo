@@ -124,7 +124,7 @@ export default function GraduationPage({ data }) {
             <h3 className="Package-Title">Gold Package</h3>
             <ul className="Package-Details">
               <li className="Package-Item">Add <u>confetti</u>, <u>bubbles</u>, or <u>prop of your choice</u> for a fun twist</li>
-              <li className="Package-Item"> TikTok <a id="tiktok-link" href="https://www.tiktok.com/@jmayaphoto?lang=en">@Jmayaphoto</a> (<strong>105K+</strong> Likes, <strong>6.1k+</strong> Followers)</li>
+              {/* <li className="Package-Item"> TikTok <a id="tiktok-link" href="https://www.tiktok.com/@jmayaphoto?lang=en">@Jmayaphoto</a> (<strong>105K+</strong> Likes, <strong>6.1k+</strong> Followers)</li> */}
               <li className="Package-Item">Travel fee NOT INCLUDED</li>
             </ul>
           </div>
