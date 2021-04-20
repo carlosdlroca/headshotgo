@@ -28,11 +28,6 @@ export default function HeadshotsPage({data}) {
         <meta property="twitter:image" content="https://headshotgo.com/header-image.jpg"></meta>
       </Helmet>
       <header className="hs-page-header">
-        <Hero className="hs-page-topInfo">
-          <div className="topInfo--innerContainer">
-            <h1>Headshots <TimesSvg className="times-svg" /> <a className="AuthorLink-HS" href={"https://www.tiktok.com/@jmayaphoto?lang=en"}>JMayaPhoto</a></h1>
-          </div>
-        </Hero>
         <div className="hs-cards">
           <div className="hs-card green">
             <div className="hs-card-header">

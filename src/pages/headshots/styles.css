@@ -15,6 +15,7 @@
   flex-direction: column;
   align-items: center;
 
+  margin-top: 18.6rem;
   background-color: var(--bg-color);
 }
 
@@ -70,7 +71,7 @@
   position: relative;
 }
 
-@media (min-width: 63em) {
+@media (min-width: 72.5em) {
   .hs-card.hs-card--large {
     transform: translateY(-5rem);
   }
