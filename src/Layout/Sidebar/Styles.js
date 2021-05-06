@@ -17,8 +17,8 @@ export const SidebarContainer = styled.div`
 
   #close-sidebar {
     position: absolute;
-    top: 4rem;
-    right: 4rem;
+    top: 3rem;
+    right: 3rem;
 
     display: block;
     justify-self: flex-end;

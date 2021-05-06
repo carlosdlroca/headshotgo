@@ -1,32 +1,61 @@
-import React from 'react';
-import { graphql } from "gatsby";
-import Hero from './Hero';
+import React from "react"
+import { graphql } from "gatsby"
+import Hero from "./Hero"
 
 import { Helmet } from "react-helmet"
-import GraduationImage from "./GraduationImage";
-import "./styles.css";
+import GraduationImage from "./GraduationImage"
+import "./styles.css"
 
 export default function GraduationPage({ data }) {
   return (
     <div className="pricing-page">
       <Helmet>
         <title>Graduation Packages x JMayaPhoto | Headshots-on-the-Go</title>
-        <meta name="title" content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go" />
-        <meta name="description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!" />
+        <meta
+          name="title"
+          content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go"
+        />
+        <meta
+          name="description"
+          content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!"
+        />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://headshotgo.com/graduation" />
-        <meta property="og:title" content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go" />
-        <meta property="og:description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!" />
-        <meta property="og:image" content="https://headshotgo.com/graduation-header.jpg" />
+        <meta
+          property="og:title"
+          content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go"
+        />
+        <meta
+          property="og:description"
+          content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!"
+        />
+        <meta
+          property="og:image"
+          content="https://headshotgo.com/graduation-header.jpg"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://headshotgo.com/graduation" />
-        <meta property="twitter:title" content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go" />
-        <meta property="twitter:description" content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!" />
-        <meta property="twitter:image" content="https://headshotgo.com/graduation-header.jpg"></meta>
-        <meta property="twitter:image:alt" content="A compilation of graduation photographs from different happy clients"></meta>
-
+        <meta
+          property="twitter:url"
+          content="https://headshotgo.com/graduation"
+        />
+        <meta
+          property="twitter:title"
+          content="Graduation Packages x JMayaPhoto | Headshots-on-the-Go"
+        />
+        <meta
+          property="twitter:description"
+          content="You might have taken graduation pictures in high school, but a session that highlights your college career will mean much more to you and your loved ones! Each package includes a free headshot to prepare you for your professional career!"
+        />
+        <meta
+          property="twitter:image"
+          content="https://headshotgo.com/graduation-header.jpg"
+        ></meta>
+        <meta
+          property="twitter:image:alt"
+          content="A compilation of graduation photographs from different happy clients"
+        ></meta>
       </Helmet>
       <header className="pricing-page-header">
         <Hero className="pricing-page-topInfo">
@@ -34,8 +63,12 @@ export default function GraduationPage({ data }) {
             {/* <h1>Graduation & Senior Portraits</h1>
             <h2 className="topInfo--subtitle">A collaboration with <a className="AuthorLink-Grad" href={"https://www.tiktok.com/@jmayaphoto?lang=en"}>JMayaPhoto</a></h2> */}
             <div className="welcome-message-container">
-              <h3 className="welcome-message-main">Los Àngeles & Southern California Graduation Portraits</h3>
-              <h4 className="welcome-message-sub">Welcome Class of <strong>{new Date().getFullYear()}</strong></h4>
+              <h3 className="welcome-message-main">
+                Los Àngeles & Southern California Graduation Portraits
+              </h3>
+              <h4 className="welcome-message-sub">
+                Welcome Class of <strong>{new Date().getFullYear()}</strong>
+              </h4>
             </div>
           </div>
         </Hero>
@@ -43,44 +76,81 @@ export default function GraduationPage({ data }) {
           <div className="pricing-card">
             <div className="pricing-card-header">
               <div className="pricing-card_title">Basic Package</div>
-              <div className="pricing-card_price">$200 <span className="pricing-card_price-hours">per hour</span></div>
+              <div className="pricing-card_price">
+                $200 <span className="pricing-card_price-hours">per hour</span>
+              </div>
             </div>
             <div className="pricing-card-body">
               <ul className="pricing-card-details">
                 <li className="pricing-card-details_item">20 - 30 images</li>
-                <li className="pricing-card-details_item">7 - 9 day delivery</li>
+                <li className="pricing-card-details_item">
+                  7 - 9 day delivery
+                </li>
               </ul>
-              <a className="pricing-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
+              <a
+                className="pricing-card-button"
+                href={data.site.siteMetadata.bookingLink}
+              >
+                Book Now
+              </a>
             </div>
           </div>
           <div className="pricing-card pricing-card--large">
             <div className="pricing-card-header">
-              <div className="pricing-card_title pricing-card_title--premium">Premium Package</div>
-              <div className="pricing-card_price">$270 <span className="pricing-card_price-hours">per hour</span></div>
+              <div className="pricing-card_title pricing-card_title--premium">
+                Premium Package
+              </div>
+              <div className="pricing-card_price">
+                $270 <span className="pricing-card_price-hours">per hour</span>
+              </div>
             </div>
             <div className="pricing-card-body">
               <ul className="pricing-card-details">
                 <li className="pricing-card-details_item">25 - 35 images</li>
-                <li className="pricing-card-details_item">5 - 7 day delivery</li>
-                <li className="pricing-card-details_item">1 Free Headshot</li>
+                <li className="pricing-card-details_item">
+                  5 - 7 day delivery
+                </li>
+                <li className="pricing-card-details_item">
+                  1 Free Headshot (optional)
+                </li>
               </ul>
-              <a className="pricing-card-button pricing-card-button--large" href={data.site.siteMetadata.bookingLink}>Book Now</a>
+              <a
+                className="pricing-card-button pricing-card-button--large"
+                href={data.site.siteMetadata.bookingLink}
+              >
+                Book Now
+              </a>
             </div>
           </div>
           <div className="pricing-card">
             <div className="pricing-card-header">
-              <div className="pricing-card_title pricing-card_title--gold">Gold Package</div>
-              <div className="pricing-card_price">$300 <span className="pricing-card_price-hours">per hour</span></div>
+              <div className="pricing-card_title pricing-card_title--gold">
+                Gold Package
+              </div>
+              <div className="pricing-card_price">
+                $300 <span className="pricing-card_price-hours">per hour</span>
+              </div>
             </div>
             <div className="pricing-card-body">
               <ul className="pricing-card-details">
                 <li className="pricing-card-details_item">25 - 35 images</li>
-                <li className="pricing-card-details_item">5 - 7 day delivery</li>
+                <li className="pricing-card-details_item">
+                  5 - 7 day delivery
+                </li>
                 <li className="pricing-card-details_item">3 Creative Images</li>
-                <li className="pricing-card-details_item">1 Free Headshot</li>
-                <a id="link-link" href="#pricing-information"><i># More Information</i></a>
+                <li className="pricing-card-details_item">
+                  1 Free Headshot (optional)
+                </li>
+                <a id="link-link" href="#pricing-information">
+                  <i># More Information</i>
+                </a>
               </ul>
-              <a className="pricing-card-button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
+              <a
+                className="pricing-card-button"
+                href={data.site.siteMetadata.bookingLink}
+              >
+                Book Now
+              </a>
             </div>
           </div>
         </div>
@@ -100,7 +170,16 @@ export default function GraduationPage({ data }) {
         </div>
 
         <div id="pricing-information" className="PricingInfo-Details">
-          <p><strong><a href="https://www.instagram.com/headshotsonthego/">@jmayaphoto</a></strong> is the founder and CEO of Headshots on the Go, although headshots are his specialty, around this year he takes photos of graduating seniors to commemorate their college experiences. </p>
+          <p>
+            <strong>
+              <a href="https://www.instagram.com/headshotsonthego/">
+                @jmayaphoto
+              </a>
+            </strong>{" "}
+            is the founder and CEO of Headshots on the Go, although headshots
+            are his specialty, around this year he takes photos of graduating
+            seniors to commemorate their college experiences.{" "}
+          </p>
           <h2>Pricing Information</h2>
           {/* <div className="Package-Card Basic">
             <h3 className="Package-Title">Basic Package</h3>
@@ -123,12 +202,21 @@ export default function GraduationPage({ data }) {
           <div className="Package-Card Gold">
             <h3 className="Package-Title">Gold Package</h3>
             <ul className="Package-Details">
-              <li className="Package-Item">Add <u>confetti</u>, <u>bubbles</u>, or <u>prop of your choice</u> for a fun twist</li>
+              <li className="Package-Item">
+                Add <u>confetti</u>, <u>bubbles</u>, or{" "}
+                <u>prop of your choice</u> for a fun twist
+              </li>
               {/* <li className="Package-Item"> TikTok <a id="tiktok-link" href="https://www.tiktok.com/@jmayaphoto?lang=en">@Jmayaphoto</a> (<strong>105K+</strong> Likes, <strong>6.1k+</strong> Followers)</li> */}
               <li className="Package-Item">Travel fee NOT INCLUDED</li>
             </ul>
           </div>
-          <a className="pricing-card-button" role="button" href={data.site.siteMetadata.bookingLink}>Book Now</a>
+          <a
+            className="pricing-card-button"
+            role="button"
+            href={data.site.siteMetadata.bookingLink}
+          >
+            Book Now
+          </a>
         </div>
       </section>
     </div>
@@ -143,4 +231,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
